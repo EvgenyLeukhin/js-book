@@ -1,8 +1,8 @@
 const path = require('path');
 
 const paths = {
-  SRC:  path.resolve(__dirname, 'src/main.js'),
-  DIST: path.resolve(__dirname, 'public')
+  SRC:  path.resolve(__dirname, 'src/app.js'),
+  DIST: path.resolve(__dirname, 'dist')
 };
 
 module.exports = {

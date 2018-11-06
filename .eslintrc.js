@@ -21,7 +21,7 @@ module.exports = {
     ],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
-    "semi": ["error", "always"],
+    "semi": ["error", 0],
     "no-console": 0
   },
   "plugins": ["eslint-plugin-react"]
