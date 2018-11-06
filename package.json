@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/EvgenyLeukhin/react-book#readme",
   "dependencies": {
-    "classnames": "^2.2.6",
     "normalize.css": "^8.0.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
@@ -46,6 +45,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "chalk": "^2.4.1",
+    "classnames": "^2.2.6",
     "clean-webpack-plugin": "^0.1.19",
     "compression": "^1.7.2",
     "compression-webpack-plugin": "^1.1.11",
