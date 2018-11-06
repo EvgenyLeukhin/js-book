@@ -1,0 +1,25 @@
+{
+  "name": "react-book",
+  "version": "1.0.0",
+  "description": "My learning react-repo",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyLeukhin/react-book.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvgenyLeukhin/react-book/issues"
+  },
+  "homepage": "https://github.com/EvgenyLeukhin/react-book#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
+}
