@@ -1,0 +1,8 @@
+@media screen and (max-width: 1000px) {
+  .page-wrapper {
+    & > main {
+      width: 100%;
+      min-width: 320px;
+    }
+  }
+}

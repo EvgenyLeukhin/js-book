@@ -17,18 +17,14 @@ export default class Layout extends React.Component {
     return(
       <div className="page-wrapper">
         <Header/>
-
-        <div className="content-wrapper">
-          <Aside/>
-          <main>
-            <Switch>
-              <Route path='/' component={Home} exact></Route>
-              <Route path='/page-2' component={Page2}></Route>
-              <Route path='/page-3' component={Page3}></Route>
-            </Switch>
-          </main>
-        </div>
-
+        <Aside/>
+        <main>
+          <Switch>
+            <Route path='/' component={Home} exact></Route>
+            <Route path='/page-2' component={Page2}></Route>
+            <Route path='/page-3' component={Page3}></Route>
+          </Switch>
+        </main>
       </div>
     )
   }
