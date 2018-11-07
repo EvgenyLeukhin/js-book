@@ -12,7 +12,7 @@ export default class Layout extends React.Component {
 
   render() {
     return(
-      <div className="page-wrapper">
+      <div className="wrapper">
         <Header/>
         <Aside
           hideAside={!this.state.showAside}
