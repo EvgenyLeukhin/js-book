@@ -36,38 +36,46 @@ body {
     }
   }
   & > aside {
-    background: rgba(255,255,255,.75);
+    background: rgba(123,123,123,.9);
+    border-radius: 0 5px 5px 0;
     position: absolute;
     top: 55px;
     width: 200px;
     z-index: 5;
-    outline: 1px solid green;
-    transition-duration: 1s;
+    transition-duration: .5s;
     &.hide {
       transform: translateX(-200px);
       i {
         right: -20px;
-        border: 7px solid #fff;
+        border: 7px solid transparent;
         border-left: 7px solid #ccc;
         &:hover {
-          border: 7px solid #fff;
+          border: 7px solid transparent;
           border-left: 7px solid hsl(141, 71%, 48%);
         }
       }
     }
+    ul {
+      list-style: none;
+    }
     a {
       text-decoration: none;
+      color: #fff;
+      transition-duration: .222s;
+      &:hover {
+        color: hsl(141, 71%, 48%);
+      }
     }
     i {
       display: block;
       cursor: pointer;
-      transition-duration: 1s;
+      transition-duration: .5s;
       position: absolute;
       z-index: 10;
-      right: 0;
+      right: -10px;
       top: 0;
-      border: 7px solid #fff;
-      border-right: 7px solid #ccc;
+      border: 7px solid transparent;
+      border-right: 7px solid #888;
       &:hover {
         border-right: 7px solid hsl(348, 100%, 61%);
       }

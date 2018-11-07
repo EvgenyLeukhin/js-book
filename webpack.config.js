@@ -35,6 +35,12 @@ module.exports = {
         ]
       },
 
+      // MARKDOWN //
+      {
+        test: /\.md$/,
+        use: 'markdown-with-front-matter-loader'
+      },
+
     ]
   },
 

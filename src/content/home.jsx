@@ -1,7 +1,8 @@
 import React from 'react'
+import home from './home.md'
 
-export default () => (
-  <React.Fragment>
-    <span style={{fontSize: 33}}>Home</span>
-  </React.Fragment>
-)
+export default () =>
+<div
+  className='markdown-body'
+  dangerouslySetInnerHTML={{__html: home.__content}} />
+
