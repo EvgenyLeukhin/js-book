@@ -55,7 +55,7 @@ body {
         }
       }
     }
-    ul {
+    ul.links-list {
       list-style: none;
     }
     a {
@@ -64,6 +64,9 @@ body {
       transition-duration: .222s;
       &:hover {
         color: hsl(141, 71%, 48%);
+      }
+      &.active:hover {
+        color: #fff;
       }
     }
     i {
