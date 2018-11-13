@@ -70,3 +70,4 @@ const SomeComponent3 = () => <div>
   <SomeComponent2/>
 </div>
 ```
+### Old-school classes

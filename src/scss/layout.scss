@@ -38,7 +38,7 @@ body {
   & > aside {
     background: rgba(123,123,123,.9);
     border-radius: 0 5px 5px 0;
-    position: absolute;
+    position: fixed;
     top: 55px;
     width: 200px;
     z-index: 5;
@@ -58,15 +58,25 @@ body {
     ul.links-list {
       list-style: none;
     }
+    li {
+      padding: 3px 0;
+    }
     a {
       text-decoration: none;
       color: #fff;
       transition-duration: .222s;
       &:hover {
-        color: hsl(141, 71%, 48%);
+        color: rgb(97, 218, 251);
       }
-      &.active:hover {
-        color: #fff;
+      &.active {
+        &::before {
+          position: absolute;
+          left: 20px;
+          content: "►";
+        }
+        &:hover {
+          color: #fff;
+        }
       }
     }
     i {
