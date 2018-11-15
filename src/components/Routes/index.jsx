@@ -9,6 +9,9 @@ import components   from './../../content/components.md'
 import props        from './../../content/props.md'
 import state        from './../../content/state.md'
 import jsx          from './../../content/jsx.md'
+import events       from './../../content/events.md'
+import forms        from './../../content/forms.md'
+import styling      from './../../content/styling.md'
 import page404      from './../../content/page404.md'
 
 // convert mardkdown to components
@@ -19,6 +22,9 @@ const Components   = () => <div dangerouslySetInnerHTML={{__html: components.  _
 const Props        = () => <div dangerouslySetInnerHTML={{__html: props.       __content}}/>
 const State        = () => <div dangerouslySetInnerHTML={{__html: state.       __content}}/>
 const Jsx          = () => <div dangerouslySetInnerHTML={{__html: jsx.         __content}}/>
+const Events       = () => <div dangerouslySetInnerHTML={{__html: events.      __content}}/>
+const Forms        = () => <div dangerouslySetInnerHTML={{__html: forms.       __content}}/>
+const Styling      = () => <div dangerouslySetInnerHTML={{__html: styling.     __content}}/>
 const Page404      = () => <div dangerouslySetInnerHTML={{__html: page404.     __content}}/>
 
 
@@ -31,6 +37,9 @@ export default () => <main className='markdown-body'>
     <Route path='/props'         component={Props}/>
     <Route path='/state'         component={State}/>
     <Route path='/jsx'           component={Jsx}/>
+    <Route path='/events'        component={Events}/>
+    <Route path='/forms'         component={Forms}/>
+    <Route path='/styling'       component={Styling}/>
     <Route                       component={Page404} />
   </Switch>
 </main>

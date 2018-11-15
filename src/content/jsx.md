@@ -1,12 +1,16 @@
 # JSX
 
 ## JSX from const
-JS-login can be as a property, before return, or js-code in {...} inside return()
+JS-login can be as a class-method, before return, or js-code in {...} inside return()
 
 ```js
 import React from 'react'
 
 export default class Someclass extends React.Component {
+
+  // 0. classMethod
+  classMethod = () => {...}
+
   render() {
 
     // I. before return
