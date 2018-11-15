@@ -65,9 +65,18 @@ import React from 'react'
 const SomeComponent1 = () => <div>...</div>
 const SomeComponent2 = () => <div>...</div>
 
-const SomeComponent3 = () => <div>
+export default () => <div>
   <SomeComponent1/>
   <SomeComponent2/>
 </div>
 ```
 ### Old-school classes
+```js
+class Someclass2 extends Someclass {
+  constructor(props) {
+    super(props);
+    this.prop3 = 'Some property';
+    this.state = {...}
+  }
+}
+```

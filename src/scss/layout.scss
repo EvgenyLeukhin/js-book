@@ -96,12 +96,12 @@ body {
   }
   & > main {
     padding: 0 15px;
+    padding-bottom: 20px;
     position: relative;
     z-index: 3;
     width: 900px;
     min-height: 500px;
-    margin-top: 55px;
+    margin-top: 25px;
     align-self: center;
-    // outline: 1px solid deeppink;
   }
 }

@@ -6,7 +6,8 @@ import Routes from './../Routes'
 
 export default class Layout extends React.Component {
   state = {
-    showAside: true
+    showAside: true,
+    name: 'John Smith',
   }
   toggleSidebar = () => this.setState({showAside: !this.state.showAside})
 
