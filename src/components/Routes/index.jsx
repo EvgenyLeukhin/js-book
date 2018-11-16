@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-// marhdown to html
+// template component (marhdown to html)
 const CreateComponent = props => <div dangerouslySetInnerHTML={{__html: props.mdPath.__content}}/>
 
 // create components
@@ -13,10 +13,10 @@ const Props        = () => <CreateComponent mdPath={ require('./../../content/pr
 const State        = () => <CreateComponent mdPath={ require('./../../content/state.md')         }/>
 const Jsx          = () => <CreateComponent mdPath={ require('./../../content/jsx.md')           }/>
 const Events       = () => <CreateComponent mdPath={ require('./../../content/events.md')        }/>
+const Switcher     = () => <CreateComponent mdPath={ require('./../../content/switcher.md')      }/>
 const Forms        = () => <CreateComponent mdPath={ require('./../../content/forms.md')         }/>
 const Styling      = () => <CreateComponent mdPath={ require('./../../content/styling.md')       }/>
 const Page404      = () => <CreateComponent mdPath={ require('./../../content/page404.md')       }/>
-
 
 export default () => <main className='markdown-body'>
   <Switch>
@@ -28,6 +28,7 @@ export default () => <main className='markdown-body'>
     <Route path='/state'         component={State}/>
     <Route path='/jsx'           component={Jsx}/>
     <Route path='/events'        component={Events}/>
+    <Route path='/switcher'      component={Switcher}/>
     <Route path='/forms'         component={Forms}/>
     <Route path='/styling'       component={Styling}/>
     <Route                       component={Page404} />
