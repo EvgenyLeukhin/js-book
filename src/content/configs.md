@@ -87,6 +87,8 @@
 
 ## Common
 ```js
+// webpack.config.js
+
 const path = require('path');
 
 const paths = {
@@ -138,6 +140,8 @@ module.exports = {
 
 ## Development
 ```js
+// webpack.dev.js
+
 const merge             = require('webpack-merge');
 const common            = require('./webpack.config.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -185,6 +189,8 @@ module.exports = merge(common, development);
 ```
 ## Production
 ```js
+// webpack.prod.js
+
 const merge                   = require('webpack-merge');
 const common                  = require('./webpack.config.js');
 

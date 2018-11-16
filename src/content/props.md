@@ -1,5 +1,5 @@
 # Props
-## Props in classes (often for logic)
+## Props in classes
 ```js
 import React from 'react'
 
@@ -28,7 +28,7 @@ export default class SomeClass2 extends React.Component {
 
 ```
 
-## Props in funcs (often for data)
+## Props in funcs
 ```js
 // someComponent.jsx
 import React from 'react'
