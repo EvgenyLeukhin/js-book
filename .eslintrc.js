@@ -4,7 +4,7 @@ module.exports = {
     "node": true,
     "commonjs": true,
     "es6": true,
-    "jquery": true
+    "jquery": false
   },
   "parser": "babel-eslint",
   "parserOptions": {
