@@ -19,6 +19,7 @@ export default () => <ul className='links-list'>
   <li><NavLink to='/switcher'      activeStyle={styles}>Switcher</NavLink></li>
   <li><NavLink to='/forms'         activeStyle={styles}>Forms</NavLink></li>
   <li><NavLink to='/styling'       activeStyle={styles}>Styling</NavLink></li>
+  <li><NavLink to='/transitions'   activeStyle={styles}>Transitions</NavLink></li>
   <li><NavLink to='/maping'        activeStyle={styles}>Maping</NavLink></li>
   <li><NavLink to='/routing'       activeStyle={styles}>Routing</NavLink></li>
   <li><NavLink to='/lifecycle'     activeStyle={styles}>Lifecycle</NavLink></li>

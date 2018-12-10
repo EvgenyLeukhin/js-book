@@ -38,40 +38,24 @@ import classes from './styles.css'
 export default () => <div>
   <p className={classes.someClass}>Some text</p>
 </div>
+
+// // CSS-modules
+// {
+//   test: /\.css$/,
+//   use: [
+//     { loader: 'style-loader' },
+//     {
+//       loader: 'css-loader',
+//       query: {
+//        modules: true,
+//        localIndentName: "[name]__[local]__[hash:base64:8]"
+//       }
+//     }
+//   ]
+// }
 ```
 
-## Classnames
-``` npm i --save-dev classnames ```
-```js
-import React from 'react'
-import cx from 'classnames'
-
-export default class Layout extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      hightlight: false,
-    };
-    this.hightlightToggle = () => {
-      this.setState({hightlight: !this.state.hightlight});
-    };
-  }
-  render() {
-    const { hightlight } = this.state;
-    return(
-      <React.Fragment>
-
-        <button className={cx('btn', {'hightlight': hightlight })}
-          onClick={this.hightlightToggle}
-        >{!hightlight ? 'Click me' : 'Clicked'}</button>
-
-      </React.Fragment>
-    );
-  }
-}
-```
-
-## Glamour
+## Glamour - can use all css-selectors
 ``` npm i --save-dev glamour ```
 ```js
 import React from 'react';

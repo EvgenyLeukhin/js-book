@@ -1,1 +1,5 @@
 # Events
+```js
+onClick 
+onChange 
+```

@@ -16,6 +16,9 @@ const Events       = () => <CreateComponent mdPath={ require('./../../content/ev
 const Switcher     = () => <CreateComponent mdPath={ require('./../../content/switcher.md')      }/>
 const Forms        = () => <CreateComponent mdPath={ require('./../../content/forms.md')         }/>
 const Styling      = () => <CreateComponent mdPath={ require('./../../content/styling.md')       }/>
+const Maping       = () => <CreateComponent mdPath={ require('./../../content/maping.md')        }/>
+const Routing      = () => <CreateComponent mdPath={ require('./../../content/routing.md')       }/>
+const Lifecycle    = () => <CreateComponent mdPath={ require('./../../content/lifecycle.md')     }/>
 const Page404      = () => <CreateComponent mdPath={ require('./../../content/page404.md')       }/>
 
 export default () => <main className='markdown-body'>
@@ -31,6 +34,9 @@ export default () => <main className='markdown-body'>
     <Route path='/switcher'      component={Switcher}/>
     <Route path='/forms'         component={Forms}/>
     <Route path='/styling'       component={Styling}/>
+    <Route path='/maping'        component={Maping}/>
+    <Route path='/routing'       component={Routing}/>
+    <Route path='/lifecycle'     component={Lifecycle}/>
     <Route                       component={Page404} />
   </Switch>
 </main>
