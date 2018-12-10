@@ -2,24 +2,24 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 // template component (marhdown to html)
-const CreateComponent = props => <div dangerouslySetInnerHTML={{__html: props.mdPath.__content}}/>
+const CrComp = props => <div dangerouslySetInnerHTML={{__html: props.mdPath.__content}}/>
 
 // create components
-const Home         = () => <CreateComponent mdPath={ require('./../../content/home.md')          }/>
-const BaseTemplate = () => <CreateComponent mdPath={ require('./../../content/base-template.md') }/>
-const Configs      = () => <CreateComponent mdPath={ require('./../../content/configs.md')       }/>
-const Components   = () => <CreateComponent mdPath={ require('./../../content/components.md')    }/>
-const Props        = () => <CreateComponent mdPath={ require('./../../content/props.md')         }/>
-const State        = () => <CreateComponent mdPath={ require('./../../content/state.md')         }/>
-const Jsx          = () => <CreateComponent mdPath={ require('./../../content/jsx.md')           }/>
-const Events       = () => <CreateComponent mdPath={ require('./../../content/events.md')        }/>
-const Switcher     = () => <CreateComponent mdPath={ require('./../../content/switcher.md')      }/>
-const Forms        = () => <CreateComponent mdPath={ require('./../../content/forms.md')         }/>
-const Styling      = () => <CreateComponent mdPath={ require('./../../content/styling.md')       }/>
-const Maping       = () => <CreateComponent mdPath={ require('./../../content/maping.md')        }/>
-const Routing      = () => <CreateComponent mdPath={ require('./../../content/routing.md')       }/>
-const Lifecycle    = () => <CreateComponent mdPath={ require('./../../content/lifecycle.md')     }/>
-const Page404      = () => <CreateComponent mdPath={ require('./../../content/page404.md')       }/>
+const Home         = () => <CrComp mdPath={ require('./../../content/home.md')          }/>
+const BaseTemplate = () => <CrComp mdPath={ require('./../../content/base-template.md') }/>
+const Configs      = () => <CrComp mdPath={ require('./../../content/configs.md')       }/>
+const Components   = () => <CrComp mdPath={ require('./../../content/components.md')    }/>
+const Props        = () => <CrComp mdPath={ require('./../../content/props.md')         }/>
+const State        = () => <CrComp mdPath={ require('./../../content/state.md')         }/>
+const Jsx          = () => <CrComp mdPath={ require('./../../content/jsx.md')           }/>
+const Events       = () => <CrComp mdPath={ require('./../../content/events.md')        }/>
+const Switcher     = () => <CrComp mdPath={ require('./../../content/switcher.md')      }/>
+const Forms        = () => <CrComp mdPath={ require('./../../content/forms.md')         }/>
+const Styling      = () => <CrComp mdPath={ require('./../../content/styling.md')       }/>
+const Maping       = () => <CrComp mdPath={ require('./../../content/maping.md')        }/>
+const Routing      = () => <CrComp mdPath={ require('./../../content/routing.md')       }/>
+const Lifecycle    = () => <CrComp mdPath={ require('./../../content/lifecycle.md')     }/>
+const Page404      = () => <CrComp mdPath={ require('./../../content/page404.md')       }/>
 
 export default () => <main className='markdown-body'>
   <Switch>

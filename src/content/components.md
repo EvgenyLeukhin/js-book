@@ -6,7 +6,7 @@ import React from 'react'
 
 export default class Someclass extends React.Component {
   state = { ... }
-  someProp = () => ...
+  someProp = () => ... // class method
 
   render() {
     return(

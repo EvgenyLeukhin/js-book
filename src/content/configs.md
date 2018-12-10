@@ -402,12 +402,13 @@ const PATH = path.join(__dirname, './dist');
 server.use(compression());
 server.use(express.static(PATH));
 
-server.listen(PORT, () => {
-  console.log(chalk.green('Express-server is running up'));
-  console.log('------------------------------------');
-  console.log(`[MODE]    ` + chalk.yellow.bold('PRODUCTION'));
-  console.log('[Folder]  Serving files from:' + chalk.blue('./dist'));
-  console.log(`[Local]   ` + chalk.blue.underline.bold('http://localhost:' + PORT));
-});
+server.listen(PORT, () => console.log(`
+  ${chalk.green('Express-server is running up ...')}
+  ---------------------------------------
+  [MODE]       ${chalk.yellow.bold('PRODUCTION')}
+  [Folder]     Serving files from:' ${chalk.cyan('./dist')}
+  [URL]        ${chalk.blue.underline.bold('http://localhost:' + PORT)}
+`)
+);
 
 ```
