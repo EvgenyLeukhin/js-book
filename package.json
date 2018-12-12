@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/EvgenyLeukhin/react-book/issues"
   },
-  "homepage": "https://github.com/EvgenyLeukhin/react-book#readme",
+  "homepage": "https://github.com/EvgenyLeukhin/react-book/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "github-markdown-css": "^2.10.0",
