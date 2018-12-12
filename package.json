@@ -19,9 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/EvgenyLeukhin/react-book.git"
   },
-  "keywords": [],
+  "keywords": ["react"],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EvgenyLeukhin/react-book/issues"
   },
