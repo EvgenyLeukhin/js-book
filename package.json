@@ -12,7 +12,8 @@
     "delete-build": "rimraf public",
     "install-packages-npm": "npm install",
     "install-packages-yarn": "yarn install",
-    "delete-packages": "rimraf node_modules"
+    "delete-packages": "rimraf node_modules",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/EvgenyLeukhin/react-book#readme",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "github-markdown-css": "^2.10.0",
     "normalize.css": "^8.0.0",
     "react": "^16.6.0",
