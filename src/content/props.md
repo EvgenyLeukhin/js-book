@@ -133,23 +133,3 @@ class Some2 extends React.Component {
 export default Some2;
 {/* <Some name='John' age='32'> */ }
 ```
-
-## Bind
-```js
-class App extends Component {
-
-  writeName = (name) => alert(`Hello, ${name}!`);
-
-  render() {
-    return (
-      <div>
-        {/* 1 aproach - better way */}
-        <SomeComponent click={this.writeName.bind(this, 'Zhenia')} />
-        {/* 2 aproach  - 1 is better */}
-        <SomeComponent click={() => writeName('Zhenia')} />
-      </div>
-    );
-  }
-}
-```
-

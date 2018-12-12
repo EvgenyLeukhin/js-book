@@ -30,3 +30,23 @@ export default class App extends React.Component {
   }
 }
 ```
+
+## Bind
+```js
+class App extends Component {
+
+  writeName = (name) => alert(`Hello, ${name}!`);
+
+  render() {
+    return (
+      <div>
+        {/* 1 aproach - better way */}
+        <SomeComponent click={this.writeName.bind(this, 'Zhenia')} />
+        <SomeComponent click={this.writeName.bind(this, name)} />
+        {/* 2 aproach  - 1 is better */}
+        <SomeComponent click={() => writeName('Zhenia')} />
+      </div>
+    );
+  }
+}
+```
