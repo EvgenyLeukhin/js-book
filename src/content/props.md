@@ -94,9 +94,10 @@ const Some1 = props => {
   )
 }
 
+{/* <Some name='Your name' age='32'> */}
 Some1.defaultProps = {
   name: 'Your name',
-  age: 00,
+  age: 32,
 };
 
 Some1.propTypes = {
@@ -104,8 +105,7 @@ Some1.propTypes = {
   age: propTypes.number,
 }
 
-export default Some;
-{/* <Some name='John' age='32'> */}
+export default Some1;
 
 
 

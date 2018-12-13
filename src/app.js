@@ -12,6 +12,8 @@ import Layout from './components/Layout'
 import './style.scss'
 
 // global js
+// import 'github-markdown-css';
+
 
 
 ReactDOM.render(

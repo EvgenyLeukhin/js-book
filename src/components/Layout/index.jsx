@@ -6,14 +6,21 @@ import Routes from './../Routes'
 
 export default class Layout extends React.Component {
   state = {
-    showAside: true,
+    showAside: false,
     name: 'John Smith',
   }
   toggleSidebar = () => this.setState({showAside: !this.state.showAside})
 
+  hideAside = () => {
+    if (this.state.showAside) {
+      this.setState({showAside: false})
+    }
+  }
+
+
   render() {
     return(
-      <div className="wrapper">
+      <div className="wrapper" onClick={this.hideAside}>
         <Header/>
         <Aside
           hideAside={!this.state.showAside}

@@ -6,9 +6,9 @@ changeName = () => this.setState({ some: 'Some another'})
 ...
 <h1 onClick={this.changeName}>{this.state.some}</h1>)
 ```
+
 ## onChange 
 ```js
-
 export default class App extends React.Component {
 
   state = {
@@ -31,22 +31,81 @@ export default class App extends React.Component {
 }
 ```
 
+## Toggle
+```js
+{this.state.showContacts ? 
+    <React.Fragment>
+      <p>{email}</p>
+      <p>{city}</p>
+    </React.Fragment> : null
+  }
+```
+
+## Event object
+```js
+writeEvent  = (e) => console.log(e);
+
+// show current element
+writeTarget = (e) => console.log(e.target);
+
+// show current value in element
+writeTarget = (e) => console.log(e.target.value);
+
+```
+
 ## Bind
 ```js
-class App extends Component {
+// need to bind
+someFunc() {console.log(123)}
+onClick={this.someFunc.bind(this)}
 
-  writeName = (name) => alert(`Hello, ${name}!`);
+// don't need to bind (arrow func)
+someFunc = () => {console.log(123)}
+onClick={this.someFunc}
+```
+
+## Show some component data
+```js
+showId = (id) => { alert(id);}
+
+// when maping component
+click={this.showId.bind(this, items.id)}
+
+```
+
+## Delete item
+```js
+class Events extends Component {
+  // переносим json в state
+  state = { 
+    contacts: dataJson.contacts,
+  }
+
+  deleteItem = (id) => {
+    const { contacts } = this.state;
+
+    // фильтруем через id
+    const newContacts = contacts.filter(item => {
+      return item.id !== id;
+    });
+    this.setState({contacts: newContacts});
+  }
 
   render() {
+    const {contacts} = this.state;
     return (
       <div>
-        {/* 1 aproach - better way */}
-        <SomeComponent click={this.writeName.bind(this, 'Zhenia')} />
-        <SomeComponent click={this.writeName.bind(this, name)} />
-        {/* 2 aproach  - 1 is better */}
-        <SomeComponent click={() => writeName('Zhenia')} />
+        {contacts.map((items)  => (
+          <Contacts 
+            key={items.id}
+            contactsData={items}
+            
+            // удаление по клику
+            click={this.deleteItem.bind(this, items.id)}
+          />
+        ))}
       </div>
-    );
+    )
   }
 }
 ```
