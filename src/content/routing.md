@@ -71,3 +71,13 @@ export default () => <ul className='links-list'>
 </ul>
 
 ```
+## Props
+```js
+<Route path='/post/:id'/>
+
+// id страницы
+props.match.params.id;
+
+// redirect 
+props.history.push('/');
+```

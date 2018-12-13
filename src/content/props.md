@@ -36,6 +36,20 @@ import React from 'react'
 export default props => <div>{props.something}</div>
 ```
 
+## Props for logic 
+```js
+const Some = ({ item, important = false }) => {
+  const style = {
+    important ? 'tomato' : 'black'
+  }
+  return(
+    <span style={style}>{item}</span>
+  )
+}
+
+<Some item='Some text' important />
+```
+
 ## Connect func-props to class
 ```js
 import React from 'react'

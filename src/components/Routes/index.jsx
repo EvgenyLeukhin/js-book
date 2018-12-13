@@ -19,6 +19,8 @@ const Styling      = () => <CrComp mdPath={ require('./../../content/styling.md'
 const OutputData   = () => <CrComp mdPath={ require('./../../content/output-data.md')   }/>
 const Routing      = () => <CrComp mdPath={ require('./../../content/routing.md')       }/>
 const Lifecycle    = () => <CrComp mdPath={ require('./../../content/lifecycle.md')     }/>
+const Server       = () => <CrComp mdPath={ require('./../../content/server.md')        }/>
+const ContexApi    = () => <CrComp mdPath={ require('./../../content/contex-api.md')    }/>
 const Page404      = () => <CrComp mdPath={ require('./../../content/page404.md')       }/>
 
 export default () => <main className='markdown-body'>
@@ -37,6 +39,8 @@ export default () => <main className='markdown-body'>
     <Route path='/output-data'   component={OutputData}/>
     <Route path='/routing'       component={Routing}/>
     <Route path='/lifecycle'     component={Lifecycle}/>
+    <Route path='/server'        component={Server}/>
+    <Route path='/contex-api'    component={ContexApi}/>
     <Route                       component={Page404} />
   </Switch>
 </main>

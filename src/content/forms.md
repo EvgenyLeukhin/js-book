@@ -98,3 +98,7 @@ class Form extends Component {
 
 export default Form;
 ```
+# Shortcut for onChange forms
+```js
+  onChange = e => this.setState({ [e.target.name]: e.target.value });
+```

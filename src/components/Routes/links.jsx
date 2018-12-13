@@ -23,5 +23,7 @@ export default () => <ul className='links-list'>
   <li><NavLink to='/transitions'   activeStyle={styles}>Transitions</NavLink></li>
   <li><NavLink to='/routing'       activeStyle={styles}>Routing</NavLink></li>
   <li><NavLink to='/lifecycle'     activeStyle={styles}>Lifecycle</NavLink></li>
+  <li><NavLink to='/server'        activeStyle={styles}>Server</NavLink></li>
+  <li><NavLink to='/contex-api'    activeStyle={styles}>Contex API</NavLink></li>
   <li><NavLink to='/redux'         activeStyle={styles}>Redux</NavLink></li>
 </ul>
