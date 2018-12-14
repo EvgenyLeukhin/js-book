@@ -1,6 +1,7 @@
 # Server
 
 ## Fetch API - React Server API (standart)
+Сетевой код нужно изолировать в отдельный класс (ServerAPI)
 
 ### Выполнение запроса (Promise)
 ```js
@@ -131,6 +132,7 @@ class Example extends Component {
   API = new ServerAPI();
 
   state = {
+    loading: true, 
     name: null,
     height: null,
     mass: null,
@@ -143,24 +145,34 @@ class Example extends Component {
     this.getDataToComponent();
   }
 
+  // Функция при ошибке ответа с сервера
+  onError = () => { alert('Page Not Found'); }
+
   // функция запрос данных
   getDataToComponent = () => {
-   const id = Math.floor(Math.random() * 15 + 1);
+    this.setState({loading: true})
+    
+    const id = Math.floor(Math.random() * 15 + 1);
+    // const id = 150;
     this.API
       .getHero(id)
       .then(heroObj => {
         this.setState({
+          loading: false,
           name: heroObj.name,
           height: heroObj.height,
           mass: heroObj.mass,
           hair_color: heroObj.hair_color,
         })
       })
+      // запустит обработчик ошибок, если не загрузятся даные
+      .catch(this.onError)
   }
 
 
   render() {
-    const {name, height, mass, hair_color} = this.state;
+    const {loading, name, height, mass, hair_color} = this.state;
+
     return (
       <div>
         <button 
@@ -169,10 +181,17 @@ class Example extends Component {
           Get data from server
         </button>
 
-        <p>Name:       <b>{name}</b></p>
-        <p>Height:     <b>{height}</b></p>
-        <p>Mass:       <b>{mass}</b></p>
-        <p>Hair color: <b>{hair_color}</b></p>
+        {
+          loading ? 
+            <p>Loading ... </p> : 
+
+            <React.Fragment>
+              <p>Name:       <b>{name}</b></p>
+              <p>Height:     <b>{height}</b></p>
+              <p>Mass:       <b>{mass}</b></p>
+              <p>Hair color: <b>{hair_color}</b></p>
+            </React.Fragment> 
+        }
       </div>
     )
   }
