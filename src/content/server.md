@@ -94,3 +94,89 @@ getRequest.getAllHeros().then(body => {
 
 export default ServerAPI;
 ```
+
+### Load data from API to a component
+```js
+import React, { Component } from 'react';
+
+// API
+class ServerAPI extends Component {
+
+  _apiBase = 'https://swapi.co/api';
+
+  // шаблон запросов
+  async getResource(url) {
+    // запрос по url 
+    const res = await fetch(`${this._apiBase}${url}`);
+    // в случае 404
+    if (!res.ok) {
+      throw new Error(`Couldn't fetch ${url}, Status ${res.status}`);
+    }
+    // в случае ок
+    return await res.json();
+  };
+
+  async getAllHeros() {
+    const res = await this.getResource('/people/');
+    return res.results;
+  }
+
+  getHero(id) { return this.getResource(`/people/${id}`) }
+}
+
+
+// Компонент, использующий API
+class Example extends Component {
+  // инициализация API в компоненте
+  API = new ServerAPI();
+
+  state = {
+    name: null,
+    height: null,
+    mass: null,
+    hair_color: null,
+  }
+
+  // делать запрос сразу при инициализации 
+  constructor() {
+    super();
+    this.getDataToComponent();
+  }
+
+  // функция запрос данных
+  getDataToComponent = () => {
+   const id = Math.floor(Math.random() * 15 + 1);
+    this.API
+      .getHero(id)
+      .then(heroObj => {
+        this.setState({
+          name: heroObj.name,
+          height: heroObj.height,
+          mass: heroObj.mass,
+          hair_color: heroObj.hair_color,
+        })
+      })
+  }
+
+
+  render() {
+    const {name, height, mass, hair_color} = this.state;
+    return (
+      <div>
+        <button 
+          style={{ background: 'tomato', cursor: 'pointer' }}
+          onClick={this.getDataToComponent}>
+          Get data from server
+        </button>
+
+        <p>Name:       <b>{name}</b></p>
+        <p>Height:     <b>{height}</b></p>
+        <p>Mass:       <b>{mass}</b></p>
+        <p>Hair color: <b>{hair_color}</b></p>
+      </div>
+    )
+  }
+}
+
+export default Example;
+```
