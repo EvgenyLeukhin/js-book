@@ -80,4 +80,11 @@ props.match.params.id;
 
 // redirect 
 props.history.push('/');
+
+// роутинг по id
+<Route path='/products/:id' component={Products}/>
+<Route path='/products/:id'   component={ProductsList}/>
+
+// роутинг c render
+<Route path='/products/:id' render={() => <ProductDetails />} />
 ```

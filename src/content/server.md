@@ -133,6 +133,7 @@ class Example extends Component {
 
   state = {
     loading: true, 
+    error: null,
     name: null,
     height: null,
     mass: null,
