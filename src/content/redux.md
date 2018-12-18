@@ -16,7 +16,7 @@ State в Redux все компоненты могут только читать,
 
 **mapStateToProps** - (Функция), которая вызывается из компонента, возвращает дынные из store (пробрасывает props в компонент). Какие данные внести компоненту в props из store.
 
-**mapDispatchToProps** - какие actions внести компоненту из reducers в props.
+**mapDispatchToProps** - ... какие actions внести компоненту из reducers в props из store.
 
 
 
@@ -99,6 +99,10 @@ const rootReducer = (state = initialState, action) => {
 ```
 
 ## 4.2 шаг - Создаём Actions
+```js
+case 'PLUS':  return { ...state, counter: ++state.counter };
+case 'MINUS': return { ...state, counter: --state.counter };
+```
 
 ## 4.3 шаг - Множественные Reducer-ы
 ```js
@@ -110,4 +114,28 @@ export const rootReducer = combineReducers({
   page: pageReducer,
   user: userReducer,
 })
+```
+
+## 5 шаг - Подключение компонента к store
+```js
+import { connect } from 'react-redux';
+
+// Вытаскивает данные из store
+const mapStateToProps = store => {
+  return { counter: store.counter }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    plus:  () => dispatch({ type: 'PLUS' }),
+    minus: () => dispatch({ type: 'MINUS' }),
+  };
+};
+  // ... //
+<p>{this.props.counter}</p>
+<button onClick={this.props.plus}>+</button>
+<button onClick={this.props.minus}>-</button>
+  // ... //
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)
 ```
