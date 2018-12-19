@@ -18,12 +18,6 @@ State в Redux все компоненты могут только читать,
 
 **mapDispatchToProps** - ... какие actions внести компоненту из reducers в props из store.
 
-
-
-
-
-
-
 ## 1 шаг - Устанавливаем библиотеки
 ```npm i --save redux react-redux```
 
@@ -41,34 +35,26 @@ import { Provider } from 'react-redux';
 ```
 После этого каждый React-компонент может подключаться к глобальному store, с помощью функции <b>connect</b> 
 
-## 3.1 шаг - Создаём Redux-store
+## 3 шаг - Создаём Redux-store
+store это функция, которая принимает Reducer
 ```js
-import { Provider as Redux } from 'react-redux';
-import store from './store.js';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-<Provider store={store}>
+import rootReducer from './rootReducer.js';
+import enhancer from './enhancer.js';
+
+<Provider store={createStore(rootReducer, enhancer)}>
   <Router><App/></Router>
 </Provider>
 ```
 
-store это функция, которая принимает Reducer
-```js
-// store.js 
-import { createStore } from 'redux';
-import rootReducer from './reducer.js';
-
-export default createStore(rootReducer);
-```
-
-## 3.2 шаг - Подключаем Redux-dev-tools
+## 4 шаг - enhancer.js (Подключаем Redux-dev-tools)
 ```npm i --save-dev redux-thunk```
 ```js
-// store.js 
-import { createStore, compose, applyMiddleware } from 'redux';
-import rootReducer from './reducer.js';
+import {compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-// with ReduxDevTools
 const composeEnhancers = typeof window === 'object' &&
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
@@ -76,16 +62,15 @@ const composeEnhancers = typeof window === 'object' &&
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-export default createStore(rootReducer, enhancer);
+export default enhancer;
 ```
 В режиме разработке данный store также будет доступен Redux-dev-tools в браузере
 
-## 4.1 шаг - Создаём Reducer
+## 5.1 шаг - rootReducer.js (Создаём Reducer)
 Reducer это самая главная функция в Redux, которая принимает начальный state и actions.
 Actions это объект, имеющий много типов (types), при проверке которых и происходит изменение state.
 Вся логика состояния приложения находится здесь. По умолчанию возвращает исходный(начальный) state.
 ```js
-// reducer.js
 import initialState from './initial-state.json';
 
 const rootReducer = (state = initialState, action) => {
@@ -95,16 +80,28 @@ const rootReducer = (state = initialState, action) => {
 
     default: return state;
   }
-}
+};
+
+export default rootReducer;
 ```
 
-## 4.2 шаг - Создаём Actions
+## 5.2 шаг - Создаём Actions
 ```js
+// ... //
+
 case 'PLUS':  return { ...state, counter: ++state.counter };
 case 'MINUS': return { ...state, counter: --state.counter };
+
+// ... //
+```
+Лучше записывать названия actions в переменные, чтобы IDE подсвечивала ошибки (если записывать строками, то подсвечивать не будет).
+
+```js
+const PLUS = 'PLUS';
+const MINUS = 'MINUS';
 ```
 
-## 4.3 шаг - Множественные Reducer-ы
+## 5.3 шаг - Множественные Reducer-ы
 ```js
 import { combineReducers } from 'redux'
 import { pageReducer } from './pageReducer'
@@ -116,15 +113,16 @@ export const rootReducer = combineReducers({
 })
 ```
 
-## 5 шаг - Подключение компонента к store
+## 6 шаг - Подключение компонента к store
 ```js
 import { connect } from 'react-redux';
 
-// Вытаскивает данные из store
+// Вытаскивает данные из store в props компонента
 const mapStateToProps = store => {
-  return { counter: store.counter }
-}
+  return { counter: store.counter };
+};
 
+// Вытаскивает actions из store в props компонента
 const mapDispatchToProps = dispatch => {
   return {
     plus:  () => dispatch({ type: 'PLUS' }),
@@ -137,5 +135,6 @@ const mapDispatchToProps = dispatch => {
 <button onClick={this.props.minus}>-</button>
   // ... //
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+// Подключение компонента к store (connect)
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
