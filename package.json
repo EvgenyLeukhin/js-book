@@ -1,8 +1,9 @@
 {
   "name": "react-book",
   "version": "1.0.0",
+  "private": true,
+  "homepage": "https://EvgenyLeukhin.github.io/react-book",
   "description": "My learning react-repo",
-  "main": "src/index.js",
   "scripts": {
     "start": "npm run develop",
     "develop": "webpack-dev-server --config=./webpack.dev.js --open google-chrome",
@@ -25,7 +26,6 @@
   "bugs": {
     "url": "https://github.com/EvgenyLeukhin/react-book/issues"
   },
-  "homepage": "https://evgenyleukhin.github.io/react-book",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "github-markdown-css": "^2.10.0",
