@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     path: paths.DIST,
-    publicPath: '/'
+    publicPath: ''
   },
 
   resolve: { extensions: ['.js', '.jsx'] },
