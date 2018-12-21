@@ -113,7 +113,7 @@ export const rootReducer = combineReducers({
 })
 ```
 
-## 6 шаг - Подключение компонента к store
+## 6.1 шаг - Подключение компонента к store
 ```js
 import { connect } from 'react-redux';
 
@@ -137,4 +137,31 @@ const mapDispatchToProps = dispatch => {
 
 // Подключение компонента к store (connect)
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+```
+
+## 6.2 шаг - bindActionCreators
+Можно сократить код по внедрению actions в компонент
+```js
+// actions.js
+export const some1 = () => ({ type: 'SOME1' });
+export const some2 = () => ({ type: 'SOME2' });
+export const some3 = (payload) => ({ type: 'SOME3', payload });
+
+// component
+import { bindActionCreators } from 'redux';
+import * as actions from './actions';
+
+
+const mapDispatchToProps = dispatch => {
+  const  { some1, some2, some3 } = bindActionCreators(actions, dispatch);
+  return { some1, some2, some3 }
+};
+
+// 1 shortcut (импортнуться все actions из actions.js)
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(actions, dispatch);
+};
+
+// 2 shortcut (передавать все actions напрямую в connect)
+export default connect(mapStateToProps, actions)(App);
 ```
