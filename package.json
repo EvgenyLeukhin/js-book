@@ -9,7 +9,6 @@
     "develop": "webpack-dev-server --config=./webpack.dev.js --open google-chrome",
     "build": "webpack --config=./webpack.prod.js",
     "serve": "node server.js --open google-chrome",
-    "build-and-serve": "npm run build && npm run serve",
     "delete-build": "rimraf public",
     "install-packages-npm": "npm install",
     "install-packages-yarn": "yarn install",

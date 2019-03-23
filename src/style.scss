@@ -1,11 +1,9 @@
 * { box-sizing: border-box; }
+
 $title-color: maroon;
 
 @import "~normalize.css";
 @import "~github-markdown-css";
-@import "scss/layout";
-@import "scss/adaptive";
-
 
 .markdown-body {
   h1 {

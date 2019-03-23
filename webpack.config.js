@@ -13,7 +13,16 @@ module.exports = {
     publicPath: ''
   },
 
-  resolve: { extensions: ['.js', '.jsx'] },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    alias: {
+      Webpack:     path.resolve(__dirname, 'src', 'content/webpack'),
+      React:       path.resolve(__dirname, 'src', 'content/react'),
+      JS:          path.resolve(__dirname, 'src', 'content/js'),
+      NodeJs:      path.resolve(__dirname, 'src', 'content/nodejs'),
+      Components:  path.resolve(__dirname, 'src', 'components'),
+    }
+  },
 
   module: {
     rules: [
