@@ -3,24 +3,26 @@
 ## src/app.js
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Layout from './components/Layout'
+import Layout from 'Components/Layout';
 
 // global fonts
+import './js/fonts.js';
 ...
 
 // global css
-import './style.scss'
+import './style.scss';
 
 // global js
+import './js/global.js';
 ...
 
 ReactDOM.render(
   <Layout/>,
   document.getElementById('app')
-)
+);
 ```
 
 ## src/index.html

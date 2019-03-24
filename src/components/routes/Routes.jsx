@@ -12,6 +12,9 @@ const Webpack = () => <MdComp mdPath={ require('Webpack/index.md') }/>;
 const NodeJs  = () => <MdComp mdPath={ require('NodeJs/index.md') } />;
 
 // react-pages
+const ReactTemplate = () => <MdComp mdPath={ require('React/template.md') }/>;
+const ReactComponents = () => <MdComp mdPath={ require('React/components.md') }/>;
+const ReactProps = () => <MdComp mdPath={ require('React/props.md') }/>;
 
 // js-pages
 
@@ -27,6 +30,7 @@ const WpHtml    = () => <MdComp mdPath={ require('Webpack/html.md') }/>;
 const WpServer  = () => <MdComp mdPath={ require('Webpack/server.md') }/>;
 const WpEslint  = () => <MdComp mdPath={ require('Webpack/eslint.md') }/>;
 const WpPlugins = () => <MdComp mdPath={ require('Webpack/plugins.md') }/>;
+const WpEditor  = () => <MdComp mdPath={ require('Webpack/editor.md') }/>;
 
 // nodejs-pages
 
@@ -42,6 +46,9 @@ const Routes = () => {
         <Route path='/nodejs'  component={NodeJs} />
 
         {/* react-pages */}
+        <Route path='/react-template' component={ReactTemplate} />
+        <Route path='/react-components' component={ReactComponents} />
+        <Route path='/react-props' component={ReactProps} />
 
 
         {/* wp-pages */}
@@ -56,6 +63,7 @@ const Routes = () => {
         <Route path='/wp-plugins' component={WpPlugins} />
         <Route path='/wp-eslint'  component={WpEslint} />
         <Route path='/wp-server'  component={WpServer} />
+        <Route path='/wp-editor'  component={WpEditor} />
 
       </Switch>
     </main>

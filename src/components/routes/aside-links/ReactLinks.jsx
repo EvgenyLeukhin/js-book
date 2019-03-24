@@ -10,7 +10,9 @@ const styles = {
 export const ReactLinks = () => {
   return (
     <Fragment>
-      <li><NavLink to='/base-template' activeStyle={styles}>Base template</NavLink></li>
+      <li><NavLink to='/react-template' activeStyle={styles}>Template</NavLink></li>
+      <li><NavLink to='/react-components' activeStyle={styles}>Components</NavLink></li>
+      <li><NavLink to='/react-props' activeStyle={styles}>Props</NavLink></li>
       {/* <li><NavLink to='/configs'       activeStyle={styles}>Configs</NavLink></li>
       <li><NavLink to='/components'    activeStyle={styles}>Components</NavLink></li>
       <li><NavLink to='/jsx'           activeStyle={styles}>JSX & Images</NavLink></li>

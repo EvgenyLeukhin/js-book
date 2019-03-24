@@ -1,18 +1,16 @@
 # Props
 ## Props in classes
 ```js
-import React from 'react'
+import React from 'react';
 
 class SomeClass1 extends React.Component {
   render() {
-    return( 
+    return ( 
       <div>
-
         <b>{this.props.prop1}</b>
         <b>{this.props.prop2}</b>
-
       </div>
-    )
+    );
   }
 }
 
@@ -23,17 +21,14 @@ export default class SomeClass2 extends React.Component {
     )
   }
 }
-
-
-
 ```
 
 ## Props in funcs
 ```js
 // someComponent.jsx
-import React from 'react'
+import React from 'react';
 
-export default props => <div>{props.something}</div>
+export default props => <div>{props.something}</div>;
 ```
 
 ## Props for logic 
@@ -42,9 +37,9 @@ const Some = ({ item, important = false }) => {
   const style = {
     important ? 'tomato' : 'black'
   }
-  return(
+  return (
     <span style={style}>{item}</span>
-  )
+  );
 }
 
 <Some item='Some text' important />

@@ -2,23 +2,38 @@
 ## Class-based components (can have state)
 
 ```js
-import React from 'react'
+import React, { Component } from 'react';
 
-export default class Someclass extends React.Component {
+class Someclass extends Component {
   state = { ... }
-  someProp = () => ... // class method
+
+  classMethod = () => ... 
 
   render() {
-    return(
+    return (
       <div className="wrapper"> ... </div>
-    )
+    );
   }
 }
+
+export default Someclass;
 ```
 
 ## Function-based components (pure-function)
 ```js
-import React from 'react'
+import React from 'react';
+
+const SomeFunc = () => {
+  return (
+    <div className='wrapper'>+++</div>
+  );
+}
+
+export default SomeFunc;
+
+
+// short way
+import React from 'react';
 
 export default () => <div className='wrapper'>
   ...
@@ -28,51 +43,60 @@ export default () => <div className='wrapper'>
 <br>
 ## Nested components
 ### Classes
+
 ```js
-import React from 'react'
+import React, { Component } from 'react';
 
-class SomeClass1 extends React.Component {
+class SomeClass1 extends Component {
   render() {
-    return(
+    return (
       <div className="some-class1"> ... </div>
-    )
+    );
   }
 }
 
-class SomeClass2 extends React.Component {
+class SomeClass2 extends Component {
   render() {
-    return(
+    return (
       <div className="some-class2"> ... </div>
-    )
+    );
   }
 }
 
-export default class SomeClass3 extends React.Component {
+class SomeClass3 extends Component {
   render() {
-    return(
+    return (
       <div>
         <SomeClass1/>
         <SomeClass2/>
       </div>
-    )
+    );
   }
 }
+
+export default SomeClass3;
 ```
+
 ### Functions
 ```js
-import React from 'react'
+import React from 'react';
 
-const SomeComponent1 = () => <div>...</div>
-const SomeComponent2 = () => <div>...</div>
+const SomeComponent1 = () => <div>...</div>;
+const SomeComponent2 = () => <div>...</div>;
 
-export default () => <div>
-  <SomeComponent1/>
-  <SomeComponent2/>
-</div>
+const SomeComponent3 = () => (
+  <div>
+    <SomeComponent1/>
+    <SomeComponent2/>
+  </div>
+);
+
+export default SomeClass3;
 ```
+
 ### Old-school classes
 ```js
-class Someclass2 extends Someclass {
+class Someclass2 extends Component {
   constructor(props) {
     super(props);
     this.prop3 = 'Some property';

@@ -17,3 +17,25 @@ npm i --save-dev file-loader
   },
 ...
 ```
+
+## fonts.js
+```
+import '../fonts/UniNeue/500/UniNeueBook.woff2';
+import '../fonts/UniNeue/500/UniNeueBook.woff';
+import '../fonts/UniNeue/500/UniNeueBook.ttf';
+```
+
+## fonts.scss
+```css
+@font-face {
+  font-family: 'Uni Neue';
+  src:
+    local('Uni Neue'),
+    local('Uni_Neue'),
+    local('Uni-Neue'),
+    url('fonts/UniNeue/500/UniNeueBook.woff2') format('woff2'),
+    url('fonts/UniNeue/500/UniNeueBook.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+```
