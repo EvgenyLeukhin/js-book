@@ -7,12 +7,11 @@ const styles = {
   textShadow: '0 0 15px #000'
 };
 
-const ReactLinks = () => {
+export const ReactLinks = () => {
   return (
     <Fragment>
-      <li><NavLink to='/' exact        activeStyle={styles}>Home</NavLink></li>
       <li><NavLink to='/base-template' activeStyle={styles}>Base template</NavLink></li>
-      <li><NavLink to='/configs'       activeStyle={styles}>Configs</NavLink></li>
+      {/* <li><NavLink to='/configs'       activeStyle={styles}>Configs</NavLink></li>
       <li><NavLink to='/components'    activeStyle={styles}>Components</NavLink></li>
       <li><NavLink to='/jsx'           activeStyle={styles}>JSX & Images</NavLink></li>
       <li><NavLink to='/props'         activeStyle={styles}>Props & Proptypes</NavLink></li>
@@ -26,9 +25,9 @@ const ReactLinks = () => {
       <li><NavLink to='/routing'       activeStyle={styles}>Routing</NavLink></li>
       <li><NavLink to='/lifecycle'     activeStyle={styles}>Lifecycle</NavLink></li>
       <li><NavLink to='/server'        activeStyle={styles}>Server</NavLink></li>
-      <li><NavLink to='/redux'         activeStyle={styles}>Redux</NavLink></li>
+      <li><NavLink to='/redux'         activeStyle={styles}>Redux</NavLink></li> */}
     </Fragment>
-  )
-}
+  );
+};
 
 export default ReactLinks;

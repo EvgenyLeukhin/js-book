@@ -1,8 +1,23 @@
-@media screen and (max-width: 1000px) {
+@media (max-width: 1300px) {
+  .app-wrapper {
+    & > main {
+      padding-left: 220px;
+    }
+  }
+}
+
+
+@media (max-width: 1000px) {
   .app-wrapper {
     & > main {
       width: 100%;
       min-width: 320px;
+    }
+
+    .markdown-body {
+      h1 { font-size: 20px; }
+      h2 { font-size: 18px; }
+      h3 { font-size: 16px; }
     }
   }
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import cln from 'classnames';
 import Links from './Links';
 
-
 const Aside = props => {
   const { isShow, toggleSidebar, page } = props;
 
@@ -15,6 +14,6 @@ const Aside = props => {
       <i onClick={toggleSidebar} />
     </aside>
   );
-}
+};
 
 export default Aside;

@@ -14,7 +14,7 @@ class Layout extends React.Component {
 
   toggleSidebar = () => {
     const { showAside } = this.state;
-    this.setState({ showAside: !showAside })
+    this.setState({ showAside: !showAside });
   }
 
   render() {
@@ -37,7 +37,7 @@ class Layout extends React.Component {
 
         <Routes />
       </div>
-    )
+    );
   }
 }
 

@@ -7,11 +7,11 @@ import NodeJsLinks from '../../routes/aside-links/NodeJsLinks';
 
 const Links = ({ page }) => {
   switch (page) {
-    case 'js-page':      return <JSLinks      />
-    case 'webpack-page': return <WebpackLinks />
-    case 'react-page':   return <ReactLinks   />
-    case 'nodejs-page':  return <NodeJsLinks  />
+    case 'js-page':      return <JSLinks />;
+    case 'webpack-page': return <WebpackLinks />;
+    case 'react-page':   return <ReactLinks />;
+    case 'nodejs-page':  return <NodeJsLinks />;
   }
-}
+};
 
 export default Links;

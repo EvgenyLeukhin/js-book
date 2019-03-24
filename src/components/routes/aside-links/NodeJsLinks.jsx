@@ -12,7 +12,7 @@ const NodeJsLinks = () => {
     <Fragment>
       <li><NavLink to='/123' exact activeStyle={styles}>NodeJsLinks</NavLink></li>
     </Fragment>
-  )
-}
+  );
+};
 
 export default NodeJsLinks;

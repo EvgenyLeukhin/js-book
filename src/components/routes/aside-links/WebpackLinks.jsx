@@ -10,9 +10,19 @@ const styles = {
 const WebpackLinks = () => {
   return (
     <Fragment>
-      <li><NavLink to='/123' exact activeStyle={styles}>WebpackLinks</NavLink></li>
+      <li><NavLink to='/wp-install' exact activeStyle={styles}>Install</NavLink></li>
+      <li><NavLink to='/wp-config' activeStyle={styles}>Config</NavLink></li>
+      <li><NavLink to='/wp-js' activeStyle={styles}>JS-Babel</NavLink></li>
+      <li><NavLink to='/wp-css' activeStyle={styles}>CSS</NavLink></li>
+      <li><NavLink to='/wp-html' activeStyle={styles}>HTML</NavLink></li>
+      <li><NavLink to='/wp-img' activeStyle={styles}>Images</NavLink></li>
+      <li><NavLink to='/wp-fonts' activeStyle={styles}>Fonts</NavLink></li>
+      <li><NavLink to='/wp-md' activeStyle={styles}>Markdown</NavLink></li>
+      <li><NavLink to='/wp-plugins' activeStyle={styles}>Plugins</NavLink></li>
+      <li><NavLink to='/wp-eslint' activeStyle={styles}>ESLint</NavLink></li>
+      <li><NavLink to='/wp-server' activeStyle={styles}>Server</NavLink></li>
     </Fragment>
-  )
-}
+  );
+};
 
 export default WebpackLinks;
