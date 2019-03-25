@@ -5,8 +5,10 @@ const MdComp = props => (
   <div dangerouslySetInnerHTML={{__html: props.mdPath.__content }} />
 );
 
+import qwe from 'React/index.md';
+
 // main pages //
-const Home    = () => <MdComp mdPath={ require('React/index.md') } />;
+const Home    = () => <MdComp mdPath={ qwe } />;
 const JS      = () => <MdComp mdPath={ require('JS/index.md') } />;
 const Webpack = () => <MdComp mdPath={ require('Webpack/index.md') }/>;
 const NodeJs  = () => <MdComp mdPath={ require('NodeJs/index.md') } />;

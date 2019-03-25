@@ -3,7 +3,7 @@
 npm i --save-dev file-loader
 ```
 
-## Config
+## Config (common)
 ```js
 ...
   {

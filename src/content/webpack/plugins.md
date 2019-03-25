@@ -1,10 +1,15 @@
-# webpack-merge
+# Install
 ```
 npm i --save-dev 
   webpack-merge
-  webpack-bar
+  webpackbar
   clean-webpack-plugin
+  compression-webpack-plugin
+  favicons-webpack-plugin
+  webpack-bundle-analyzer
+  copy-webpack-plugin
 ```
+# webpack-merge
 ## webpack.config.js
 ```js
   ... // common configs
@@ -12,8 +17,8 @@ npm i --save-dev
 
 ## webpack.dev.js
 ```js
-const merge             = require('webpack-merge');
-const common            = require('./webpack.config.js');
+const merge  = require('webpack-merge');
+const common = require('./webpack.config.js');
 
 const development = {
   ...
@@ -24,8 +29,8 @@ module.exports = merge(common, development);
 
 ## webpack.prod.js
 ```js
-const merge             = require('webpack-merge');
-const common            = require('./webpack.config.js');
+const merge  = require('webpack-merge');
+const common = require('./webpack.config.js');
 
 const production = {
   ...
@@ -60,7 +65,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 # compression-webpack-plugin
 ```js
-  const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 ...
   new CompressionPlugin({ algorithm: 'gzip' }),
 ...
@@ -70,7 +75,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 # favicons-webpack-plugin
 ```js
-  const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 ...
   new FaviconsWebpackPlugin({
       logo: './static/img/favicon.png',
@@ -85,7 +90,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 # webpack-bundle-analyzer
 ```js
-  const BundleAnalyzerPlugin = 
+const BundleAnalyzerPlugin = 
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 ...
   new BundleAnalyzerPlugin({
@@ -99,7 +104,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 # copy-webpack-plugin
 ```js
-  const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 ...
   new CopyWebpackPlugin([
     { from: 'src/scss/no-script.css', to: '' },

@@ -1,8 +1,11 @@
 ## base template
 
-Config file is a simple js-object
+***Config file is a simple js-object***
 
 ```js
+const plugins = require('plugins');
+...
+
 module.exports = {
   mode: ...,    // 'production' || 'development'
 
@@ -45,7 +48,7 @@ const paths = {
 ...
 ```
 
-## Dev-server
+## Dev-server (dev)
 ```js
 ...
   mode: 'development',
@@ -63,7 +66,7 @@ const paths = {
 ...
 ```
 
-## Resolve with alias
+## Resolve with alias (common)
 ```js
 ...
   resolve: {
