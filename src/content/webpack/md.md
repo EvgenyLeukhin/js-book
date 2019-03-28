@@ -1,10 +1,12 @@
-# Install
+# Markdown
+
+## Install
 ```
   npn i --save-dev 
   markdown-with-front-matter-loader
 ```
 
-# Config
+## Config
 ```js
 ...
   {
@@ -14,9 +16,9 @@
 ...
 ```
 
-# Usage
+## Usage
 
-## file.md
+### file.md
 ```md
 ---
 name: Winston the Bulldog
@@ -33,7 +35,7 @@ I LIKE TO EAT CATS
 
 ```
 
-## blog.js
+### blog.js
 ```js
 import file from './content/file.md';
 

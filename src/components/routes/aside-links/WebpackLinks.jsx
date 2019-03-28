@@ -22,6 +22,7 @@ const WebpackLinks = () => {
       <li><NavLink to='/wp-eslint' activeStyle={styles}>ESLint</NavLink></li>
       <li><NavLink to='/wp-server' activeStyle={styles}>Server</NavLink></li>
       <li><NavLink to='/wp-editor' activeStyle={styles}>Editor</NavLink></li>
+      <li><NavLink to='/wp-structure' activeStyle={styles}>Structure</NavLink></li>
     </Fragment>
   );
 };

@@ -1,3 +1,5 @@
+# Config
+
 ## base template
 
 ***Config file is a simple js-object***

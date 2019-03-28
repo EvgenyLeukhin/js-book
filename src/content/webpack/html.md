@@ -1,3 +1,5 @@
+# HTML
+
 ## Install
 ```
 npm i --save-dev html-webpack-plugin

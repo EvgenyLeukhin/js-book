@@ -1,4 +1,5 @@
-# Install
+# Plugins
+## Install
 ```
 npm i --save-dev 
   webpack-merge
@@ -9,8 +10,8 @@ npm i --save-dev
   webpack-bundle-analyzer
   copy-webpack-plugin
 ```
-# webpack-merge
-## webpack.config.js
+## <mark>webpack-merge</mark>
+### webpack.config.js
 ```js
   ... // common configs
 ```
@@ -27,7 +28,7 @@ const development = {
 module.exports = merge(common, development);
 ```
 
-## webpack.prod.js
+### webpack.prod.js
 ```js
 const merge  = require('webpack-merge');
 const common = require('./webpack.config.js');
@@ -41,7 +42,7 @@ module.exports = merge(common, production);
 
 ***
 
-# webpack-bar
+## <mark>webpack-bar</mark>
 ```js
 const WebpackBar = require('webpackbar');
 
@@ -52,7 +53,7 @@ const WebpackBar = require('webpackbar');
 
 ***
 
-# clean-webpack-plugin
+## <mark>clean-webpack-plugin</mark>
 ```js
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -63,7 +64,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 ***
 
-# compression-webpack-plugin
+## <mark>compression-webpack-plugin</mark>
 ```js
 const CompressionPlugin = require('compression-webpack-plugin');
 ...
@@ -73,7 +74,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 ***
 
-# favicons-webpack-plugin
+## <mark>favicons-webpack-plugin</mark>
 ```js
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 ...
@@ -88,7 +89,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 ***
 
-# webpack-bundle-analyzer
+## <mark>webpack-bundle-analyzer</mark>
 ```js
 const BundleAnalyzerPlugin = 
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -102,7 +103,7 @@ const BundleAnalyzerPlugin =
 
 ***
 
-# copy-webpack-plugin
+## <mark>copy-webpack-plugin</mark>
 ```js
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 ...

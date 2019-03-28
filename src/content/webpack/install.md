@@ -1,3 +1,5 @@
+# Install
+
 ## Init project
 `npm init -y`
 

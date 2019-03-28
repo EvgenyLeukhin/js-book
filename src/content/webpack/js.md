@@ -1,3 +1,5 @@
+# JS-Babel
+
 ## Install
 ```
 npm i --save-dev 
@@ -10,7 +12,7 @@ npm i --save-dev
   uglifyjs-webpack-plugin
 ```
 
-## Babel-loader
+## Config (common)
 ```js
 ...
   {
@@ -21,7 +23,7 @@ npm i --save-dev
 ...
 ```
 
-## Config prod
+## Config-prod
 ```js
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 ...
