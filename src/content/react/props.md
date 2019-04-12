@@ -14,13 +14,15 @@ class SomeClass1 extends React.Component {
   }
 }
 
-export default class SomeClass2 extends React.Component {
+class SomeClass2 extends React.Component {
   render() {
-    return( 
+    return ( 
       <SomeClass1 prop1='value1' prop2='value2'/>
-    )
+    );
   }
 }
+
+export default SomeClass2;
 ```
 
 ## Props in funcs
@@ -56,11 +58,12 @@ export default class Someclass extends React.Component {
   }
   render() {
     const something = 'something'
-    return( 
+    return ( 
       <div>
-        <SomeComponent something='something' />
-        <SomeComponent something={something} />
-        <SomeComponent something={this.state.something} />
+        <SomeComponent someString='something' />
+        <SomeComponent someValue={something} />
+        <SomeComponent someData={this.state.something} />
+        <SomeComponent someMethod={this.someMethod} />
       </div>
     )
   }
@@ -79,11 +82,11 @@ import SomeComponent from './someComponent'
 
 export default class Someclass extends React.Component {
   render() {
-    return( 
+    return ( 
       <div>
         <SomeComponent>Some children text</SomeComponent>
       </div>
-    )
+    );
   }
 }
 ```
