@@ -17,6 +17,7 @@ const NodeJs  = () => <MdComp path={ require('NodeJs/index.md') } />;
 const ReactTemplate   = () => <MdComp path={ require('React/template.md') }/>;
 const ReactComponents = () => <MdComp path={ require('React/components.md') }/>;
 const ReactProps      = () => <MdComp path={ require('React/props.md') }/>;
+const ReactProptypes  = () => <MdComp path={ require('React/proptypes.md') }/>;
 const ReactJSX        = () => <MdComp path={ require('React/jsx.md') }/>;
 const ReactState      = () => <MdComp path={ require('React/state.md') }/>;
 const ReactOutputData = () => <MdComp path={ require('React/output-data.md') }/>;
@@ -72,6 +73,7 @@ const Routes = () => {
         <Route path='/react-template'   component={ReactTemplate} />
         <Route path='/react-components' component={ReactComponents} />
         <Route path='/react-props'      component={ReactProps} />
+        <Route path='/react-proptypes'  component={ReactProptypes} />
         <Route path='/react-jsx'        component={ReactJSX} />
         <Route path='/react-state'      component={ReactState} />
         <Route path='/react-output-data'component={ReactOutputData} />

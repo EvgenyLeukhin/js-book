@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 class Someclass extends Component {
   state = { ... }
 
-  classMethod = () => ... 
+  classMethod = () => { ... } 
 
   render() {
     return (
@@ -25,14 +25,14 @@ import React from 'react';
 
 const SomeFunc = () => {
   return (
-    <div className='wrapper'>+++</div>
+    <div className='wrapper'>...</div>
   );
 }
 
 export default SomeFunc;
 
 
-// short way
+// short way - anonimus func
 import React from 'react';
 
 export default () => <div className='wrapper'>
@@ -94,7 +94,7 @@ const SomeComponent3 = () => (
 export default SomeClass3;
 ```
 
-### Old-school classes
+### Old-school classes (with constructor)
 ```js
 class Someclass2 extends Component {
   constructor(props) {

@@ -5,6 +5,7 @@
 npm i --save-dev 
   @babel/core 
   @babel/plugin-proposal-class-properties
+  @babel/plugin-proposal-optional-chaining
   @babel/plugin-syntax-dynamic-import
   @babel/preset-env 
   @babel/preset-react
@@ -56,6 +57,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
   ],
   "plugins": [
     "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import"
   ],
   "ignore": [ "/node_modules/" ]

@@ -42,7 +42,7 @@ module.exports = merge(common, production);
 
 ***
 
-## <mark>webpack-bar</mark>
+## <mark>webpack-bar</mark> (prod)
 ```js
 const WebpackBar = require('webpackbar');
 
@@ -53,7 +53,7 @@ const WebpackBar = require('webpackbar');
 
 ***
 
-## <mark>clean-webpack-plugin</mark>
+## <mark>clean-webpack-plugin</mark> (prod)
 ```js
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -64,7 +64,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 ***
 
-## <mark>compression-webpack-plugin</mark>
+## <mark>compression-webpack-plugin</mark> (prod)
 ```js
 const CompressionPlugin = require('compression-webpack-plugin');
 ...
@@ -74,7 +74,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 ***
 
-## <mark>favicons-webpack-plugin</mark>
+## <mark>favicons-webpack-plugin</mark> (prod)
 ```js
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 ...
@@ -89,7 +89,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 ***
 
-## <mark>webpack-bundle-analyzer</mark>
+## <mark>webpack-bundle-analyzer</mark> (prod)
 ```js
 const BundleAnalyzerPlugin = 
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -103,7 +103,7 @@ const BundleAnalyzerPlugin =
 
 ***
 
-## <mark>copy-webpack-plugin</mark>
+## <mark>copy-webpack-plugin</mark> (prod)
 ```js
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 ...

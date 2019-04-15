@@ -5,10 +5,12 @@ import React from 'react';
 
 class SomeClass1 extends React.Component {
   render() {
-    return ( 
+    const { prop1, prop2 } = this.props;
+    return (
+
       <div>
-        <b>{this.props.prop1}</b>
-        <b>{this.props.prop2}</b>
+        <b>{prop1}</b>
+        <b>{prop2}</b>
       </div>
     );
   }
@@ -17,7 +19,7 @@ class SomeClass1 extends React.Component {
 class SomeClass2 extends React.Component {
   render() {
     return ( 
-      <SomeClass1 prop1='value1' prop2='value2'/>
+      <SomeClass1 prop1='value1' prop2='value2' />
     );
   }
 }
@@ -27,10 +29,23 @@ export default SomeClass2;
 
 ## Props in funcs
 ```js
-// someComponent.jsx
-import React from 'react';
+const Some = props => (
+  <div>{props.something}</div>
+);
 
-export default props => <div>{props.something}</div>;
+// short way
+const Some = ({ something }) => (
+  <div>{something}</div>
+);
+
+// with destruct
+const Some = props => {
+  const { something } = props;
+  return(
+    <div>{something}</div>
+  );
+}
+
 ```
 
 ## Props for logic 
@@ -39,23 +54,27 @@ const Some = ({ item, important = false }) => {
   const style = {
     important ? 'tomato' : 'black'
   }
+
   return (
-    <span style={style}>{item}</span>
+    <span style={{ color: {style} }}>{item}</span>
   );
 }
 
-<Some item='Some text' important />
+...
+
+<Some item='Some text' important={true} />
 ```
 
 ## Connect func-props to class
 ```js
-import React from 'react'
-import SomeComponent from './someComponent'
+import React from 'react';
+import SomeComponent from './someComponent';
 
 export default class Someclass extends React.Component {
   state = {
     something: 'something'
   }
+
   render() {
     const something = 'something'
     return ( 
@@ -72,13 +91,13 @@ export default class Someclass extends React.Component {
 ## props.children
 ```js
 // someComponent.jsx
-import React from 'react'
+import React from 'react';
 
 export default props => <div>{props.children}</div>
 
 // someClass.jsx
-import React from 'react'
-import SomeComponent from './someComponent'
+import React from 'react';
+import SomeComponent from './someComponent';
 
 export default class Someclass extends React.Component {
   render() {
@@ -89,59 +108,4 @@ export default class Someclass extends React.Component {
     );
   }
 }
-```
-## Proptypes
-```js
-// props in rfc
-import React from 'react'
-import propTypes from 'prop-types'
-
-const Some1 = props => {
-  const {name, age} = props;
-  return (
-    <div>
-      <p>{name}</p>
-      <p>{age}</p>
-    </div>
-  )
-}
-
-{/* <Some name='Your name' age='32'> */}
-Some1.defaultProps = {
-  name: 'Your name',
-  age: 32,
-};
-
-Some1.propTypes = {
-  name: propTypes.string.isRequired,
-  age: propTypes.number,
-}
-
-export default Some1;
-
-
-
-// props in rcc
-import React from 'react'
-import PropTypes from 'prop-types'
-
-class Some2 extends React.Component {
-
-  // можно вставлять сюда или как в примере выше
-  static propTypes = {
-    name: PropTypes.string.isRequired
-  }
-  
-  render() {
-    const {name, age} = this.props;
-    return (
-      <div>
-        <p>{name}</p>
-        <p>{age}</p>
-      </div>
-    )
-  }
-}
-export default Some2;
-{/* <Some name='John' age='32'> */ }
 ```
