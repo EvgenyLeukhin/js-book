@@ -8,7 +8,7 @@ npm i --save-dev prop-types
 ## Proptypes checking
 ```js
 import React from 'react';
-import propTypes from 'prop-types';
+import T from 'prop-types';
 
 const Some1 = props => {
   const { name, age } = props;
@@ -27,21 +27,21 @@ Some.defaultProps = {
 };
 
 Some.propTypes = {
-  name: propTypes.string.isRequired,
-  age: propTypes.number,
+  name: T.string.isRequired,
+  age: T.number,
 }
 
 export default Some1;
 ```
 
-## Proptypes checking 2 (in classes with static)
+## Proptypes checking 2 (in CBC with static)
 ```js
 import React from 'react';
-import propTypes from 'prop-types';
+import T from 'prop-types';
 
 class Some2 extends React.Component {
 
-  static propTypes = {
+  static T = {
     name: propTypes.string.isRequired,
     age: propTypes.number,
   }

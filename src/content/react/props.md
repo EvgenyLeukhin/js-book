@@ -1,5 +1,5 @@
 # Props
-## Props in classes
+## Props in CBC
 ```js
 import React from 'react';
 
@@ -7,7 +7,6 @@ class SomeClass1 extends React.Component {
   render() {
     const { prop1, prop2 } = this.props;
     return (
-
       <div>
         <b>{prop1}</b>
         <b>{prop2}</b>
@@ -27,18 +26,18 @@ class SomeClass2 extends React.Component {
 export default SomeClass2;
 ```
 
-## Props in funcs
+## Props in FBC
 ```js
 const Some = props => (
   <div>{props.something}</div>
 );
 
-// short way
+// short way with destruct
 const Some = ({ something }) => (
   <div>{something}</div>
 );
 
-// with destruct
+// or like this
 const Some = props => {
   const { something } = props;
   return(
@@ -48,7 +47,7 @@ const Some = props => {
 
 ```
 
-## Props for logic 
+## Props for a logic 
 ```js
 const Some = ({ item, important = false }) => {
   const style = {
@@ -65,7 +64,7 @@ const Some = ({ item, important = false }) => {
 <Some item='Some text' important={true} />
 ```
 
-## Connect func-props to class
+## Connect FBC to CBC
 ```js
 import React from 'react';
 import SomeComponent from './someComponent';
@@ -76,7 +75,8 @@ export default class Someclass extends React.Component {
   }
 
   render() {
-    const something = 'something'
+    const something = 'something';
+
     return ( 
       <div>
         <SomeComponent someString='something' />
@@ -88,7 +88,7 @@ export default class Someclass extends React.Component {
   }
 }
 ```
-## props.children
+## Children
 ```js
 // someComponent.jsx
 import React from 'react';
@@ -99,7 +99,7 @@ export default props => <div>{props.children}</div>
 import React from 'react';
 import SomeComponent from './someComponent';
 
-export default class Someclass extends React.Component {
+class Someclass extends React.Component {
   render() {
     return ( 
       <div>
@@ -108,4 +108,6 @@ export default class Someclass extends React.Component {
     );
   }
 }
+
+export default Someclass;
 ```

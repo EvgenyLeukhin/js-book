@@ -12,10 +12,10 @@ export const ReactLinks = () => {
     <Fragment>
       <li><NavLink to='/react-template'    activeStyle={styles}>Template</NavLink></li>
       <li><NavLink to='/react-components'  activeStyle={styles}>Components</NavLink></li>
+      <li><NavLink to='/react-state'       activeStyle={styles}>State</NavLink></li>
       <li><NavLink to='/react-props'       activeStyle={styles}>Props</NavLink></li>
       <li><NavLink to='/react-proptypes'   activeStyle={styles}>PropTypes</NavLink></li>
       <li><NavLink to='/react-jsx'         activeStyle={styles}>JSX & Images</NavLink></li>
-      <li><NavLink to='/react-state'       activeStyle={styles}>State</NavLink></li>
       <li><NavLink to='/react-output-data' activeStyle={styles}>Output Data</NavLink></li>
       <li><NavLink to='/react-events'      activeStyle={styles}>Events</NavLink></li>
       <li><NavLink to='/react-switcher'    activeStyle={styles}>Switcher</NavLink></li>

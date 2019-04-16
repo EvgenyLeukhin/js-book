@@ -3,32 +3,9 @@ Only classes can have state
 
 ## State example
 ```js
-import React from 'react'
+import React from 'react';
 
-export default class StateClass extends React.Component {
-
-  state = {
-    name: 'John Smith',
-    age: 32,
-  }
-
-  render() {
-    return (
-      <div>
-        <p>{this.state.name}</p>
-        <p>{this.state.age}</p>
-      </div>
-    )
-  }
-}
-```
-
-## JS destructuring
-
-```js
-import React from 'react'
-
-export default class StateClass extends React.Component {
+class StateClass extends React.Component {
 
   state = {
     name: 'John Smith',
@@ -36,24 +13,25 @@ export default class StateClass extends React.Component {
   }
 
   render() {
-
-    const {name, age} = this.state
+    const { name, age } = this.state;
 
     return (
       <div>
-        <p>{name}</p>
-        <p>{age}</p>
+        <p>{ name }</p>
+        <p>{ age }</p>
       </div>
     )
   }
 }
+
+export default StateClass;
 ```
 
-## setState
+## setState method
 ```js
-import React from 'react'
+import React from 'react';
 
-export default class StateClass extends React.Component {
+class StateClass extends React.Component {
 
   state = {
     name: 'John Smith',
@@ -61,12 +39,12 @@ export default class StateClass extends React.Component {
   }
 
   someClassMethod = () => {
-    this.setState({ name: 'New Name' })
+    this.setState({ name: 'New Name' });
   };
 
   render() {
 
-    const {name, age} = this.state
+    const { name, age } = this.state;
 
     return (
       <div onClick={this.someClassMethod}>
@@ -76,4 +54,6 @@ export default class StateClass extends React.Component {
     )
   }
 }
+
+export default StateClass;
 ```

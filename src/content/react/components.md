@@ -1,5 +1,5 @@
 # Components
-## Class-based components (can have state)
+## Class-based components 'CBC' (can have state and props)
 
 ```js
 import React, { Component } from 'react';
@@ -19,7 +19,7 @@ class Someclass extends Component {
 export default Someclass;
 ```
 
-## Function-based components (pure-function)
+## Function-based components 'FBC', pure-function, return only JSX (can have props only)
 ```js
 import React from 'react';
 
@@ -42,7 +42,7 @@ export default () => <div className='wrapper'>
 
 <br>
 ## Nested components
-### Classes
+### Nested CBC
 
 ```js
 import React, { Component } from 'react';
@@ -77,7 +77,7 @@ class SomeClass3 extends Component {
 export default SomeClass3;
 ```
 
-### Functions
+### Nested FBC
 ```js
 import React from 'react';
 
