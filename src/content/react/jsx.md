@@ -35,23 +35,30 @@ class Someclass extends React.Component {
 export default Someclass;
 ```
 
-## Images in JSX
+## I. Images from import
 ```js
-import React from 'react'
-import Img from './some-img.png'
+import React from 'react';
+import Img from './some-img.png';
 
-
-export default () => <div>
-
-  <img src={Img} width='100' alt='Some alt text'/>
-
-  // or with require
-  <img src={require('./some-img.png')} width='100' alt='Some alt text'/>
-
-</div>
+export default () => (
+  <div>
+    <img src={Img} width='100' alt='Some alt text' />
+  </div>
+);
 ```
 
-## Backgound images
+## II. Images from require
+```js
+import React from 'react';
+
+export default () => (
+  <div>
+    <img src={require('./some-img.png')} width='100' alt='Some alt text' />
+  </div>
+);
+```
+
+## III. Images from backgroud-image
 ```js
   <div style={{ backgroundImage: require(`Images/icons/some.png }} />
 ``` 

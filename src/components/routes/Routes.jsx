@@ -1,14 +1,13 @@
 import React from 'react';
+import T from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
 const MdComp = ({ path }) => (
   <div dangerouslySetInnerHTML={{__html: path.__content }} />
 );
 
-import qwe from 'React/index.md';
-
 // main pages //
-const Home    = () => <MdComp path={ qwe } />;
+const Home    = () => <MdComp path={ require('React/index.md') } />;
 const JS      = () => <MdComp path={ require('JS/index.md') } />;
 const Webpack = () => <MdComp path={ require('Webpack/index.md') }/>;
 const NodeJs  = () => <MdComp path={ require('NodeJs/index.md') } />;
@@ -106,6 +105,10 @@ const Routes = () => {
       </Switch>
     </main>
   );
+};
+
+MdComp.propTypes = {
+  path: T.object,
 };
 
 export default Routes;

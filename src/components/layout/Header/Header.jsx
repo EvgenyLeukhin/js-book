@@ -1,4 +1,5 @@
 import React from 'react';
+import T from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Header= props => {
@@ -55,6 +56,14 @@ const Header= props => {
       </nav>
     </header>
   );
+};
+
+Header.propTypes = {
+  page: T.string,
+  JsClick: T.func,
+  WebpackClick: T.func,
+  ReactClick: T.func,
+  NodeJsClick: T.func,
 };
 
 export default Header;

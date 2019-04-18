@@ -52,7 +52,7 @@ const Some = props => {
 const Some = ({ item, important = false }) => {
   const style = {
     important ? 'tomato' : 'black'
-  }
+  };
 
   return (
     <span style={{ color: {style} }}>{item}</span>

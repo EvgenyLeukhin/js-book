@@ -1,4 +1,5 @@
 import React from 'react';
+import T from 'prop-types';
 
 import JSLinks from '../../routes/aside-links/JSLinks';
 import WebpackLinks from '../../routes/aside-links/WebpackLinks';
@@ -12,6 +13,10 @@ const Links = ({ page }) => {
     case 'react-page':   return <ReactLinks />;
     case 'nodejs-page':  return <NodeJsLinks />;
   }
+};
+
+Links.propTypes = {
+  page: T.string
 };
 
 export default Links;

@@ -17,8 +17,8 @@ class StateClass extends React.Component {
 
     return (
       <div>
-        <p>{ name }</p>
-        <p>{ age }</p>
+        <p>{name}</p>
+        <p>{age}</p>
       </div>
     )
   }

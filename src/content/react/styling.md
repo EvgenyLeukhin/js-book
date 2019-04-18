@@ -1,61 +1,70 @@
 # Styling
 
-## Component styles in separate css-file
+## I. Component styles in separate css-file (My choice)
 
 ```js
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import './style.scss';
+...
 ```
 
-## Inline styles
+## II. Inline styles
 
 ```js
-import React from 'react'
+import React from 'react';
 
-export default () => <div>
-  <p style={{color: 'red', fontSize: '16px'}}>Some text</p>
-</div>
-
-
-// or like this
-import React from 'react'
+export default () => (
+  <div>
+    <p style={{ color: 'red', fontSize: '16px' }}>Some text</p>
+  </div>
+);
+```
+or like this:
+```js
+import React from 'react';
 
 const styles = {
-  color: 'red', 
+  color: 'red',     // style.color = 'red';
   fontSize: '16px',
-}
+};
 
-export default () => <div>
-  <p style={styles}>Some text</p>
-</div>
+export default () => (
+  <div>
+    <p style={styles}>Some text</p>
+  </div>
+);
 ```
 
-## Css-modules
+## III. Css-modules - needs to re-config Webpack
 ```js
-import React from 'react'
-import classes from './styles.css'
+import React from 'react';
+import classes from './styles.css';
 
-export default () => <div>
-  <p className={classes.someClass}>Some text</p>
-</div>
-
-// // CSS-modules
-// {
-//   test: /\.css$/,
-//   use: [
-//     { loader: 'style-loader' },
-//     {
-//       loader: 'css-loader',
-//       query: {
-//        modules: true,
-//        localIndentName: "[name]__[local]__[hash:base64:8]"
-//       }
-//     }
-//   ]
-// }
+export default () => (
+  <div>
+    <p className={classes.someClass}>Some text</p>
+  </div>
+);
 ```
 
-## Glamour - can use all css-selectors
+Webpack config for css-files:
+```js
+{
+  test: /\.css$/,
+  use: [
+    { loader: 'style-loader' },
+    {
+      loader: 'css-loader',
+      query: {
+       modules: true,
+       localIndentName: "[name]__[local]__[hash:base64:8]"
+      }
+    }
+  ]
+}
+```
+
+## III. Inline-styling with Glamour (can use all css-selectors)
 ``` npm i --save-dev glamour ```
 ```js
 import React from 'react';
@@ -81,37 +90,9 @@ let someClass2 = css({
 });
 
 
-export default () => 
-
+export default () => (
   <div className={`${someClass1} ${someClass2}`}>
     <div className="test">Test content</div>
   </div>
-
-```
-
-## Change inline styling onClick
-
-```js
-class App extends Component {
-
-  contentToogle = () => {
-    if (true) {
-      style.backgroundColor = 'red';
-    }
-  }
-
-  render() {
-    const style = {
-      color: 'white',
-      backgroundColor: 'black'
-    };
-
-    return (
-      <button
-        style={style}
-        onClick={this.contentToogle}
-      >Show content</button>
-    );
-  }
-}
+);
 ```
