@@ -1,4 +1,4 @@
-# Components
+# Components (Компоненты)
 ## Class-based components 'CBC' (can have state and props)
 
 ```js

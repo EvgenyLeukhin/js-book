@@ -1,4 +1,4 @@
-# State
+# State (Состояние компонента)
 Only classes can have state
 
 ## State example
@@ -28,6 +28,7 @@ export default StateClass;
 ```
 
 ## setState method
+When state is changing always calles render-method and content is re-freshing
 ```js
 import React from 'react';
 

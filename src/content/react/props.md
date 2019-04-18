@@ -1,4 +1,4 @@
-# Props
+# Props (Свойства компонента)
 ## Props in CBC
 ```js
 import React from 'react';
