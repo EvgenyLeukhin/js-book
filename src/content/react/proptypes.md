@@ -5,7 +5,7 @@
 npm i --save-dev prop-types
 ```
 
-## Proptypes checking
+## Proptypes checking 1 (prefer method)
 ```js
 import React from 'react';
 import T from 'prop-types';
@@ -21,12 +21,12 @@ const Some1 = props => {
   );
 }
 
-Some.defaultProps = {
+Some1.defaultProps = {
   name: 'Your name',
   age: 32,
 };
 
-Some.propTypes = {
+Some1.propTypes = {
   name: T.string.isRequired,
   age: T.number,
 }

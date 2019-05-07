@@ -7,6 +7,8 @@
    
 `npm i --save-dev webpack webpack-cli webpack-dev-server`
 
+## package.json
+
 ```json
   "scripts": {
     "start": "npm run develop",

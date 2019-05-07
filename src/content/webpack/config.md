@@ -80,6 +80,7 @@ const paths = {
       }
     },
 ...
+import Home from 'Routes/home';
 ```
 
 ## Mode and output filename
