@@ -3,13 +3,7 @@ import T from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Header= props => {
-  const {
-    JsClick,
-    WebpackClick,
-    ReactClick,
-    NodeJsClick,
-    page
-  } = props;
+  const { JsClick, WebpackClick, ReactClick, NodeJsClick, page } = props;
 
   return (
     <header>
@@ -27,7 +21,7 @@ const Header= props => {
           </li>
           <li>
             <NavLink
-              className={page === 'webpack-page' ? 'current-page' : null}
+              className={page === 'webpack-page' ? 'current-page__done' : null}
               onClick={WebpackClick} to='/webpack'>Webpack
             </NavLink>
           </li>

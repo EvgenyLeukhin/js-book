@@ -1,17 +1,21 @@
 @media (max-width: 1300px) {
   .app-wrapper {
-    & > main {
-      padding-left: 220px;
+    aside {
+      & + main      { padding-left: 170px }
+      &.hide + main { padding-left: 15px; }
     }
   }
 }
 
-
 @media (max-width: 1000px) {
   .app-wrapper {
-    & > main {
+    main {
       width: 100%;
       min-width: 320px;
+    }
+
+    aside {
+      & + main { padding-left: 220px; }
     }
 
     .markdown-body {
@@ -19,5 +23,11 @@
       h2 { font-size: 18px; }
       h3 { font-size: 16px; }
     }
+  }
+}
+
+@media (max-width: 650px) {
+  .app-wrapper {
+    aside + main { padding-left: 15px; }
   }
 }

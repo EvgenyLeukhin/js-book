@@ -8,7 +8,7 @@ npm i --save-dev
 
 ```
 
-## webpack-config-dev
+## Config-dev  
 ```js
 ...
   {

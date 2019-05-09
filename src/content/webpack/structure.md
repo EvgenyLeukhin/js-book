@@ -1,4 +1,6 @@
 # Structure
+for React SPA
+
     .babelrc
     .eslintrc
     .eslintignore

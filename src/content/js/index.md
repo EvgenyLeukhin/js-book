@@ -1,1 +1,1 @@
-# JavaScript page
+# JavaScript

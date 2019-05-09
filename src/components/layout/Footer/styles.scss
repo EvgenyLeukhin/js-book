@@ -1,0 +1,14 @@
+footer {
+  margin-top: auto;
+  text-align: right;
+  a {
+    font-size: 1.25rem;
+    display: inline-flex;
+    padding: 10px;
+    text-decoration: none;
+    color: #61dafb;
+    &:hover {
+      color: #000;
+    }
+  }
+}

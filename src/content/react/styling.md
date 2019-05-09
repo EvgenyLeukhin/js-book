@@ -24,7 +24,7 @@ or like this:
 import React from 'react';
 
 const styles = {
-  color: 'red',     // style.color = 'red';
+  color: 'red',     // styles.color = 'red';
   fontSize: '16px',
 };
 
