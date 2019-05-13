@@ -40,6 +40,7 @@ const Some = ({ something }) => (
 // or like this
 const Some = props => {
   const { something } = props;
+  
   return(
     <div>{something}</div>
   );

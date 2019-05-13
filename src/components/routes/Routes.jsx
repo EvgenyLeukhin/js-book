@@ -15,54 +15,52 @@ import {
 
 } from './index';
 
-const Routes = () => {
-  return (
-    <main className='markdown-body'>
-      <Switch>
-        {/* main pages */}
-        <Route path='/' exact  component={ReacT} />
-        <Route path='/js'      component={JS} />
-        <Route path='/webpack' component={Webpack} />
-        <Route path='/nodejs'  component={NodeJs} />
+const Routes = () => (
+  <main className='markdown-body'>
+    <Switch>
+      {/* main pages */}
+      <Route path='/' exact  component={ReacT} />
+      <Route path='/js'      component={JS} />
+      <Route path='/webpack' component={Webpack} />
+      <Route path='/nodejs'  component={NodeJs} />
 
-        {/* react-pages */}
-        <Route path='/react-template'   component={ReactTemplate} />
-        <Route path='/react-components' component={ReactComponents} />
-        <Route path='/react-props'      component={ReactProps} />
-        <Route path='/react-proptypes'  component={ReactProptypes} />
-        <Route path='/react-jsx'        component={ReactJSX} />
-        <Route path='/react-state'      component={ReactState} />
-        <Route path='/react-output-data'component={ReactOutputData} />
-        <Route path='/react-events'     component={ReactEvents} />
-        <Route path='/react-switcher'   component={ReactSwitcher} />
-        <Route path='/react-forms'      component={ReactForms} />
-        <Route path='/react-styling'    component={ReactStyling} />
-        <Route path='/react-transitions'component={ReactProps} />
-        <Route path='/react-routing'    component={ReactRouting} />
-        <Route path='/react-lifecycle'  component={ReactLifecycle} />
-        <Route path='/react-server'     component={ReactServer} />
-        <Route path='/react-redux'      component={ReactRedux} />
+      {/* react-pages */}
+      <Route path='/react-template'   component={ReactTemplate} />
+      <Route path='/react-components' component={ReactComponents} />
+      <Route path='/react-props'      component={ReactProps} />
+      <Route path='/react-proptypes'  component={ReactProptypes} />
+      <Route path='/react-jsx'        component={ReactJSX} />
+      <Route path='/react-state'      component={ReactState} />
+      <Route path='/react-output-data'component={ReactOutputData} />
+      <Route path='/react-events'     component={ReactEvents} />
+      <Route path='/react-switcher'   component={ReactSwitcher} />
+      <Route path='/react-forms'      component={ReactForms} />
+      <Route path='/react-styling'    component={ReactStyling} />
+      <Route path='/react-transitions'component={ReactProps} />
+      <Route path='/react-routing'    component={ReactRouting} />
+      <Route path='/react-lifecycle'  component={ReactLifecycle} />
+      <Route path='/react-server'     component={ReactServer} />
+      <Route path='/react-redux'      component={ReactRedux} />
 
-        {/* wp-pages */}
-        <Route path='/wp-install'   component={WpInstall} />
-        <Route path='/wp-config'    component={WpConfig} />
-        <Route path='/wp-js'        component={WpJs} />
-        <Route path='/wp-css'       component={WpCss} />
-        <Route path='/wp-img'       component={WpImg} />
-        <Route path='/wp-fonts'     component={WpFonts} />
-        <Route path='/wp-md'        component={WpMd} />
-        <Route path='/wp-html'      component={WpHtml} />
-        <Route path='/wp-plugins'   component={WpPlugins} />
-        <Route path='/wp-eslint'    component={WpEslint} />
-        <Route path='/wp-editor'    component={WpEditor} />
-        <Route path='/wp-structure' component={WpStructure} />
+      {/* wp-pages */}
+      <Route path='/wp-install'   component={WpInstall} />
+      <Route path='/wp-config'    component={WpConfig} />
+      <Route path='/wp-js'        component={WpJs} />
+      <Route path='/wp-css'       component={WpCss} />
+      <Route path='/wp-img'       component={WpImg} />
+      <Route path='/wp-fonts'     component={WpFonts} />
+      <Route path='/wp-md'        component={WpMd} />
+      <Route path='/wp-html'      component={WpHtml} />
+      <Route path='/wp-plugins'   component={WpPlugins} />
+      <Route path='/wp-eslint'    component={WpEslint} />
+      <Route path='/wp-editor'    component={WpEditor} />
+      <Route path='/wp-structure' component={WpStructure} />
 
-        {/* nodejs-pages */}
-        <Route path='/nodejs-express' component={NodeJsExpress} />
+      {/* nodejs-pages */}
+      <Route path='/nodejs-express' component={NodeJsExpress} />
 
-      </Switch>
-    </main>
-  );
-};
+    </Switch>
+  </main>
+);
 
 export default Routes;

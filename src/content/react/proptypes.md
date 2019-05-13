@@ -67,7 +67,7 @@ import T from 'prop-types';
 
 ...
 
-SectionDetail.propTypes = {
+Someclass.propTypes = {
   someString: T.string.isRequired,
   someNumber: T.number,
   someBool: T.bool,
@@ -80,7 +80,7 @@ SectionDetail.propTypes = {
   some3: T.any.array,
 };
 
-SectionDetail.defaultProps = {
+Someclass.defaultProps = {
   someString: 'Your name',
 };
 ```
