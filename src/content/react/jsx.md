@@ -62,6 +62,7 @@ export default () => (
 ```js
   <div style={{ backgroundImage: require(`Images/icons/some.png }} />
 ``` 
+
 ```css
   background-image: url('~images/icons/calendar.svg');  
 ```
