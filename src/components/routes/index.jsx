@@ -19,8 +19,10 @@ export const ReactComponents = () => <MdComp path={ require('React/components.md
 export const ReactProps      = () => <MdComp path={ require('React/props.md') }/>;
 export const ReactProptypes  = () => <MdComp path={ require('React/proptypes.md') }/>;
 export const ReactJSX        = () => <MdComp path={ require('React/jsx.md') }/>;
+export const ReactImages     = () => <MdComp path={ require('React/images.md') }/>;
 export const ReactState      = () => <MdComp path={ require('React/state.md') }/>;
 export const ReactOutputData = () => <MdComp path={ require('React/output-data.md') }/>;
+export const ReactMapingData = () => <MdComp path={ require('React/maping-data.md') }/>;
 export const ReactEvents     = () => <MdComp path={ require('React/events.md') }/>;
 export const ReactSwitcher   = () => <MdComp path={ require('React/switcher.md') }/>;
 export const ReactForms      = () => <MdComp path={ require('React/forms.md') }/>;
