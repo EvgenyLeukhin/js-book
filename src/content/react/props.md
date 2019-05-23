@@ -1,4 +1,4 @@
-# Props (Свойства компонента)
+# Props (Свойства компонента) - Data chanels
 ## Props in CBC
 ```js
 import React from 'react';
@@ -48,7 +48,7 @@ const Some = props => {
 
 ```
 
-## Props for a logic 
+## Props for a logic (with default params)
 ```js
 const Some = ({ item, important = false }) => {
   const style = {
@@ -103,9 +103,9 @@ import SomeComponent from './someComponent';
 class Someclass extends React.Component {
   render() {
     return ( 
-      <div>
+      <>
         <SomeComponent>Some children text</SomeComponent>
-      </div>
+      </>
     );
   }
 }

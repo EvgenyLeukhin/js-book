@@ -11,7 +11,7 @@ import {
   NodeJsExpress,
 
   // react-pages
-  ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactState, ReactOutputData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactRouting, ReactLifecycle, ReactServer, ReactRedux,
+  ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactRouting, ReactLifecycle, ReactServer, ReactRedux,
 
 } from './index';
 
@@ -30,8 +30,10 @@ const Routes = () => (
       <Route path='/react-props'      component={ReactProps} />
       <Route path='/react-proptypes'  component={ReactProptypes} />
       <Route path='/react-jsx'        component={ReactJSX} />
+      <Route path='/react-images'     component={ReactImages} />
       <Route path='/react-state'      component={ReactState} />
       <Route path='/react-output-data'component={ReactOutputData} />
+      <Route path='/react-maping-data'component={ReactMapingData} />
       <Route path='/react-events'     component={ReactEvents} />
       <Route path='/react-switcher'   component={ReactSwitcher} />
       <Route path='/react-forms'      component={ReactForms} />

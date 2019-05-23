@@ -1,6 +1,6 @@
 # Styling
 
-## I. Component styles in separate css-file (My choice)
+## I. Component styles in separate css-file (my choice)
 
 ```js
 import React from 'react';
@@ -64,7 +64,7 @@ Webpack config for css-files:
 }
 ```
 
-## III. Inline-styling with Glamour (can use all css-selectors)
+## IV. Inline-styling with Glamour (can use all css-selectors)
 ``` npm i --save-dev glamour ```
 ```js
 import React from 'react';
