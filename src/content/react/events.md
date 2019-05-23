@@ -1,13 +1,14 @@
 # Events
-## onClick 
+## onClick (click or touch)
 ```js
 state = { some: 'Some' }
-changeName = () => this.setState({ some: 'Some another'})
+changeName = () => this.setState({ some: 'Some another'});
 ...
-<h1 onClick={this.changeName}>{this.state.some}</h1>)
+  <h1 onClick={this.changeName}>{this.state.some}</h1>)
+...
 ```
 
-## onChange 
+## onChange (change input value)
 ```js
 export default class App extends React.Component {
 
@@ -29,16 +30,6 @@ export default class App extends React.Component {
     );
   }
 }
-```
-
-## Toggle
-```js
-{this.state.showContacts ? 
-    <React.Fragment>
-      <p>{email}</p>
-      <p>{city}</p>
-    </React.Fragment> : null
-  }
 ```
 
 ## Event object
@@ -109,3 +100,4 @@ class Events extends Component {
   }
 }
 ```
+# onMouseLeave
