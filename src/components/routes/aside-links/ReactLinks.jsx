@@ -21,13 +21,13 @@ export const ReactLinks = () => {
       <li><NavLink to='/react-output-data' activeStyle={styles}>Output Data</NavLink></li>
       <li><NavLink to='/react-maping-data' activeStyle={styles}>Maping Data</NavLink></li>
       <li><NavLink to='/react-routing'     activeStyle={styles}>Routing</NavLink></li>
-      <li><NavLink to='/react-events'      activeStyle={styles}>Events</NavLink></li>
       <li><NavLink to='/react-switcher'    activeStyle={styles}>Switcher</NavLink></li>
-      <li><NavLink to='/react-forms'       activeStyle={styles}>Forms</NavLink></li>
-      <li><NavLink to='/react-transitions' activeStyle={styles}>Transitions</NavLink></li>
       <li><NavLink to='/react-lifecycle'   activeStyle={styles}>Lifecycle</NavLink></li>
-      <li><NavLink to='/react-server'      activeStyle={styles}>Server</NavLink></li>
       <li><NavLink to='/react-redux'       activeStyle={styles}>Redux</NavLink></li>
+      <li><NavLink to='/react-events'      activeStyle={styles}>Events</NavLink></li>
+      <li><NavLink to='/react-forms'       activeStyle={styles}>Forms</NavLink></li>
+      <li><NavLink to='/react-server'      activeStyle={styles}>Server</NavLink></li>
+      <li><NavLink to='/react-transitions' activeStyle={styles}>Transitions</NavLink></li>
     </Fragment>
   );
 };

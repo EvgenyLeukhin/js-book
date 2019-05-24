@@ -36,7 +36,7 @@ This object is immutable, we can't change this obejct after creation. We can cna
 
 ## JSX from const
 ```js
-import React from 'react'
+import React from 'react';
 
 class Someclass extends React.Component {
   render() {
