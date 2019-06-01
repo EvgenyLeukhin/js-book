@@ -37,6 +37,18 @@ export default class App extends React.Component {
 <h1 onMouseLeave={this.someFunc}>Some text</h1>
 ```
 
+## Event object
+```js
+writeEvent  = e => console.log(e);
+
+// show current element
+writeTarget = e => console.log(e.target);
+
+// show current value in element
+writeTarget = e => console.log(e.target.value);
+
+```
+
 ## Bind
 ```js
 // need to bind
@@ -67,3 +79,4 @@ showId = (id) => { alert(id); }
 click={this.showId.bind(this, items.id)}
 
 ```
+# onMouseLeave

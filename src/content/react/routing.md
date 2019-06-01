@@ -1,7 +1,7 @@
 # Routing
 ## Add routing
 ```js
-import { HashRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom';
 // or BrowserRouter
 ...
 
@@ -18,8 +18,8 @@ ReactDOM.render(
 
 ## ScrollToTop
 ```js
-import React from 'react'
-import { withRouter } from "react-router"
+import React from 'react';
+import { withRouter } from "react-router";
 
 class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
@@ -33,13 +33,13 @@ class ScrollToTop extends React.Component {
   }
 }
 
-export default withRouter(ScrollToTop)
+export default withRouter(ScrollToTop);
 ```
 
 ## Switch
 ```js
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 export default () => <main className='markdown-body'>
   <Switch>
@@ -54,8 +54,8 @@ export default () => <main className='markdown-body'>
 
 ## Navlinks
 ```js
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const styles = {
   fontWeight: 'bold',
