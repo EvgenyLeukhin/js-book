@@ -24,7 +24,7 @@ export default () => (
 
 ## III. Images from backgroud-image
 ```js
-  <div style={{ backgroundImage: require(`Images/icons/some.png }} />
+  <div style={{ backgroundImage: require('Images/icons/some.png') }} />
 ``` 
 
 ```css

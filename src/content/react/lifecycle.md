@@ -1,22 +1,20 @@
 # Lifecycle
+
+## render()
 ```js
-// =========================== LIFECYCLE  =========================== ->
-import React, { Component } from 'react';
-class Life extends Component {
-  // 1. get default props - ReactRouter
+render () { ... } // render jsx
+```
 
-  // 2. set default state
-  state = {some: 'Some'}
+## componentDidMount()
+```js
+// do something after render jsx
 
-  componentWillMount() { ... } // 3. do something before render jsx
+componentDidMount() {
+  // fetch data are here
+} 
+```
 
-  render() { // 4. render JSX
-    return( <h1>{this.state.some}</h1> );
-  }
-
-  componentDidMount() { ... } // 5. do something after render jsx
-}
-
-export default Life;
-// =========================== LIFECYCLE  =========================== -<
+## componentWillMount()
+```js
+componentWillMount() { ... } // do something before render jsx
 ```

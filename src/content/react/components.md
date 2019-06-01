@@ -31,6 +31,12 @@ const SomeFunc = () => {
 
 export default SomeFunc;
 
+// another syntax
+...
+function Footer(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+...
 
 // short way - anonimus func
 import React from 'react';

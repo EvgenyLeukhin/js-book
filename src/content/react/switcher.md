@@ -96,3 +96,13 @@ class App extends Component {
 }
 // =========================== CONTENT SWITCHER II (if) =========================== -<
 ```
+
+
+<!-- ## Toggle
+```js
+{this.state.showContacts ? 
+    <React.Fragment>
+      <p>{email}</p>
+      <p>{city}</p>
+    </React.Fragment> : null
+  } -->

@@ -6,6 +6,7 @@ $title-color: maroon;
 @import "~github-markdown-css";
 
 .markdown-body {
+  background: #d8f4f7;
   h1 {
     color: $title-color;
   }

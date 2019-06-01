@@ -1,4 +1,5 @@
 # Props (Свойства компонента) - Data chanels
+Props data can read only
 ## Props in CBC
 ```js
 import React from 'react';
