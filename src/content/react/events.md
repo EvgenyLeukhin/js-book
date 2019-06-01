@@ -17,7 +17,7 @@ export default class App extends React.Component {
     outputText: 'Some output text'
   }
 
-  dunamicOutput = (e) => {
+  dunamicOutput = e => {
     this.setState({ outputText: e.target.value }); // change state
     console.log(e.target.value); // output in console
   }
@@ -61,22 +61,21 @@ onClick={this.someFunc}
 ```
 ## Event object
 ```js
-writeEvent  = (e) => console.log(e);
+writeEvent  = e => console.log(e);
 
 // show current element
-writeTarget = (e) => console.log(e.target);
+writeTarget = e => console.log(e.target);
 
 // show current value in element
-writeTarget = (e) => console.log(e.target.value);
+writeTarget = e => console.log(e.target.value);
 
 ```
 
 ## Show some components prop-data
 ```js
-showId = (id) => { alert(id); }
+showId = id => { alert(id); }
 
 // when maping component
 click={this.showId.bind(this, items.id)}
 
 ```
-# onMouseLeave
