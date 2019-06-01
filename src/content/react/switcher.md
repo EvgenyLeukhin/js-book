@@ -1,4 +1,5 @@
 # Switchers
+Realize by state and setState-method
 
 ## ? operator
 ```js
@@ -103,13 +104,3 @@ class App extends Component {
   }
 }
 ```
-
-
-<!-- ## Toggle
-```js
-{this.state.showContacts ? 
-    <React.Fragment>
-      <p>{email}</p>
-      <p>{city}</p>
-    </React.Fragment> : null
-  } -->

@@ -14,7 +14,7 @@ changeName = () => this.setState({ some: 'Some another'})
 export default class App extends React.Component {
 
   state = {
-    outputText: 'Some output text'
+    outputText: ''
   }
 
   dunamicOutput = e => {
@@ -58,17 +58,6 @@ onClick={this.someFunc.bind(this)}
 // don't need to bind (arrow func)
 someFunc = () => {console.log(123)}
 onClick={this.someFunc}
-```
-## Event object
-```js
-writeEvent  = e => console.log(e);
-
-// show current element
-writeTarget = e => console.log(e.target);
-
-// show current value in element
-writeTarget = e => console.log(e.target.value);
-
 ```
 
 ## Show some components prop-data

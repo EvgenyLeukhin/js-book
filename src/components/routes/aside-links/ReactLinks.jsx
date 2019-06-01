@@ -22,12 +22,13 @@ const ReactLinks = () => (
     <li><NavLink to='/react-routing'     activeStyle={styles}>Routing</NavLink></li>
     <li><NavLink to='/react-events'      activeStyle={styles}>Events</NavLink></li>
     <li><NavLink to='/react-switcher'    activeStyle={styles}>Switcher</NavLink></li>
-    <li><NavLink to='/react-transitions' activeStyle={styles}>Transitions</NavLink></li>
-    <li><NavLink to='/react-lifecycle'   activeStyle={styles}>Lifecycle</NavLink></li>
+    <li><NavLink to='/react-transitions' activeStyle={styles}>Transitions X</NavLink></li>
     <li><NavLink to='/react-refs'        activeStyle={styles}>Refs</NavLink></li>
-    <li><NavLink to='/react-server'      activeStyle={styles}>Server API</NavLink></li>
     <li><NavLink to='/react-forms'       activeStyle={styles}>Forms</NavLink></li>
-    <li><NavLink to='/react-redux'       activeStyle={styles}>Redux</NavLink></li>
+    <li><NavLink to='/react-lifecycle'   activeStyle={styles}>Lifecycle</NavLink></li>
+    <li><NavLink to='/react-fetch'       activeStyle={styles}>Fetch</NavLink></li>
+    <li><NavLink to='/react-server'      activeStyle={styles}>Server API X</NavLink></li>
+    <li><NavLink to='/react-redux'       activeStyle={styles}>Redux X</NavLink></li>
   </Fragment>
 );
 

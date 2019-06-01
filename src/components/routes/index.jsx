@@ -27,9 +27,11 @@ export const ReactEvents     = () => <MdComp path={ require('React/events.md') }
 export const ReactSwitcher   = () => <MdComp path={ require('React/switcher.md') }/>;
 export const ReactForms      = () => <MdComp path={ require('React/forms.md') }/>;
 export const ReactStyling    = () => <MdComp path={ require('React/styling.md') }/>;
-// const ReactTransitions= () => <MdComp path={ require('React/transitions.md') }/>;
+export const ReactTransition = () => <MdComp path={ require('React/transition.md') }/>;
+export const ReactRefs       = () => <MdComp path={ require('React/refs.md') }/>;
 export const ReactRouting    = () => <MdComp path={ require('React/routing.md') }/>;
 export const ReactLifecycle  = () => <MdComp path={ require('React/lifecycle.md') }/>;
+export const ReactFetch      = () => <MdComp path={ require('React/fetch.md') }/>;
 export const ReactServer     = () => <MdComp path={ require('React/server.md') }/>;
 export const ReactRedux      = () => <MdComp path={ require('React/redux.md') }/>;
 

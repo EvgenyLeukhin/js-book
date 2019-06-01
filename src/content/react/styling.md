@@ -1,6 +1,6 @@
 # Styling
 
-## I. Component styles in separate css-file (my choice)
+## I. Component styles in separate css/scss-file (my choice)
 
 ```js
 import React from 'react';

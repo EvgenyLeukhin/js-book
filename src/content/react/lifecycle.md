@@ -10,11 +10,21 @@ render () { ... } // render jsx
 // do something after render jsx
 
 componentDidMount() {
-  // fetch data are here
+  // fetch data
+  // addEventListener
 } 
 ```
 
 ## componentWillMount()
 ```js
 componentWillMount() { ... } // do something before render jsx
+```
+
+## componentWillUnmount()
+```js
+// do something after render jsx
+
+componentWillUnmount() {
+  // removeEventListener
+} 
 ```
