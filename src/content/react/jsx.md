@@ -53,6 +53,17 @@ class Someclass extends React.Component {
 export default Someclass;
 ```
 
+## JSX from function
+```js
+const someJsx2 = () => {
+  return (
+    <h1>Some jsx content</h1>
+  );
+}
+...
+{someJsx2()}
+```
+
 ## Some js-code inside JSX with { }
 ```js
 import React from 'react';
