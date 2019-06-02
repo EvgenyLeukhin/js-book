@@ -1,66 +1,75 @@
+# Transitions
+
+## CSSTransition
+
 ```js
-import React, { Component } from 'react';
-import { Transition, CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 class Transitions extends Component {
-  state = {
-    show: true,
-    show2: true
-  }
+  state = { show: true }
   
   toggleText  = () => this.setState({show: !this.state.show});
-  toggleColor = () => this.setState({show2: !this.state.show2});
 
   render() {
-    const { show, show2 } = this.state;
-    const duration = 200;
-    const defaultStyle = {
-      transition: `opacity ${duration}ms ease-in-out`,
-      opacity: 0,
-    }
-
-    const transitionStyles = {
-      entering: { opacity: 0 },
-      entered:  { opacity: 1 },
-    };
+    const { show } = this.state;
 
     return (
       <>
-        {/* in style tag */}
-        <h2>&lt;Transition&gt;</h2>
-        <Transition in={show} timeout={duration}>
-          {(state) => (
-            <div style={{
-              ...defaultStyle,
-              ...transitionStyles[state]
-            }}>
-              I'm a fade Transition!
-            </div>
-          )}
-        </Transition>
-
-        <button onClick={this.toggleText}>{show ? 'Hide' : 'Show'}</button>
-        <hr/>
-
-
-        {/* css-classes */}
-        <h2>&lt;CSSTransition&gt;</h2>
         <CSSTransition
-          in={show2}
+          in={show}
           timeout={500}
           classNames="square"
         >
           <div className="square" />
         </CSSTransition>
-        <button onClick={this.toggleColor}>{show2 ? 'Red' : 'White'}</button>
-        <hr/>
 
-
-        <h2>&lt;TransitionGroup&gt;</h2>
-        <p>TODO</p>
+        <button onClick={this.toggleColor}>{show ? 'Red' : 'White'}</button>
       </>
     );
   }
 }
-export default Transitions;
+
+...
+```
+
+## Styles
+```scss
+.square {
+  // 0 - static styles
+  background: white;
+
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition-duration: .5s; // должно совпадать с timeout
+  transition-timing-function: ease;
+
+  // 0 ---*---> 1
+  // click I (start-IN) - промежуточный класс
+  &-exit-active {
+    background: yellow;
+  }
+
+  // 0 ------> 1*
+  &-exit-done {
+    background: red;
+  }
+
+  // 1 ---*---> 2
+  // click II (start-OUT) - промежуточный класс
+  &-enter-active {
+    background: orange;
+  }
+
+  // 1 ------> 2*
+  // fourth click (end-OUT)
+  &-enter-done {
+    background: white;
+  }
+}
+
+// цвета на 0 и на 2 должны совпадать
 ```

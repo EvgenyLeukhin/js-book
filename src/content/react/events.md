@@ -68,3 +68,35 @@ showId = id => { alert(id); }
 click={this.showId.bind(this, items.id)}
 
 ```
+## Listeners
+```js
+...
+class Resize extends Component {
+  state = {
+    windowWidth: null
+  };
+
+  resizeListener = () => {
+    let updateWidth  = window.innerWidth;
+    this.setState({ windowWidth: updateWidth });
+  };
+
+  componentDidMount() {
+    this.resizeListener();
+    window.addEventListener('resize', this.resizeListener);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resizeListener);
+  }
+
+  render() {
+    const { windowWidth } = this.state;
+
+    if (windowWidth > 600) { return(<Red />);   }
+    else                   { return(<Green />); }
+  };
+};
+
+...
+```

@@ -88,3 +88,14 @@ props.history.push('/');
 // роутинг c render
 <Route path='/some-route' render={() => <ProductDetails />} />
 ```
+
+## External links
+```js
+<a
+  href="https://evgenyleukhin.github.io/HTML-CSS-book/index.html"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  External link
+</a>
+```
