@@ -1,5 +1,5 @@
 # React
-A JavaScript library for building user interfaces
+A JavaScript library for building user interfaces.
 
 **React realize**: Load and output data (work with server), Fast routing with Virtual DOM, Re-usable components aproach, State and props manipulating, Many helpful plugins.
 
