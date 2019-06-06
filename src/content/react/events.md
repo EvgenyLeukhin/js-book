@@ -100,3 +100,17 @@ class Resize extends Component {
 
 ...
 ```
+
+## react-click-outside
+```js
+import clickOutsideHOC from 'react-onclickoutside';
+
+...
+handleClickOutside = () => {
+  this.setState({ open: false });
+};
+
+...
+
+export default clickOutsideHOC(User);
+```

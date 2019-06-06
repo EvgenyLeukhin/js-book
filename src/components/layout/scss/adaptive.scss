@@ -1,4 +1,4 @@
-@media (max-width: 1300px) {
+@media (max-width: 1220px) {
   .app-wrapper {
     aside {
       & + main      { padding-left: 170px }
@@ -7,7 +7,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .app-wrapper {
     main {
       width: 100%;
@@ -15,7 +15,7 @@
     }
 
     aside {
-      & + main { padding-left: 220px; }
+      & + main { padding-left: 180px; }
     }
 
     .markdown-body {
