@@ -15,6 +15,8 @@ import {
 
 } from './index';
 
+import Test from './../test';
+
 const Routes = () => (
   <main className='markdown-body'>
     <Switch>
@@ -62,6 +64,7 @@ const Routes = () => (
 
       {/* nodejs-pages */}
       <Route path='/nodejs-express' component={NodeJsExpress} />
+      <Route path='/test' component={Test} />
 
       {/* 404 page */}
       <Route render={() => <h1 style={{ paddingTop: 24 }}>404 - Page not found</h1>} />

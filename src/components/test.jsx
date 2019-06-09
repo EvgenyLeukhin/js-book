@@ -1,36 +1,21 @@
-# Fetch
+import React, { Component } from 'react';
 
-```js
-// api.js
-const baseURL = 'https://swapi.co/api';
-export default baseURL;
-...
-```
 
-```js
-// component.jsx
-...
-
-import baseUrl from 'api.js';
-
-class FetchPage extends Component {
-
+class Test extends Component {
   state = {
     people: [],
     loading: false,
     error: null,
   };
-
-  // fetch data after render
-  componentDidMount() { 
-    // this.fetchData();
+  componentDidMount() {
+    this.fetchData();
   }
 
   fetchData = () => {
     this.setState({ loading: true });
 
     // fetch url
-    fetch(`${baseUrl}/people/`)
+    fetch(`https://swapi.co/api/people/`)
 
       // return json
       .then(res => {
@@ -45,16 +30,15 @@ class FetchPage extends Component {
         this.setState({
           people: resJSON.results,
           loading: false,
-        })
+        });
       }
-    )
+      );
   };
 
   render() {
-    const { people, loading } = this.state;
-
+    const { people, loading, error } = this.state;
     return (
-      <>
+      <div>
         <button onClick={this.fetchData}>Fetch data</button>
 
         {
@@ -66,10 +50,10 @@ class FetchPage extends Component {
             </ul>
         }
         { error && <p>Error - Could not fetch</p> }
-      </>
+      </div>
     );
   }
 }
 
-export default FetchPage;
-```
+export default Test;
+
