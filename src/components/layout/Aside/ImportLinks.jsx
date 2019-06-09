@@ -1,10 +1,10 @@
 import React from 'react';
 import T from 'prop-types';
 
-import JSLinks from '../../routes/aside-links/JSLinks';
-import WebpackLinks from '../../routes/aside-links/WebpackLinks';
-import ReactLinks from '../../routes/aside-links/ReactLinks';
-import NodeJsLinks from '../../routes/aside-links/NodeJsLinks';
+import JSLinks      from '../../links/JSLinks';
+import WebpackLinks from '../../links/WebpackLinks';
+import ReactLinks   from '../../links/ReactLinks';
+import NodeJsLinks  from '../../links/NodeJsLinks';
 
 const Links = ({ page }) => {
   switch (page) {

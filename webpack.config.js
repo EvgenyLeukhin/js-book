@@ -21,7 +21,7 @@ module.exports = {
       React:       path.resolve(__dirname, 'src', 'content/react'),
       JS:          path.resolve(__dirname, 'src', 'content/js'),
       NodeJs:      path.resolve(__dirname, 'src', 'content/nodejs'),
-      Components:  path.resolve(__dirname, 'src', 'components'),
+      Components:  path.resolve(__dirname, 'src', 'components')
     }
   },
 

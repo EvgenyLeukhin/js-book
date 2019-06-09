@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Aside from './Aside';
-import Routes from './../routes';
+import Routes from './../Routes';
 
 import './scss/styles.scss';
 

@@ -1,14 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const styles = {
-  fontWeight: 'bold',
-  cursor: 'default',
-  textShadow: '0 0 15px #000'
-};
+import { styles } from 'Components/Consts';
 
 const ReactLinks = () => (
-  <Fragment>
+  <>
     <li><NavLink to='/react-template'    activeStyle={styles}>Template</NavLink></li>
     <li><NavLink to='/react-components'  activeStyle={styles}>Components</NavLink></li>
     <li><NavLink to='/react-jsx'         activeStyle={styles}>JSX</NavLink></li>
@@ -29,7 +25,7 @@ const ReactLinks = () => (
     <li><NavLink to='/react-fetch'       activeStyle={styles}>Fetch in CBB</NavLink></li>
     <li><NavLink to='/react-server'      activeStyle={styles}>Server API X</NavLink></li>
     <li><NavLink to='/react-redux'       activeStyle={styles}>Redux X</NavLink></li>
-  </Fragment>
+  </>
 );
 
 export default ReactLinks;

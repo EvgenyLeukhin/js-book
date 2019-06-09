@@ -1,5 +1,5 @@
 # JS-book
-My learning JS-repo
+My learning JS-repo. Content created by React with markdown-with-front-matter-loader
 
 1. Add md-file to content folder (./src/content/...);
 2. Require this file to const (./src/components/routes/index.jsx);
