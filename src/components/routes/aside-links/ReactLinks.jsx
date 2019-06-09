@@ -26,7 +26,7 @@ const ReactLinks = () => (
     <li><NavLink to='/react-forms'       activeStyle={styles}>Forms</NavLink></li>
     <li><NavLink to='/react-lifecycle'   activeStyle={styles}>Lifecycle</NavLink></li>
     <li><NavLink to='/react-events'      activeStyle={styles}>Events</NavLink></li>
-    <li><NavLink to='/react-fetch'       activeStyle={styles}>Fetch X</NavLink></li>
+    <li><NavLink to='/react-fetch'       activeStyle={styles}>Fetch in CBB</NavLink></li>
     <li><NavLink to='/react-server'      activeStyle={styles}>Server API X</NavLink></li>
     <li><NavLink to='/react-redux'       activeStyle={styles}>Redux X</NavLink></li>
   </Fragment>

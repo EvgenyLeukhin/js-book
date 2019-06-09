@@ -1,14 +1,13 @@
 # Fetch
-
+## api.js
 ```js
-// api.js
 const baseURL = 'https://swapi.co/api';
 export default baseURL;
 ...
 ```
 
+## CBC with fetch
 ```js
-// component.jsx
 ...
 
 import baseUrl from 'api.js';

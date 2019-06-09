@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const paths = {
   SRC:  path.resolve(__dirname, 'src/app.js'),
@@ -52,5 +53,17 @@ module.exports = {
 
     ]
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      favicon: 'static/img/favicon.ico',
+      template: __dirname + '/src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        conservativeCollapse: true
+      }
+    })
+  ]
 
 };

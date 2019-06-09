@@ -1,6 +1,5 @@
 const merge             = require('webpack-merge');
 const common            = require('./webpack.config.js');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const development = {
   mode: 'development',
@@ -51,14 +50,7 @@ const development = {
       },
 
     ]
-  },
-
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: __dirname + '/src/index.html',
-      favicon: 'static/img/favicon.ico'
-    }),
-  ]
+  }
 };
 
 module.exports = merge(common, development);
