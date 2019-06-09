@@ -55,10 +55,10 @@ const WebpackBar = require('webpackbar');
 
 ## <mark>clean-webpack-plugin</mark> (prod)
 ```js
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 ...
-  new CleanWebpackPlugin('dist'),
+  new CleanWebpackPlugin(),
 ...
 ```
 

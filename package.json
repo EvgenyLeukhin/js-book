@@ -63,5 +63,10 @@
     "webpack-dev-server": "^3.7.1",
     "webpack-merge": "^4.2.1",
     "webpackbar": "^3.2.0"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "iOS >= 8",
+    "not dead"
+  ]
 }

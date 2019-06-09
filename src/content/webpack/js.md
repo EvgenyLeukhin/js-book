@@ -47,12 +47,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 ```js
 {
   "presets": [
-    [
-      "@babel/preset-env", {
-        "targets": { "browsers": [ "last 2 versions", "> 0.5%", "not ie <= 10" ] },
-        "debug": true
-      }
-    ],
+    [ "@babel/preset-env", { "debug": true } ],
     "@babel/preset-react"
   ],
   "plugins": [

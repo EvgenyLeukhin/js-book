@@ -21,5 +21,10 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   }
-  ...
+  ... // for autoprefixer and @babel/preset-env // ...
+   "browserslist": [
+    "last 2 version",
+    "iOS >= 8",
+    "not dead"
+  ]
 ```
