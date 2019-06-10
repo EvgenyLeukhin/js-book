@@ -44,8 +44,8 @@ class Test extends Component {
         {
           loading ? <p>Loading ...</p> :
             <ul>
-              {people.map((item, index) =>
-                <li key={index}>{item.name}</li>
+              {people.map(i =>
+                <li key={i.id}>{i.name}</li>
               )}
             </ul>
         }

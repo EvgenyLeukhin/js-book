@@ -17,11 +17,13 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      Webpack:     path.resolve(__dirname, 'src', 'content/webpack'),
-      React:       path.resolve(__dirname, 'src', 'content/react'),
-      JS:          path.resolve(__dirname, 'src', 'content/js'),
-      NodeJs:      path.resolve(__dirname, 'src', 'content/nodejs'),
-      Components:  path.resolve(__dirname, 'src', 'components')
+      JS:         path.resolve(__dirname, 'src', 'content/js'),
+      Webpack:    path.resolve(__dirname, 'src', 'content/webpack'),
+      React:      path.resolve(__dirname, 'src', 'content/react'),
+      Redux:      path.resolve(__dirname, 'src', 'content/redux'),
+      NodeJs:     path.resolve(__dirname, 'src', 'content/nodejs'),
+      Links:      path.resolve(__dirname, 'src', 'components/Links'),
+      Components: path.resolve(__dirname, 'src', 'components')
     }
   },
 

@@ -1,4 +1,4 @@
-# Routing
+# Routing [*(link)*](https://reacttraining.com/react-router/web/example/basic)
 ## Add routing
 ```js
 import { HashRouter as Router } from 'react-router-dom';

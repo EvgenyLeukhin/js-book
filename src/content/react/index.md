@@ -15,3 +15,6 @@ Re-render App when props, state or data are changing.
 * [Preact](https://preactjs.com/)
 * [Create react app - docs](https://reactjs.org/docs/create-a-new-react-app.html)
 * [Create react app - repo](https://github.com/facebook/create-react-app)
+* [Conf - reactjs](http://conf.reactjs.org/)
+* [Reactive conf](https://reactiveconf.com/videos/)
+* [React Amsterdam](https://react.amsterdam//)

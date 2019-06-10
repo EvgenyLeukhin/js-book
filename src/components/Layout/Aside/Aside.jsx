@@ -1,15 +1,14 @@
 import React from 'react';
 import T from 'prop-types';
 import cln from 'classnames';
-import ImportLinks from './ImportLinks';
+import Links from './Links';
 
-const Aside = props => {
-  const { isShow, toggleSidebar, page } = props;
+const Aside = ({ isShow, toggleSidebar }) => {
 
   return (
     <aside className={cln({'hide': !isShow })}>
       <ul className='links-list'>
-        <ImportLinks page={page} />
+        <Links />
       </ul>
 
       <i onClick={toggleSidebar} />
@@ -19,8 +18,7 @@ const Aside = props => {
 
 Aside.propTypes = {
   isShow: T.bool,
-  toggleSidebar: T.func,
-  page: T.string
+  toggleSidebar: T.func
 };
 
 export default Aside;

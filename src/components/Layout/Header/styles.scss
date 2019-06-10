@@ -43,15 +43,15 @@ header {
           background-color: transparent;
           border: 1px solid transparent;
 
-          &.current-page {
-            background-color: #fff;
-            border: 1px solid darkmagenta;
-            cursor: default;
-            &__done {
-              background-color: lightgreen;
-              color: #000;
-            }
-          }
+          // &.current-page {
+          //   background-color: #fff;
+          //   border: 1px solid darkmagenta;
+          //   cursor: default;
+          //   &__done {
+          //     background-color: lightgreen;
+          //     color: #000;
+          //   }
+          // }
         }
       }
     }

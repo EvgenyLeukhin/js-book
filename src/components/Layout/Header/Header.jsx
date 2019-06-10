@@ -1,42 +1,43 @@
 import React from 'react';
-import T from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
-const Header= props => {
-  const { JsClick, WebpackClick, ReactClick, NodeJsClick, page } = props;
+import { navStyles } from 'Components/Consts';
 
+const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink onClick={ReactClick} to='/'>
+        <NavLink to='/'>
           <b>My JS-book</b>
         </NavLink>
 
         <ul className="main-nav">
           <li>
-            <NavLink
-              className={page === 'js-page' ? 'current-page' : null}
-              onClick={JsClick} to='/js'>JS
+            <NavLink activeStyle={navStyles} to='/js'>
+              JS
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className={page === 'webpack-page' ? 'current-page__done' : null}
-              onClick={WebpackClick} to='/webpack'>Webpack
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              className={page === 'react-page' ? 'current-page' : null}
-              onClick={ReactClick} exact to='/'>React
+            <NavLink activeStyle={navStyles} to='/webpack'>
+              Webpack
             </NavLink>
           </li>
 
           <li>
-            <NavLink
-              className={page === 'nodejs-page' ? 'current-page' : null}
-              onClick={NodeJsClick} to='/nodejs'>NodeJs
+            <NavLink activeStyle={navStyles} to='/'>
+              React
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink activeStyle={navStyles} to='/redux'>
+              Redux
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink activeStyle={navStyles} to='/nodejs'>
+              NodeJs
             </NavLink>
           </li>
         </ul>
@@ -50,14 +51,6 @@ const Header= props => {
       </nav>
     </header>
   );
-};
-
-Header.propTypes = {
-  page: T.string,
-  JsClick: T.func,
-  WebpackClick: T.func,
-  ReactClick: T.func,
-  NodeJsClick: T.func,
 };
 
 export default Header;

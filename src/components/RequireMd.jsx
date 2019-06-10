@@ -9,6 +9,7 @@ const MdComp = ({ path }) => (
 export const ReacT   = () => <MdComp path={require('React/index.md')} />;
 export const JS      = () => <MdComp path={require('JS/index.md')} />;
 export const Webpack = () => <MdComp path={require('Webpack/index.md')} />;
+export const Redux   = () => <MdComp path={require('Redux/index.md')} />;
 export const NodeJs  = () => <MdComp path={require('NodeJs/index.md')} />;
 
 // react-pages
@@ -32,6 +33,7 @@ export const ReactLifecycle  = () => <MdComp path={require('React/lifecycle.md')
 export const ReactFetch      = () => <MdComp path={require('React/fetch.md')} />;
 export const ReactServer     = () => <MdComp path={require('React/server.md')} />;
 export const ReactRedux      = () => <MdComp path={require('React/redux.md')} />;
+export const ReactPlugins    = () => <MdComp path={require('React/plugins.md')} />;
 
 // webpack-pages //
 export const WpInstall   = () => <MdComp path={require('Webpack/install.md')} />;
@@ -51,5 +53,7 @@ export const WpStructure = () => <MdComp path={require('Webpack/structure.md')} 
 export const NodeJsExpress = () => <MdComp path={require('NodeJs/express.md')} />;
 
 // js-pages //
+
+// redux-pages //
 
 MdComp.propTypes = { path: T.object };

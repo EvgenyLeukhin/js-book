@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {
   // main pages
-  ReacT, JS, Webpack, NodeJs,
+  ReacT, Redux, JS, Webpack, NodeJs,
 
   // webpack-pages
   WpInstall, WpConfig, WpJs, WpCss, WpHtml, WpImg, WpFonts, WpMd, WpPlugins, WpEslint, WpEditor, WpStructure,
@@ -11,7 +11,7 @@ import {
   NodeJsExpress,
 
   // react-pages
-  ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLifecycle, ReactFetch, ReactServer, ReactRedux,
+  ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLifecycle, ReactFetch, ReactServer, ReactRedux, ReactPlugins
 
 } from './RequireMd';
 
@@ -23,6 +23,7 @@ const Routes = () => (
       {/* main pages */}
       <Route path='/' exact  component={ReacT} />
       <Route path='/js'      component={JS} />
+      <Route path='/redux'   component={Redux} />
       <Route path='/webpack' component={Webpack} />
       <Route path='/nodejs'  component={NodeJs} />
 
@@ -47,6 +48,7 @@ const Routes = () => (
       <Route path='/react-fetch'       component={ReactFetch} />
       <Route path='/react-server'      component={ReactServer} />
       <Route path='/react-redux'       component={ReactRedux} />
+      <Route path='/react-plugins'     component={ReactPlugins} />
 
       {/* wp-pages */}
       <Route path='/wp-install'   component={WpInstall} />
