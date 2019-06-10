@@ -3,6 +3,8 @@ import T from 'prop-types';
 import cln from 'classnames';
 import Links from './Links';
 
+import './styles.scss';
+
 const Aside = ({ isShow, toggleSidebar }) => {
 
   return (
