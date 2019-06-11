@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink to='/'>
+        <NavLink to='/react'>
           <b>My JS-book</b>
         </NavLink>
 
@@ -20,13 +20,13 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink activeStyle={navStyles} to='/webpack'>
+            <NavLink activeStyle={navStyles} to='/wp'>
               Webpack
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeStyle={navStyles} to='/'>
+            <NavLink activeStyle={navStyles} to='/react'>
               React
             </NavLink>
           </li>

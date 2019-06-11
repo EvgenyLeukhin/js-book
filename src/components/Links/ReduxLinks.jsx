@@ -5,7 +5,7 @@ import { linkStyles } from 'Components/Consts';
 
 const ReduxLinks = () => (
   <>
-    <li><NavLink to='/redux-install' activeStyle={linkStyles}>Install</NavLink></li>
+    <li><NavLink to='/redux/install' activeStyle={linkStyles}>Install</NavLink></li>
   </>
 );
 

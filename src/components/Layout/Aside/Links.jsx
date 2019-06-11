@@ -9,10 +9,10 @@ import NodeJsLinks  from 'Links/NodeJsLinks';
 
 const Links = () => (
   <Switch>
-    <Route path='/'        component={ReactLinks} />
+    <Route path='/react'   component={ReactLinks} />
     <Route path='/js'      component={JSLinks} />
     <Route path='/redux'   component={ReduxLinks} />
-    <Route path='/webpack' component={WebpackLinks} />
+    <Route path='/wp'      component={WebpackLinks} />
     <Route path='/nodejs'  component={NodeJsLinks} />
   </Switch>
 );
