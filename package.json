@@ -12,9 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/EvgenyLeukhin/js-book.git"
   },
-  "keywords": [
-    "react"
-  ],
+  "keywords": ["react", "redux", "js", "webpack"],
   "author": "Evgeny Leukhin",
   "license": "MIT",
   "bugs": {
