@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { linkStyles } from 'Components/Consts';
+import { linkStyles } from 'Components/сonsts';
 
 const NodeJsLinks = () => (
   <>

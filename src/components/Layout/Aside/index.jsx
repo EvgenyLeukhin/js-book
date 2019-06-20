@@ -17,11 +17,11 @@ const Aside = ({ isShow, toggleSidebar, page }) => {
     <aside className={cln({'hide': !isShow })}>
       <ul className='links-list'>
         {
-          page === 'js'      && <JSLinks /> ||
-          page === 'webpack' && <WebpackLinks /> ||
-          page === 'react'   && <ReactLinks /> ||
-          page === 'redux'   && <ReduxLinks /> ||
-          page === 'nodejs'  && <NodeJsLinks />
+          page === 'JS'      && <JSLinks />      ||
+          page === 'Webpack' && <WebpackLinks /> ||
+          page === 'React'   && <ReactLinks />   ||
+          page === 'Redux'   && <ReduxLinks />   ||
+          page === 'NodeJS'  && <NodeJsLinks />
         }
       </ul>
 

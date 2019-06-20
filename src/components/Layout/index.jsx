@@ -1,4 +1,5 @@
 import React from 'react';
+import T from 'prop-types';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -9,8 +10,8 @@ import './scss/styles.scss';
 
 class Layout extends React.Component {
   state = {
+    page: 'React',
     showAside: true,
-    page: 'react',
   }
 
   toggleSidebar = () => {
@@ -25,11 +26,7 @@ class Layout extends React.Component {
       <div className="app-wrapper">
         <Header
           page={page}
-          JsClick     = {() => this.setState({ page: 'js' })}
-          WpClick     = {() => this.setState({ page: 'webpack' })}
-          ReactClick  = {() => this.setState({ page: 'react' })}
-          ReduxClick  = {() => this.setState({ page: 'redux' })}
-          NodejsClick = {() => this.setState({ page: 'nodejs' })}
+          click={e => this.setState({ page: e.target.textContent })}
         />
         <Aside
           page={page}
@@ -42,5 +39,10 @@ class Layout extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  page: T.string,
+  showAside: T.bool
+};
 
 export default Layout;

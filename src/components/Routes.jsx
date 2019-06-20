@@ -23,11 +23,11 @@ const Routes = () => (
       <Route exact path="/" render={() => <Redirect to="/react" /> } />
 
       {/* main pages */}
-      <Route path='/react'   component={ReacT} />
-      <Route path='/js'      component={JS} />
-      <Route path='/redux'   component={Redux} />
-      <Route path='/wp'      component={Webpack} />
-      <Route path='/nodejs'  component={NodeJs} />
+      <Route path='/react'  exact component={ReacT} />
+      <Route path='/js'     exact component={JS} />
+      <Route path='/redux'  exact component={Redux} />
+      <Route path='/wp'     exact component={Webpack} />
+      <Route path='/nodejs' exact component={NodeJs} />
 
       {/* react-pages */}
       <Route path='/react/template'    component={ReactTemplate} />
