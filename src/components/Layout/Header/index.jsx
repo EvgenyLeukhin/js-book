@@ -5,7 +5,7 @@ import { navStyles } from 'Components/Consts';
 
 import './styles.scss';
 
-const Header = () => {
+const Header = ({ page, JsClick, WpClick, ReactClick, ReduxClick, NodejsClick }) => {
   return (
     <header>
       <nav>
@@ -15,30 +15,55 @@ const Header = () => {
 
         <ul className="main-nav">
           <li>
-            <NavLink activeStyle={navStyles} to='/js'>
+            <NavLink
+              to='/js'
+              activeStyle={navStyles}
+              className={page === 'js' && 'current'}
+              onClick={JsClick}
+            >
               JS
             </NavLink>
           </li>
           <li>
-            <NavLink activeStyle={navStyles} to='/wp'>
+            <NavLink
+              to='/wp'
+              activeStyle={navStyles}
+              className={page === 'wp' && 'current'}
+              onClick={WpClick}
+            >
               Webpack
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeStyle={navStyles} to='/react'>
+            <NavLink
+              to='/react'
+              activeStyle={navStyles}
+              className={page === 'react' && 'current'}
+              onClick={ReactClick}
+            >
               React
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeStyle={navStyles} to='/redux'>
+            <NavLink
+              to='/redux'
+              activeStyle={navStyles}
+              className={page === 'redux' && 'current'}
+              onClick={ReduxClick}
+            >
               Redux
             </NavLink>
           </li>
 
           <li>
-            <NavLink activeStyle={navStyles} to='/nodejs'>
+            <NavLink
+              to='/nodejs'
+              activeStyle={navStyles}
+              className={page === 'nodejs' && 'current'}
+              onClick={NodejsClick}
+            >
               NodeJs
             </NavLink>
           </li>

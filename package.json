@@ -4,8 +4,7 @@
   "homepage": "https://EvgenyLeukhin.github.io/js-book",
   "description": "My learning js-repo",
   "scripts": {
-    "start": "npm run develop",
-    "develop": "webpack-dev-server --config=./webpack.dev.js --open google-chrome",
+    "start": "webpack-dev-server --config=./webpack.dev.js --open google-chrome",
     "build": "webpack --config=./webpack.prod.js",
     "deploy": "npm run build && gh-pages -d dist"
   },

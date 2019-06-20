@@ -9,7 +9,8 @@ import './scss/styles.scss';
 
 class Layout extends React.Component {
   state = {
-    showAside: true
+    showAside: true,
+    page: 'react',
   }
 
   toggleSidebar = () => {
@@ -18,12 +19,20 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { showAside } = this.state;
+    const { showAside, page } = this.state;
 
     return(
       <div className="app-wrapper">
-        <Header />
+        <Header
+          page={page}
+          JsClick     = {() => this.setState({ page: 'js' })}
+          WpClick     = {() => this.setState({ page: 'webpack' })}
+          ReactClick  = {() => this.setState({ page: 'react' })}
+          ReduxClick  = {() => this.setState({ page: 'redux' })}
+          NodejsClick = {() => this.setState({ page: 'nodejs' })}
+        />
         <Aside
+          page={page}
           isShow={showAside}
           toggleSidebar={this.toggleSidebar}
         />
