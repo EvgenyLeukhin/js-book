@@ -3,7 +3,6 @@
 Maping data may be from the state or from the external json-file.
 
 ```js
-import SomeComp2 from 'SomeComp1';
 ...
 class SomeComp1 extends Component {
   state = {
@@ -20,13 +19,12 @@ class SomeComp1 extends Component {
     return (
       <>
         {
-          contacts.map((item, index) => ( // index - [index] of array
-            <SomeComp2
-              name={item.name} 
-              age={item.age} 
-              key={item.id} 
-            />
-          );
+          contacts.map(i => (
+            <li key ={i.id}>
+              <span>{i.name}</span>
+              <b>{i.age}</b>
+            </li>
+          ))
         }
       </>
     );
