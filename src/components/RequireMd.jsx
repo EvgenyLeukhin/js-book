@@ -34,6 +34,7 @@ export const ReactFetch      = () => <MdComp path={require('React/fetch.md')} />
 export const ReactServer     = () => <MdComp path={require('React/server.md')} />;
 export const ReactRedux      = () => <MdComp path={require('React/redux.md')} />;
 export const ReactPlugins    = () => <MdComp path={require('React/plugins.md')} />;
+export const ReactGatsby     = () => <MdComp path={require('React/gatsby-js.md')} />;
 
 // webpack-pages //
 export const WpInstall   = () => <MdComp path={require('Webpack/install.md')} />;

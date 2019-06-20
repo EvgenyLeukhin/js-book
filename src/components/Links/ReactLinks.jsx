@@ -26,6 +26,7 @@ const ReactLinks = () => (
     <li><NavLink to='/react/server'      activeStyle={linkStyles}>Server API X</NavLink></li>
     <li><NavLink to='/react/redux'       activeStyle={linkStyles}>Redux X</NavLink></li>
     <li><NavLink to='/react/plugins'     activeStyle={linkStyles}>Plugins X</NavLink></li>
+    <li><NavLink to='/react/gatsby-js'   activeStyle={linkStyles}>GatsbyJS</NavLink></li>
   </>
 );
 

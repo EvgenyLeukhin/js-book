@@ -11,7 +11,7 @@ import {
   NodeJsExpress,
 
   // react-pages
-  ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLifecycle, ReactFetch, ReactServer, ReactRedux, ReactPlugins
+  ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLifecycle, ReactFetch, ReactServer, ReactRedux, ReactPlugins, ReactGatsby
 
 } from './RequireMd';
 
@@ -51,6 +51,7 @@ const Routes = () => (
       <Route path='/react/server'      component={ReactServer} />
       <Route path='/react/redux'       component={ReactRedux} />
       <Route path='/react/plugins'     component={ReactPlugins} />
+      <Route path='/react/gatsby-js'   component={ReactGatsby} />
 
       {/* wp-pages */}
       <Route path='/wp/install'   component={WpInstall} />
