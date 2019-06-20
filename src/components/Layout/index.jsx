@@ -10,7 +10,6 @@ import './scss/styles.scss';
 
 class Layout extends React.Component {
   state = {
-    page: 'React',
     showAside: true,
   }
 
@@ -20,16 +19,12 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { showAside, page } = this.state;
+    const { showAside } = this.state;
 
     return(
       <div className="app-wrapper">
-        <Header
-          page={page}
-          click={e => this.setState({ page: e.target.textContent })}
-        />
+        <Header />
         <Aside
-          page={page}
           isShow={showAside}
           toggleSidebar={this.toggleSidebar}
         />

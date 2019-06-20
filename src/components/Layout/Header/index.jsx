@@ -1,5 +1,4 @@
 import React from 'react';
-import T from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 import GutHubLink from './GutHubLink';
@@ -30,7 +29,7 @@ const headerLinks = [
     href: '/nodejs' },
 ];
 
-const Header = ({ click }) => {
+const Header = () => {
   return (
     <header>
       <nav>
@@ -40,11 +39,7 @@ const Header = ({ click }) => {
           {
             headerLinks.map(i => (
               <li key ={i.id}>
-                <NavLink
-                  to={i.href}
-                  onClick={click}
-                  activeStyle={navStyles}
-                >
+                <NavLink to={i.href} activeStyle={navStyles}>
                   {i.text}
                 </NavLink>
               </li>
@@ -56,10 +51,6 @@ const Header = ({ click }) => {
       </nav>
     </header>
   );
-};
-
-Header.propTypes = {
-  click: T.func.isRequired
 };
 
 export default Header;

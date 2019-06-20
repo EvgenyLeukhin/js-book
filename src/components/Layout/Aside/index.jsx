@@ -2,6 +2,7 @@
 import React from 'react';
 import T from 'prop-types';
 import cln from 'classnames';
+import { Switch, Route } from 'react-router-dom';
 
 import JSLinks from 'Links/JSLinks';
 import WebpackLinks from 'Links/WebpackLinks';
@@ -11,18 +12,18 @@ import NodeJsLinks from 'Links/NodeJsLinks';
 
 import './styles.scss';
 
-const Aside = ({ isShow, toggleSidebar, page }) => {
+const Aside = ({ isShow, toggleSidebar }) => {
 
   return (
     <aside className={cln({'hide': !isShow })}>
       <ul className='links-list'>
-        {
-          page === 'JS'      && <JSLinks />      ||
-          page === 'Webpack' && <WebpackLinks /> ||
-          page === 'React'   && <ReactLinks />   ||
-          page === 'Redux'   && <ReduxLinks />   ||
-          page === 'NodeJS'  && <NodeJsLinks />
-        }
+        <Switch>
+          <Route path='/js'     component={JSLinks} />
+          <Route path='/wp'     component={WebpackLinks} />
+          <Route path='/react'  component={ReactLinks} />
+          <Route path='/redux'  component={ReduxLinks} />
+          <Route path='/nodejs' component={NodeJsLinks} />
+        </Switch>
       </ul>
 
       <i onClick={toggleSidebar} />
@@ -32,8 +33,7 @@ const Aside = ({ isShow, toggleSidebar, page }) => {
 
 Aside.propTypes = {
   isShow: T.bool,
-  toggleSidebar: T.func,
-  page: T.string
+  toggleSidebar: T.func
 };
 
 export default Aside;
