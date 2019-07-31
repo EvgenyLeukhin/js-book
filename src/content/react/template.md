@@ -1,5 +1,14 @@
 # Base template
 
+All about components. React App is a collection of Static and re-used Common components with empty props which filled some data by Route components.
+
+Pass data -> Route component -> Content components with a transfered data by props
+
+## Components
+1. Route components (collection of Common and Static components)
+2. Common components (re-used with empty props)
+3. Static components (return jsx only with a minimal logic)
+
 ## src/app.js
 
 ```js

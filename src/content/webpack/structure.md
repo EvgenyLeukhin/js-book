@@ -12,6 +12,7 @@ for React SPA
 
     src\
         components\
+            common\
             layout\
             routes\
         scss\

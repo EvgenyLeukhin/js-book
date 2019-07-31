@@ -18,7 +18,7 @@ const ReactLinks = () => (
     <li><NavLink to='/react/routing'     activeStyle={linkStyles}>Routing</NavLink></li>
     <li><NavLink to='/react/switcher'    activeStyle={linkStyles}>Switcher</NavLink></li>
     <li><NavLink to='/react/transitions' activeStyle={linkStyles}>Transitions</NavLink></li>
-    <li><NavLink to='/react/refs'        activeStyle={linkStyles}>Refs</NavLink></li>
+    <li><NavLink to='/react/refs'        activeStyle={linkStyles}>Refs X</NavLink></li>
     <li><NavLink to='/react/forms'       activeStyle={linkStyles}>Forms</NavLink></li>
     <li><NavLink to='/react/lifecycle'   activeStyle={linkStyles}>Lifecycle</NavLink></li>
     <li><NavLink to='/react/events'      activeStyle={linkStyles}>Events</NavLink></li>
