@@ -16,6 +16,7 @@ class Someclass extends React.Component {
 
 export default Someclass;
 
+
 // Babel compiled to:
 const element = React.createElement(
   'h1',

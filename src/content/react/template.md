@@ -46,6 +46,7 @@ ReactDOM.render(
 </head>
 
 <body>
+  <!-- Virtual DOM is lives here -->
   <div id="app"></div>
 </body>
 

@@ -61,7 +61,7 @@ class SomeComp2 extends Component {
 }
 ```
 
-## From the JSON-file
+## From a separate JSON-file
 ```js
 // data.json
 {
@@ -103,6 +103,20 @@ class SomeComp2 extends Component {
         />
       </>
     );
+  }
+}
+
+```
+## From a separate const
+```js
+...
+import SomeComp1 from 'SomeComp1';
+
+const string = 'Some string';
+
+class SomeComp2 extends Component {
+  render() {
+    return ( <SomeComp1  name={string} /> );
   }
 }
 

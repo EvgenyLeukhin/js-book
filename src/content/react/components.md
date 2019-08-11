@@ -1,4 +1,6 @@
 # Components (Компоненты)
+Components is a elements of React application. React is all about components. Component aproach. Reusable components.
+
 ## Class-based components 'CBC' (can have state and props)
 
 ```js
@@ -21,29 +23,28 @@ export default Someclass;
 
 ## Function-based components 'FBC', pure-function, return only JSX (can have props only)
 ```js
-import React from 'react';
-
+// common syntax
 const SomeFunc = () => {
   return (
     <div className='wrapper'>...</div>
   );
 }
 
-export default SomeFunc;
 
-// another syntax
-...
+// return jsx only with ()
+const SomeFunc = () => (
+  <div className='wrapper'>...</div>
+);
+
+
+// function syntax
 function Footer(props) {
   return <h1>Hello, {props.name}</h1>;
 }
-...
+
 
 // short way - anonimus func
-import React from 'react';
-
-export default () => <div className='wrapper'>
-  ...
-</div>
+export default () => <div className='wrapper'></div>
 ```
 
 <br>

@@ -1,5 +1,5 @@
 # State (Состояние компонента)
-Only classes can have state
+Only classes can have state. You should choose a place where the state will be live. It may be route component with all major components.
 
 ## State example
 ```js
