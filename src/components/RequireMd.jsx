@@ -12,6 +12,20 @@ export const Webpack = () => <MdComp path={require('Webpack/index.md')} />;
 export const Redux   = () => <MdComp path={require('Redux/index.md')} />;
 export const NodeJs  = () => <MdComp path={require('NodeJs/index.md')} />;
 
+// js-pages //
+export const JsScript    = () => <MdComp path={require('JS/script.md')} />;
+export const JsTypes     = () => <MdComp path={require('JS/types.md')} />;
+export const JsVars      = () => <MdComp path={require('JS/vars.md')} />;
+export const JsString    = () => <MdComp path={require('JS/string.md')} />;
+export const JsNumber    = () => <MdComp path={require('JS/number.md')} />;
+export const JsBoolean   = () => <MdComp path={require('JS/boolean.md')} />;
+export const JsFunction  = () => <MdComp path={require('JS/function.md')} />;
+export const JsArray     = () => <MdComp path={require('JS/array.md')} />;
+export const JsObject    = () => <MdComp path={require('JS/object.md')} />;
+export const JsOperators = () => <MdComp path={require('JS/operators.md')} />;
+export const JsLogic     = () => <MdComp path={require('JS/logic.md')} />;
+export const JsCycles    = () => <MdComp path={require('JS/cycles.md')} />;
+
 // react-pages
 export const ReactTemplate   = () => <MdComp path={require('React/template.md')} />;
 export const ReactComponents = () => <MdComp path={require('React/components.md')} />;
@@ -50,11 +64,9 @@ export const WpPlugins   = () => <MdComp path={require('Webpack/plugins.md')} />
 export const WpEditor    = () => <MdComp path={require('Webpack/editor.md')} />;
 export const WpStructure = () => <MdComp path={require('Webpack/structure.md')} />;
 
+// redux-pages //
+
 // nodejs-pages
 export const NodeJsExpress = () => <MdComp path={require('NodeJs/express.md')} />;
-
-// js-pages //
-
-// redux-pages //
 
 MdComp.propTypes = { path: T.object };

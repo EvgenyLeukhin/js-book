@@ -78,15 +78,18 @@ export default () => <ul className='links-list'>
 // id страницы
 props.match.params.id;
 
-// redirect 
-props.history.push('/');
-
 // роутинг по id
 <Route path='/products/:id' component={Products}/>
 <Route path='/products/:id' component={ProductsList}/>
 
 // роутинг c render
 <Route path='/some-route' render={() => <ProductDetails />} />
+```
+
+## Redirect
+```js
+<Route exact path="/" render={() => <Redirect to="/react" /> } />
+props.history.push('/');
 ```
 
 ## External links

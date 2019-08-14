@@ -17,4 +17,4 @@ Re-render App when props, state or data are changing.
 * [Create react app - repo](https://github.com/facebook/create-react-app)
 * [Conf - reactjs](http://conf.reactjs.org/)
 * [Reactive conf](https://reactiveconf.com/videos/)
-* [React Amsterdam](https://react.amsterdam//)
+* [React Amsterdam](https://react.amsterdam/)

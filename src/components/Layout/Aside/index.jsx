@@ -12,24 +12,21 @@ import NodeJsLinks from 'Links/NodeJsLinks';
 
 import './styles.scss';
 
-const Aside = ({ isShow, toggleSidebar }) => {
+const Aside = ({ isShow, toggleSidebar }) => (
+  <aside className={cln({'hide': !isShow })}>
+    <ul className='links-list'>
+      <Switch>
+        <Route path='/js'     component={JSLinks} />
+        <Route path='/wp'     component={WebpackLinks} />
+        <Route path='/react'  component={ReactLinks} />
+        <Route path='/redux'  component={ReduxLinks} />
+        <Route path='/nodejs' component={NodeJsLinks} />
+      </Switch>
+    </ul>
 
-  return (
-    <aside className={cln({'hide': !isShow })}>
-      <ul className='links-list'>
-        <Switch>
-          <Route path='/js'     component={JSLinks} />
-          <Route path='/wp'     component={WebpackLinks} />
-          <Route path='/react'  component={ReactLinks} />
-          <Route path='/redux'  component={ReduxLinks} />
-          <Route path='/nodejs' component={NodeJsLinks} />
-        </Switch>
-      </ul>
-
-      <i onClick={toggleSidebar} />
-    </aside>
-  );
-};
+    <i onClick={toggleSidebar} />
+  </aside>
+);
 
 Aside.propTypes = {
   isShow: T.bool,
