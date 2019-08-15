@@ -31,7 +31,7 @@ const Routes = () => (
       <Route path='/react'  exact component={ReacT} />
       <Route path='/redux'  exact component={Redux} />
       <Route path='/nodejs' exact component={NodeJs} />
-      <Route path='/test' component={Test} />
+      <Route path='/test'         component={Test} />
 
       {/* js pages */}
       <Route path='/js/script'      component={JsScript} />
