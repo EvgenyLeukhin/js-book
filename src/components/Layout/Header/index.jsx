@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <NavLink to='/js'><b>My JS-book</b></NavLink>
+        <NavLink to='/js' className="home-link"><b>My JS-book</b></NavLink>
 
         <ul className="main-nav">
           {

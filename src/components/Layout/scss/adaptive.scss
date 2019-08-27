@@ -28,6 +28,43 @@
 
 @media (max-width: 650px) {
   .app-wrapper {
-    aside + main { padding-left: 15px; }
+    header {
+      nav { justify-content: center; }
+
+      .github-link,
+      .home-link { display: none; }
+    }
+
+    aside {
+      background: rgb(123, 123, 123);
+      top: 25px;
+
+      i {
+        top: 5px;
+        right: -12px;
+        border: 10px solid transparent;
+        border-right: 10px solid #888;
+
+        &:hover {
+          border-right: 10px solid hsl(348, 100%, 61%);
+        }
+      }
+
+      &.hide {
+        i {
+          top: 5px;
+          right: -20px;
+          border: 10px solid transparent;
+          border-left: 10px solid #ccc;
+
+          &:hover {
+            border: 10px solid transparent;
+            border-left: 10px solid hsl(141, 71%, 48%);
+          }
+        }
+      }
+
+      & + main { padding-left: 15px; }
+    }
   }
 }
