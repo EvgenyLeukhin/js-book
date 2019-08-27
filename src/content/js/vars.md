@@ -16,6 +16,10 @@ let some;
 let some1, some2, some3 = 'String;'
 
 let = (123, 'string', true); // true
+
+// distructive initialization
+const [a, b, c, d] = [1, 2, 3, 4];
+console.log(a); // 1
 ```
 
 ```js
