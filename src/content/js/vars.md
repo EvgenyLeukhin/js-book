@@ -1,6 +1,6 @@
 # Variables
 
-To save some data in JS you should use variables, it is a place where your data lives. Giving some date realize by equall operator (=);  
+To save some data in JS you should use variables, it is a place where your data lives. Giving some date realize by equall operator (=);
 
 ## Initialization
 
@@ -105,11 +105,15 @@ Outdate keyword with global scope. You should use let or const keywords.
 ```js
 let a = 5;
 a = 15; // Изменять можно
-let a = 15; // Ошибка!
+
+let a = 15; // Ошибка! - Переобъявлять нельзя
+
 
 // Scope
 let a = 5;
+
 console.log(a); // 5
+
 {
   let a = 15;
   console.log(a); // 15
@@ -122,6 +126,8 @@ console.log(a); // 5
 
 ```js
 const a = 5;
+
 a = 15; // Ошибка!
+
 const a = 15; // Ошибка!
 ```

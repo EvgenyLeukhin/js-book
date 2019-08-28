@@ -5,7 +5,7 @@ import {
   ReacT, Redux, JS, Webpack, NodeJs,
 
   // js pages
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsBoolean, JsFunction, JsArray, JsObject, JsOperators, JsLogic,JsCycles,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsArray, JsObject, JsOperators, JsLogic,JsCycles,
 
   // webpack-pages
   WpInstall, WpConfig, WpJs, WpCss, WpHtml, WpImg, WpFonts, WpMd, WpPlugins, WpEslint, WpEditor, WpStructure,
@@ -39,6 +39,7 @@ const Routes = () => (
       <Route path='/js/vars'        component={JsVars} />
       <Route path='/js/string'      component={JsString} />
       <Route path='/js/number'      component={JsNumber} />
+      <Route path='/js/null'        component={JsNull} />
       <Route path='/js/boolean'     component={JsBoolean} />
       <Route path='/js/function'    component={JsFunction} />
       <Route path='/js/array'       component={JsArray} />

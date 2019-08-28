@@ -14,10 +14,11 @@ export const NodeJs  = () => <MdComp path={require('NodeJs/index.md')} />;
 
 // js-pages //
 export const JsScript    = () => <MdComp path={require('JS/script.md')} />;
-export const JsTypes     = () => <MdComp path={require('JS/typesChange.md')} />;
+export const JsTypes     = () => <MdComp path={require('JS/types.md')} />;
 export const JsVars      = () => <MdComp path={require('JS/vars.md')} />;
 export const JsString    = () => <MdComp path={require('JS/string.md')} />;
 export const JsNumber    = () => <MdComp path={require('JS/number.md')} />;
+export const JsNull      = () => <MdComp path={require('JS/null.md')} />;
 export const JsBoolean   = () => <MdComp path={require('JS/boolean.md')} />;
 export const JsFunction  = () => <MdComp path={require('JS/function.md')} />;
 export const JsArray     = () => <MdComp path={require('JS/array.md')} />;
