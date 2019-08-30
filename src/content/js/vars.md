@@ -13,6 +13,7 @@ let some;
 ## Multi-Initialization
 
 ```js
+//With "," operator.
 let some1, some2, some3 = 'String;'
 
 let = (123, 'string', true); // true

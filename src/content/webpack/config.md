@@ -28,6 +28,7 @@ module.exports = {
 ```
 
 ## Paths
+
 ```js
 // in the top
 const path = require('path');
@@ -39,6 +40,7 @@ const paths = {
 ```
 
 ## Entry and output
+
 ```js
 ...
   entry: paths.SRC,
@@ -51,6 +53,7 @@ const paths = {
 ```
 
 ## Dev-server (dev)
+
 ```js
 ...
   mode: 'development',
@@ -69,6 +72,7 @@ const paths = {
 ```
 
 ## Resolve with alias (common)
+
 ```js
 ...
   resolve: {
@@ -84,6 +88,7 @@ import Home from 'Routes/home';
 ```
 
 ## Mode and output filename
+
 ```js
 ...
   mode: 'development',

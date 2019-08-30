@@ -57,14 +57,16 @@ num + ''; // '123'
 `${num}`; // '123'
 ```
 
-## Convertation String -> Number
+## Convertation String -> Number (if sting keeps a number)
 
 ```js
 const a = '1';
 const b = '2';
+const c = 'String';
 
 +a; // 1
 +b; // 2
++c; // NaN
 ```
 
 ## Spec symbols
