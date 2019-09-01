@@ -6,6 +6,22 @@ aside {
   width: 160px;
   z-index: 5;
   transition-duration: 230ms;
+  max-height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  // for Webkit
+  &::-webkit-scrollbar { width: 7px; height: 7px; } // width and height
+  &::-webkit-scrollbar-track { background: transparent; } // track
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  } // handle
+  &::-webkit-scrollbar-thumb:hover { background: #bbb; } // handle on hover
+
+  // for Mozilla Firefox
+  scrollbar-color: #ddd #fff;
+  scrollbar-width: thin;
 
   &.hide {
     transform: translateX(-160px);

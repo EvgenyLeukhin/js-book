@@ -105,15 +105,15 @@ Outdate keyword with global scope. You should use let or const keywords.
 
 ```js
 let a = 5;
-a = 15; // Изменять можно
+a = 15;       // Изменять можно
 
-let a = 15; // Ошибка! - Переобъявлять нельзя
+let a = 15;   // Ошибка! - Переобъявлять нельзя
 
 
 // Scope
 let a = 5;
 
-console.log(a); // 5
+console.log(a);   // 5
 
 {
   let a = 15;
@@ -128,7 +128,7 @@ console.log(a); // 5
 ```js
 const a = 5;
 
-a = 15; // Ошибка!
+a = 15;       // Ошибка!
 
 const a = 15; // Ошибка!
 ```

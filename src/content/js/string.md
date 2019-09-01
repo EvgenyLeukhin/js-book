@@ -52,12 +52,15 @@ otherwise my code is unreadable.`;
 ```js
 const num = 123;
 
+String(num); // "123"
+
 num + ''; // '123'
 
 `${num}`; // '123'
+
 ```
 
-## Convertation String -> Number (if sting keeps a number)
+## Convertation String -> Number (if string keeps a number)
 
 ```js
 const a = '1';
@@ -78,8 +81,6 @@ const c = 'String';
 \n Перенос строки
 
 \t Табуляция
-
-\xXX 16-ти ричный код
 
 \uXXXX unicode
 ```

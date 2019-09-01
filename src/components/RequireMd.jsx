@@ -23,7 +23,7 @@ export const JsBoolean   = () => <MdComp path={require('JS/boolean.md')} />;
 export const JsFunction  = () => <MdComp path={require('JS/function.md')} />;
 export const JsArray     = () => <MdComp path={require('JS/array.md')} />;
 export const JsObject    = () => <MdComp path={require('JS/object.md')} />;
-export const JsOperators = () => <MdComp path={require('JS/operators.md')} />;
+export const JsMath      = () => <MdComp path={require('JS/math.md')} />;
 export const JsLogic     = () => <MdComp path={require('JS/logic.md')} />;
 export const JsCycles    = () => <MdComp path={require('JS/cycles.md')} />;
 
