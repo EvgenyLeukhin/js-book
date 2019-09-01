@@ -1,5 +1,6 @@
 # Redux
-<img src="./../../static/img/redux.png" alt="redux" width="50%">
+
+![Image alt text](./../../static/img/redux.png)
 
 Суть Redux - есть глобальный state + функции actions, которые меняют этот state (state + actions = store). Это всё находится в одном месте (reducer). Доступ к store компоненту предоставляет функция connect. Все данные из store можно прикручивать к props компонентов через методы mapStateToProps и mapDispatchToProps.
 
@@ -8,7 +9,7 @@ State в Redux все компоненты могут только читать,
 
 **Reducer** - (Функция) вся логика по обновлению или изменению state. Reducer обновляет state. Реагирует на actions.
 
-**Actions** - (Объекты) События (действия), которые могут создаваться в компонентах, для передачи в Reducer, чтобы обновить state. 
+**Actions** - (Объекты) События (действия), которые могут создаваться в компонентах, для передачи в Reducer, чтобы обновить state.
 
 **Store** - (Объект) Центральный объект Redux. Обёртка Reducer и глобального state.  Изолирование всего Redux от остального кода.
 
@@ -19,6 +20,7 @@ State в Redux все компоненты могут только читать,
 **mapDispatchToProps** - ... какие actions внести компоненту из reducers в props из store.
 
 ## 1 шаг - Устанавливаем библиотеки
+
 ```npm i --save redux react-redux```
 
 Для Redux-dev-tools:
@@ -26,6 +28,7 @@ State в Redux все компоненты могут только читать,
 ```npm i --save-dev redux-thunk```
 
 ## 2 шаг - Создаём Redux-обёртку всего приложения
+
 ```js
 import { Provider } from 'react-redux';
 
@@ -33,10 +36,13 @@ import { Provider } from 'react-redux';
   <Router><App/></Router>
 </Provider>
 ```
+
 После этого каждый React-компонент может подключаться к глобальному store, с помощью функции <b>connect</b> 
 
 ## 3 шаг - Создаём Redux-store
+
 store это функция, которая принимает Reducer
+
 ```js
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -50,7 +56,9 @@ import enhancer from './enhancer.js';
 ```
 
 ## 4 шаг - enhancer.js (Подключаем Redux-dev-tools)
+
 ```npm i --save-dev redux-thunk```
+
 ```js
 import {compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -64,12 +72,15 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 export default enhancer;
 ```
+
 В режиме разработке данный store также будет доступен Redux-dev-tools в браузере
 
 ## 5.1 шаг - rootReducer.js (Создаём Reducer)
+
 Reducer это самая главная функция в Redux, которая принимает начальный state и actions.
 Actions это объект, имеющий много типов (types), при проверке которых и происходит изменение state.
 Вся логика состояния приложения находится здесь. По умолчанию возвращает исходный(начальный) state.
+
 ```js
 import initialState from './initial-state.json';
 
@@ -86,6 +97,7 @@ export default rootReducer;
 ```
 
 ## 5.2 шаг - Создаём Actions
+
 ```js
 // ... //
 
@@ -102,6 +114,7 @@ const MINUS = 'MINUS';
 ```
 
 ## 5.3 шаг - Множественные Reducer-ы
+
 ```js
 import { combineReducers } from 'redux'
 import { pageReducer } from './pageReducer'
@@ -114,6 +127,7 @@ export const rootReducer = combineReducers({
 ```
 
 ## 6.1 шаг - Подключение компонента к store
+
 ```js
 import { connect } from 'react-redux';
 
@@ -140,7 +154,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
 
 ## 6.2 шаг - bindActionCreators
+
 Можно сократить код по внедрению actions в компонент
+
 ```js
 // actions.js
 export const some1 = () => ({ type: 'SOME1' });

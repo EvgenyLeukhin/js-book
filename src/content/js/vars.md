@@ -40,7 +40,7 @@ console.log(number); // 123
 
 ## Naming
 
-Use camelCase. Именовать константы нужно заглавными буквами, разделяя слова "_".
+Должно отвечать на вопрос "Кто?, Что?". Use camelCase. Именовать константы нужно заглавными буквами, разделяя слова "_".
 
 ### Correct
 
@@ -63,6 +63,8 @@ var 1score;
 var %Score;
 var №score;
 var &score;
+var score-score;
+var privet;
 ```
 
 ### Keywords
@@ -132,3 +134,5 @@ a = 15;       // Ошибка!
 
 const a = 15; // Ошибка!
 ```
+
+![Image alt text](./../../static/img/vars.png)
