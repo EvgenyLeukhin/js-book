@@ -135,4 +135,4 @@ a = 15;       // Ошибка!
 const a = 15; // Ошибка!
 ```
 
-![Image alt text](./../../static/img/vars.png)
+![Image alt text](https://raw.githubusercontent.com/EvgenyLeukhin/js-book/master/static/img/vars.png)

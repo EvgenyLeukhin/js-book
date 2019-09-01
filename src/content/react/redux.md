@@ -1,6 +1,6 @@
 # Redux
 
-![Image alt text](./../../static/img/redux.png)
+![Image alt text](https://raw.githubusercontent.com/EvgenyLeukhin/js-book/master/static/img/redux.png)
 
 Суть Redux - есть глобальный state + функции actions, которые меняют этот state (state + actions = store). Это всё находится в одном месте (reducer). Доступ к store компоненту предоставляет функция connect. Все данные из store можно прикручивать к props компонентов через методы mapStateToProps и mapDispatchToProps.
 
