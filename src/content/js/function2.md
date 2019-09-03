@@ -43,6 +43,11 @@ const car = {
   },
   new(text) {
     console.log(text);
+  },
+
+  // this-keyword is a reference to current object
+  showColor() {
+    return `${this.color}`;
   }
 };
 

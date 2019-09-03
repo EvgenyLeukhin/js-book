@@ -27,6 +27,4 @@ Boolean([]); // true
 Boolean({}); // true
 
 Boolean(() => alert(123)); // true
-
-
 ```

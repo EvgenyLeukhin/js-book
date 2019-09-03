@@ -27,6 +27,7 @@ export const JsObject    = () => <MdComp path={require('JS/object.md')} />;
 export const JsMath      = () => <MdComp path={require('JS/math.md')} />;
 export const JsLogic     = () => <MdComp path={require('JS/logic.md')} />;
 export const JsCycles    = () => <MdComp path={require('JS/cycles.md')} />;
+export const JsClass     = () => <MdComp path={require('JS/class.md')} />;
 
 // react-pages
 export const ReactTemplate   = () => <MdComp path={require('React/template.md')} />;
