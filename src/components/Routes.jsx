@@ -5,7 +5,7 @@ import {
   ReacT, Redux, JS, Webpack, NodeJs,
 
   // js pages
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsArray, JsObject, JsMath, JsLogic,JsCycles,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsMath, JsLogic, JsCycles,
 
   // webpack-pages
   WpInstall, WpConfig, WpJs, WpCss, WpHtml, WpImg, WpFonts, WpMd, WpPlugins, WpEslint, WpEditor, WpStructure,
@@ -34,19 +34,20 @@ const Routes = () => (
       <Route path='/test'         component={Test} />
 
       {/* js pages */}
-      <Route path='/js/script'   component={JsScript} />
-      <Route path='/js/types'    component={JsTypes} />
-      <Route path='/js/vars'     component={JsVars} />
-      <Route path='/js/string'   component={JsString} />
-      <Route path='/js/number'   component={JsNumber} />
-      <Route path='/js/null'     component={JsNull} />
-      <Route path='/js/boolean'  component={JsBoolean} />
-      <Route path='/js/function' component={JsFunction} />
-      <Route path='/js/array'    component={JsArray} />
-      <Route path='/js/object'   component={JsObject} />
-      <Route path='/js/math'     component={JsMath} />
-      <Route path='/js/logic'    component={JsLogic} />
-      <Route path='/js/cycles'   component={JsCycles} />
+      <Route path='/js/script'    component={JsScript} />
+      <Route path='/js/types'     component={JsTypes} />
+      <Route path='/js/vars'      component={JsVars} />
+      <Route path='/js/string'    component={JsString} />
+      <Route path='/js/number'    component={JsNumber} />
+      <Route path='/js/null'      component={JsNull} />
+      <Route path='/js/boolean'   component={JsBoolean} />
+      <Route path='/js/function'  component={JsFunction} />
+      <Route path='/js/function2' component={JsFunction2} />
+      <Route path='/js/array'     component={JsArray} />
+      <Route path='/js/object'    component={JsObject} />
+      <Route path='/js/math'      component={JsMath} />
+      <Route path='/js/logic'     component={JsLogic} />
+      <Route path='/js/cycles'    component={JsCycles} />
 
       {/* wp-pages */}
       <Route path='/wp/install'   component={WpInstall} />

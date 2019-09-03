@@ -21,6 +21,7 @@ export const JsNumber    = () => <MdComp path={require('JS/number.md')} />;
 export const JsNull      = () => <MdComp path={require('JS/null.md')} />;
 export const JsBoolean   = () => <MdComp path={require('JS/boolean.md')} />;
 export const JsFunction  = () => <MdComp path={require('JS/function.md')} />;
+export const JsFunction2 = () => <MdComp path={require('JS/function2.md')} />;
 export const JsArray     = () => <MdComp path={require('JS/array.md')} />;
 export const JsObject    = () => <MdComp path={require('JS/object.md')} />;
 export const JsMath      = () => <MdComp path={require('JS/math.md')} />;

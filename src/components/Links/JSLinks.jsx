@@ -17,6 +17,7 @@ const JSLinks = () => (
     <li><NavLink to='/js/logic'     activeStyle={linkStyles}>Logic(&gt; &lt; =)</NavLink></li>
     <li><NavLink to='/js/cycles'    activeStyle={linkStyles}>Cycles</NavLink></li>
     <li><NavLink to='/js/function'  activeStyle={linkStyles}>Function</NavLink></li>
+    <li><NavLink to='/js/function2' activeStyle={linkStyles}>Function II</NavLink></li>
     <li><NavLink to='/js/array'     activeStyle={linkStyles}>Array</NavLink></li>
     <li><NavLink to='/js/dom'       activeStyle={linkStyles}>DOM</NavLink></li>
     <li><NavLink to='/js/events'    activeStyle={linkStyles}>Events</NavLink></li>

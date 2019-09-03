@@ -21,12 +21,28 @@ person.country = 'Russia';
 // show property
 console.log(person.age);
 
+// unknown properrty
+console.log(person.height); // return undefined
+
 // or
 console.log(person['age']);
 
 // delete property
 delete person.age;
+```
 
+## Nesting objects
+
+```js
+let person = {
+  wife: {
+    name: 'Inna',
+    sername: 'Begunova',
+    age: 33,
+  }
+};
+
+console.log(person.wife.name);
 ```
 
 ## Rest, spread operator
