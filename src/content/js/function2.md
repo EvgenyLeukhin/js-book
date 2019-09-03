@@ -25,6 +25,11 @@ function(a, b) {
   console.log('Something');
 })();
 
+// with params
+(function(text) {
+  console.log(text);
+})('Something');
+
 setTimeout(
   function() { console.log('Test') },
   1000
@@ -56,5 +61,10 @@ car.old('Открыто!');  // вызов метода объекта car
 car.new('Открыто!');  // вызов метода объекта car
 
 ```
+
+## This
+
+Это что-то вроде переменной, которая автоматически создается у объектов и функций, ограничивается {}, разные this друг о друге ничего не знают. 
+
 
 ## Замакания, Call-back, рекурсия

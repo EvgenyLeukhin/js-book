@@ -16,7 +16,7 @@ class SomeClass {
 
 ## Constructor
 
-Одиночный метод класса. Функция, в неё можно записывать любой код, который будет всегда выполняться при использовании экземпляров класса-родителя.
+Одиночный метод класса. Функция, в неё можно записывать любой код, который будет всегда выполняться при использовании экземпляров класса-родителя. Конструктору можно добавлять аргументы.
 
 ```js
 class SomeClass {
@@ -36,6 +36,33 @@ class SomeClass {
   }
 }
 
-// create examle of class
+// create instances of class
 new SomeClass();
+new SomeClass();
+new SomeClass();
+```
+
+## Создание экземпляров классе
+
+```js
+class Person {
+  constructor(firstName, lastName) {
+    // шаблонные свойства класса 
+    // (будут присваиваться через параметр конструктора)
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // class method
+  showFullname() {
+    console.log(`${this.firstName} ${this.lastName}`)
+  }
+}
+
+// create instances of class
+const person1 = new Person('Jack', 'Sparrow');
+person1.showFullname();
+
+const person2 = new Person('John', 'Smith');
+person2.showFullname();
 ```
