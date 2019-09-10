@@ -129,8 +129,21 @@ const MdComp = ({path}) => (
   </article>
 );
 
+
 const Comp = () => <MdComp path={file} />;
 ...
 <Comp />
 
+```
+
+### MdComp (template for require)
+
+```js
+const MdComp = ({ path }) => (
+  <div dangerouslySetInnerHTML={{ __html: path.__content }} />
+);
+
+export const JS = () => <MdComp path={require('JS/index.md')} />;
+
+MdComp.propTypes = { path: T.object };
 ```
