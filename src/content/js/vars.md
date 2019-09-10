@@ -13,10 +13,10 @@ let some;
 ## Multi-Initialization
 
 ```js
-//With "," operator.
+// With "," operator.
 let some1, some2, some3 = 'String;'
 
-let = (123, 'string', true); // true
+let = ('string1', 'string2', 'string3' ); // string3
 
 // distructive initialization
 const [a, b, c, d] = [1, 2, 3, 4];
@@ -34,7 +34,7 @@ let object = {};
 
 let array = [];
 
-// output data by console
+// output data from vars to console
 console.log(number); // 123
 ```
 

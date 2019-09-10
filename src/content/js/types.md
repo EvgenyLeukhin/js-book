@@ -1,7 +1,7 @@
 # Types
 
 JavaScript has 6 types of data.
-1-5 - Primitive types.
+1-5 - Primitive types and 6 is object.
 
 1. Number
 2. String
@@ -9,6 +9,7 @@ JavaScript has 6 types of data.
 4. Null
 5. Undefined
 6. Object
+---
 7. Symbol (ES6)
 8. BigInt (ES9)
 

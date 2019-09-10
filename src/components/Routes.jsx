@@ -5,7 +5,7 @@ import {
   ReacT, Redux, JS, Webpack, NodeJs,
 
   // js pages
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms,
 
   // webpack-pages
   WpInstall, WpConfig, WpJs, WpCss, WpHtml, WpImg, WpFonts, WpMd, WpPlugins, WpEslint, WpEditor, WpStructure,
@@ -50,6 +50,7 @@ const Routes = () => (
       <Route path='/js/cycles'    component={JsCycles} />
       <Route path='/js/class'     component={JsClass} />
       <Route path='/js/dom'       component={JsDom} />
+      <Route path='/js/forms'     component={JsForms} />
 
       {/* wp-pages */}
       <Route path='/wp/install'   component={WpInstall} />

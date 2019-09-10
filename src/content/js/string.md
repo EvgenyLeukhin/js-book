@@ -100,15 +100,15 @@ const c = 'String';
 
 'Ztring'.replace('Z', 'S');
 
-'String'.startsWith('St');
+'String'.startsWith('St'); // bool
 
-'String'.endsWith('ng');
+'String'.endsWith('ng'); // bool
 
 'String'.repeat(2);
 
-'String'.includes('S');
+'String'.includes('S'); // bool
 
-'String'.split('');
+'String'.split(''); // convert to array
 ```
 
 Содержимое строки в JavaScript нельзя изменить. Нельзя взять символ посередине и заменить его. Как только строка создана — она такая навсегда.

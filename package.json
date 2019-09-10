@@ -12,16 +12,23 @@
     "type": "git",
     "url": "git+https://github.com/EvgenyLeukhin/js-book.git"
   },
-  "keywords": ["react", "redux", "js", "webpack"],
+  "keywords": [
+    "react",
+    "redux",
+    "js",
+    "webpack"
+  ],
   "author": "Evgeny Leukhin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/EvgenyLeukhin/js-book/issues"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "gh-pages": "^2.0.1",
     "github-markdown-css": "^3.0.1",
     "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1"
@@ -35,7 +42,6 @@
     "autoprefixer": "^9.6.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
-    "classnames": "^2.2.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
@@ -50,7 +56,6 @@
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
-    "prop-types": "^15.7.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.3",

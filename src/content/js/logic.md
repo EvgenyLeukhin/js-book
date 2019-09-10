@@ -31,7 +31,7 @@ Has a strong connect with boolean data type. Бинарный оператор.
 ```js
 0 || false; // false
 
-0 || 1; // false
+0 || 1; // 1
 
 true || false; // true
 
