@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 
 const MdComp = ({ path }) => (
-  <div dangerouslySetInnerHTML={{ __html: path.__content }} />
+  <div dangerouslySetInnerHTML={{ __html: path.__content }} /> // need markdown-with-frontmatter loader
 );
 
 // main pages //

@@ -50,7 +50,8 @@ module.exports = {
       // MARKDOWN //
       {
         test: /\.md$/,
-        use: 'markdown-with-front-matter-loader'
+        // use: 'markdown-with-front-matter-loader'
+        use: 'raw-loader'
       },
 
     ]
