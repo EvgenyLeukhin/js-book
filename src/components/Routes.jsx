@@ -6,7 +6,7 @@ import {
   ReacT, Redux, JS, Webpack, NodeJs,
 
   // js pages
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms, JsImport, JsServer, JsEvents, JsStorage, JsMethods,
 
   // webpack-pages
   WpInstall, WpConfig, WpJs, WpCss, WpHtml, WpImg, WpFonts, WpMd, WpPlugins, WpEslint, WpEditor, WpStructure,
@@ -52,6 +52,11 @@ const Routes = () => (
       <Route path='/js/class'     component={JsClass} />
       <Route path='/js/dom'       component={JsDom} />
       <Route path='/js/forms'     component={JsForms} />
+      <Route path='/js/export'    component={JsImport} />
+      <Route path='/js/server'    component={JsServer} />
+      <Route path='/js/events'    component={JsEvents} />
+      <Route path='/js/storage'   component={JsStorage} />
+      <Route path='/js/methods'   component={JsMethods} />
 
       {/* wp-pages */}
       <Route path='/wp/install'   component={WpInstall} />
@@ -98,6 +103,6 @@ const Routes = () => (
       <Route render={() => <h1 style={{ paddingTop: 24 }}>404 - Page not found</h1>} />
     </Switch>
   </main>
-)
+);
 
 export default Routes;
