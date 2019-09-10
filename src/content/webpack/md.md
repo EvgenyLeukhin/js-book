@@ -87,7 +87,7 @@ import { JS } from './RequireMd';
   markdown-with-front-matter-loader
 ```
 
-### ConfiG wp
+### Config (wp)
 
 ```js
 ...
