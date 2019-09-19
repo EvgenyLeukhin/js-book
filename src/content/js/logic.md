@@ -4,12 +4,14 @@ Has a strong connect with boolean data type. Бинарный оператор.
 
 ## (>, >=, <, <=, ==, ===, !, !=, !==) operators
 
+Операторы сравнения
+
 ```js
 1 > 0; // true
 
 1 < 0; // false
 
-1 == '1'; // true
+1 == '1'; // true (conver to string)
 
 1 === '1'; // false
 

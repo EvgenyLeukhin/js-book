@@ -57,3 +57,7 @@ let newPerson = {
   city: 'Omsk'
 };
 ```
+
+## JSON
+
+React apps works with JSON API.
