@@ -1,5 +1,6 @@
 # JS-book
-My learning JS-repo. Content created by React with markdown-with-front-matter-loader
+
+My learning JS-repo. Content created by React with react-markdown and raw-loader with code highlighting by react-syntax-highlighter.
 
 1. Add md-file to content folder (./src/content/...);
 2. Require this file to const (./src/components/RequireMd.jsx);
