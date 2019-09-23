@@ -13,7 +13,7 @@ click, submit, dblclick, keydown, keyup, keypress, mouseover, mouseout, reset, f
 ## click
 
 ```js
-el.addEventListener('click', () => {
+el.addEventListener('click', (event) => {
   event.preventDefault(); // reset default events if they are
   // do smth
 });

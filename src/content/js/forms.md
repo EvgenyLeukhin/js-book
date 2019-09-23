@@ -24,7 +24,8 @@ someElement.id = 'some-id';
 someElement.type = 'email';
 
 // min-max (Макс. и минимальные значения полей)
-someElement.min = 0; someElement.max = 10;
+someElement.min = 0; 
+someElement.max = 10;
 
 // selected
 someElement.selected = true;

@@ -12,7 +12,7 @@ typeof a; // null
 
 ## Undefined
 
-Variables take undefined when we inizialize them, but didn't give them any data. The situation when data do not commes to variable.
+Variables take undefined when we inizialize them, but didn't give them any data. The situation when data do not commes to variable. Server respond error.
 
 ```js
 let a;

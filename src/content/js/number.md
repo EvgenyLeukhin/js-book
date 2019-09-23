@@ -65,11 +65,7 @@ Number(null);   // 0
 12 * '2';       // 24
 
 12 / '2';       // 6
-```
 
-## Methods
-
-```js
 parseInt('125.25px');     // 125
 
 parseFloat('125.25px');   // 125.25

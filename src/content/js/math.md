@@ -39,7 +39,7 @@ let a = 10;
 
 --a;        // prefix dicriment a - 1
 
-a++;        // post-prefix incriment a, a + 1
+a++;        // post-prefix incriment a, a + 1 (for cycles)
 
 a--;        // post-prefix dicriment a, a - 1
 
@@ -72,6 +72,8 @@ Math.ceil(-123.999));    // -123
 Math.round(-123.527));   // -124
 
 Math.abs(-123));         // 123
+
+Math.trunc(-123.132));   // -123
 
 Math.PI;                 // 3.14
 

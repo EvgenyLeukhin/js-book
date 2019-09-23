@@ -16,7 +16,11 @@ let some;
 // With "," operator.
 let some1, some2, some3 = 'String;'
 
-let = ('string1', 'string2', 'string3' ); // string3
+let some1 = 'String 1',
+    some2 = 'String 2',
+    some3 = 'String 3';
+
+let some = ('string1', 'string2', 'string3' ); // string3
 
 // distructive initialization
 const [a, b, c, d] = [1, 2, 3, 4];
@@ -49,7 +53,7 @@ let thisIsSomeString = 'This is some string';
 
 let $some = 'With $ symbol';
 
-const THIS_IS_SOME_STRING = 'This is some string';
+const THIS_IS_SOME_CONST = 'This is some const';
 ```
 
 Нельзя именовать переменные, начиная с цифры, использовать для разделения слов "-", использовать ключевые слова.
@@ -97,7 +101,7 @@ let somE;
 
 ## Var
 
-Outdate keyword with global scope. You should use let or const keywords.
+Outdate keyword with global scope. You should use let or const syntax.
 
 ## Let
 

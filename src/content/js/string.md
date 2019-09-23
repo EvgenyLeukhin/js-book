@@ -28,7 +28,7 @@ const a = 'String 1';
 const b = 'String 2';
 const c = () => '123';
 
-const concat = `${a} ${b} ${c()}`;
+const concat = `${a} ${b} ${c()}`; // "String 1 String 2 123"
 ```
 
 ### Multi-string
@@ -88,27 +88,27 @@ const c = 'String';
 ## String methods
 
 ```js
-'String'.toLowerCase();
+'String'.toLowerCase();            // string
 
-'String'.toUpperCase();
+'String'.toUpperCase();            // STRING
 
-'String'.length;
+'String'.length;                   // 6
 
-'String'[0] || 'String'.charAt(0);
+'String'[0] || 'String'.charAt(0); // S
 
-'String'.substring(1, 5);
+'String'.substring(1, 5);          // "trin"
 
-'Ztring'.replace('Z', 'S');
+'Ztring'.replace('Z', 'S');        // "String"
 
-'String'.startsWith('St'); // bool
+'String'.startsWith('St');         // bool
 
-'String'.endsWith('ng'); // bool
+'String'.endsWith('ng');           // bool
 
-'String'.repeat(2);
+'String'.repeat(2);                // "StringString"
 
-'String'.includes('S'); // bool
+'String'.includes('S');            // bool
 
-'String'.split(''); // convert to array
+'String'.split('');                // convert to array ["S", "t", "r", "i", "n", "g"]
 ```
 
 Содержимое строки в JavaScript нельзя изменить. Нельзя взять символ посередине и заменить его. Как только строка создана — она такая навсегда.

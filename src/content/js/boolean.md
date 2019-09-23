@@ -11,20 +11,20 @@ const b = false;
 ## Convertation
 
 ```js
-Boolean(1); // true
-Boolean(-1); // true
-Boolean(0.1); // true
+Boolean(1);         // true
+Boolean(-1);        // true
+Boolean(0.1);       // true
 
-Boolean(0); // false
+Boolean(0);         // false
 
-Boolean(' '); // true
-Boolean(''); // false
+Boolean(' ');       // true
+Boolean('');        // false
 
-Boolean(null); // false
+Boolean(null);      // false
 Boolean(undefined); // false
 
-Boolean([]); // true
-Boolean({}); // true
+Boolean([]);        // true, any array
+Boolean({});        // true, any object
 
-Boolean(() => alert(123)); // true
+Boolean(() => alert(123)); // true, any function
 ```
