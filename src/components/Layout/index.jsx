@@ -9,9 +9,7 @@ import Routes from '../Routes';
 import './scss/styles.scss';
 
 class Layout extends React.Component {
-  state = {
-    showAside: true,
-  }
+  state = { showAside: true }
 
   toggleSidebar = () => {
     const { showAside } = this.state;
@@ -24,10 +22,7 @@ class Layout extends React.Component {
     return(
       <div className="app-wrapper">
         <Header />
-        <Aside
-          isShow={showAside}
-          toggleSidebar={this.toggleSidebar}
-        />
+        <Aside isShow={showAside} toggleSidebar={this.toggleSidebar} />
         <Routes />
         <Footer />
       </div>

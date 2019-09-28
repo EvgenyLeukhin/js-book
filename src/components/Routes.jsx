@@ -6,7 +6,7 @@ import {
   ReacT, Redux, JS, Webpack, NodeJs,
 
   // js pages
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms, JsImport, JsServer, JsEvents, JsStorage, JsMethods,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsObject, JsObject2, JsMath, JsLogic, JsCycles, JsClass, JsClass2, JsDom, JsForms, JsImport, JsServer, JsEvents, JsStorage, JsMethods,
 
   // webpack-pages
   WpInstall, WpConfig, WpJs, WpCss, WpHtml, WpImg, WpFonts, WpMd, WpPlugins, WpEslint, WpEditor, WpStructure,
@@ -46,10 +46,12 @@ const Routes = () => (
       <Route path='/js/function2' component={JsFunction2} />
       <Route path='/js/array'     component={JsArray} />
       <Route path='/js/object'    component={JsObject} />
+      <Route path='/js/object2'   component={JsObject2} />
       <Route path='/js/math'      component={JsMath} />
       <Route path='/js/logic'     component={JsLogic} />
       <Route path='/js/cycles'    component={JsCycles} />
       <Route path='/js/class'     component={JsClass} />
+      <Route path='/js/class2'    component={JsClass2} />
       <Route path='/js/dom'       component={JsDom} />
       <Route path='/js/forms'     component={JsForms} />
       <Route path='/js/export'    component={JsImport} />

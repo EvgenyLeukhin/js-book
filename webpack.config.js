@@ -23,7 +23,8 @@ module.exports = {
       Redux:      path.resolve(__dirname, 'src', 'content/redux'),
       NodeJs:     path.resolve(__dirname, 'src', 'content/nodejs'),
       Links:      path.resolve(__dirname, 'src', 'components/Links'),
-      Components: path.resolve(__dirname, 'src', 'components')
+      Components: path.resolve(__dirname, 'src', 'components'),
+      Constants:  path.resolve(__dirname, 'src', 'constants')
     }
   },
 

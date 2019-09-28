@@ -3,54 +3,31 @@ import { NavLink } from 'react-router-dom';
 
 import GutHubLink from './GutHubLink';
 
-import { navStyles } from 'Components/сonsts';
+import { activeHeaderStyles } from 'Constants/activeStyles';
+import links from 'Constants/links';
 
 import './styles.scss';
 
-const headerLinks = [
-  { id: 0,
-    text: 'JS',
-    href: '/js' },
+const HeaderLinks = () => links.header.map(i => (
+  <li key ={i.id}>
+    <NavLink to={i.to} activeStyle={activeHeaderStyles}>
+      {i.title}
+    </NavLink>
+  </li>
+));
 
-  { id: 1,
-    text: 'Webpack',
-    href: '/wp' },
+const Header = () => (
+  <header>
+    <nav>
+      <NavLink to='/js' className="home-link"><b>My JS-book</b></NavLink>
 
-  { id: 2,
-    text: 'React',
-    href: '/react' },
+      <ul className="main-nav">
+        <HeaderLinks />
+      </ul>
 
-  { id: 3,
-    text: 'Redux',
-    href: '/redux' },
-
-  { id: 4,
-    text: 'NodeJS',
-    href: '/nodejs' },
-];
-
-const Header = () => {
-  return (
-    <header>
-      <nav>
-        <NavLink to='/js' className="home-link"><b>My JS-book</b></NavLink>
-
-        <ul className="main-nav">
-          {
-            headerLinks.map(i => (
-              <li key ={i.id}>
-                <NavLink to={i.href} activeStyle={navStyles}>
-                  {i.text}
-                </NavLink>
-              </li>
-            ))
-          }
-        </ul>
-
-        <GutHubLink />
-      </nav>
-    </header>
-  );
-};
+      <GutHubLink />
+    </nav>
+  </header>
+);
 
 export default Header;
