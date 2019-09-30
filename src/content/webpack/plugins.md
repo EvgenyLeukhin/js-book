@@ -1,6 +1,8 @@
 # Plugins
+
 ## Install
-```
+
+```bash
 npm i --save-dev 
   webpack-merge
   webpackbar
@@ -10,13 +12,17 @@ npm i --save-dev
   webpack-bundle-analyzer
   copy-webpack-plugin
 ```
-## <mark>webpack-merge</mark>
+
+## webpack-merge
+
 ### webpack.config.js
+
 ```js
-  ... // common configs
+  // common configs
 ```
 
 ## webpack.dev.js
+
 ```js
 const merge  = require('webpack-merge');
 const common = require('./webpack.config.js');
@@ -29,6 +35,7 @@ module.exports = merge(common, development);
 ```
 
 ### webpack.prod.js
+
 ```js
 const merge  = require('webpack-merge');
 const common = require('./webpack.config.js');
@@ -42,7 +49,8 @@ module.exports = merge(common, production);
 
 ***
 
-## <mark>webpack-bar</mark> (prod)
+## webpack-bar (prod)
+
 ```js
 const WebpackBar = require('webpackbar');
 
@@ -53,7 +61,8 @@ const WebpackBar = require('webpackbar');
 
 ***
 
-## <mark>clean-webpack-plugin</mark> (prod)
+## clean-webpack-plugin (prod)
+
 ```js
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -64,7 +73,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 ***
 
-## <mark>compression-webpack-plugin</mark> (prod)
+## compression-webpack-plugin (prod)
+
 ```js
 const CompressionPlugin = require('compression-webpack-plugin');
 ...
@@ -74,7 +84,8 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 ***
 
-## <mark>favicons-webpack-plugin</mark> (prod)
+## favicons-webpack-plugin (prod)
+
 ```js
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 ...
@@ -89,7 +100,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 ***
 
-## <mark>webpack-bundle-analyzer</mark> (prod)
+## webpack-bundle-analyzer (prod)
+
 ```js
 const BundleAnalyzerPlugin = 
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -103,7 +115,8 @@ const BundleAnalyzerPlugin =
 
 ***
 
-## <mark>copy-webpack-plugin</mark> (prod)
+## copy-webpack-plugin (prod)
+
 ```js
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 ...
