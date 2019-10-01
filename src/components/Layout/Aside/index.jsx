@@ -11,7 +11,7 @@ import './styles.scss';
 
 const JSLinks = () => links.js.map(i => (
   <li key ={i.id}>
-    <NavLink to={i.to} activeStyle={activeSidebarStyles}>
+    <NavLink to={i.to} activeStyle={activeSidebarStyles} className={cln({ 'divider': i.divider })}>
       {i.title}
     </NavLink>
   </li>
@@ -51,19 +51,21 @@ const NodeJsLinks = () => links.nodejs.map(i => (
 
 
 const Aside = ({ isShow, toggleSidebar }) => (
-  <aside className={cln({ 'hide': !isShow })}>
-    <ul className='links-list'>
-      <Switch>
-        <Route path='/js'     component={JSLinks} />
-        <Route path='/wp'     component={WebpackLinks} />
-        <Route path='/react'  component={ReactLinks} />
-        <Route path='/redux'  component={ReduxLinks} />
-        <Route path='/nodejs' component={NodeJsLinks} />
-      </Switch>
-    </ul>
+  <>
+    <aside className={cln({ 'hide': !isShow })}>
+      <ul className='links-list'>
+        <Switch>
+          <Route path='/js'     component={JSLinks} />
+          <Route path='/wp'     component={WebpackLinks} />
+          <Route path='/react'  component={ReactLinks} />
+          <Route path='/redux'  component={ReduxLinks} />
+          <Route path='/nodejs' component={NodeJsLinks} />
+        </Switch>
+      </ul>
 
-    <i onClick={toggleSidebar} />
-  </aside>
+    </aside>
+    <div className="sidebar-toggler" onClick={toggleSidebar} />
+  </>
 );
 
 Aside.propTypes = {

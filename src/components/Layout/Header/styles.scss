@@ -34,34 +34,57 @@ header {
       flex-shrink: 0;
       margin: 0;
       padding: 0;
+
       & > li {
         margin-right: 5px;
+
         a {
           padding: 0 10px;
           color: darkmagenta;
           border-radius: 20px;
           background-color: transparent;
           border: 1px solid transparent;
-
-          // &.current-page {
-          //   background-color: #fff;
-          //   border: 1px solid darkmagenta;
-          //   cursor: default;
-          //   &__done {
-          //     background-color: lightgreen;
-          //     color: #000;
-          //   }
-          // }
         }
       }
     }
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
   header {
     nav {
-      .main-nav + a { display: none; }
+      max-width: 90%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    nav {
+      max-width: 80%;
+      justify-content: center;
+
+      .main-nav + .github-link, .home-link { display: none; }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    padding-left: 35px;
+
+    nav {
+      max-width: 100%;
+
+      .main-nav {
+
+        & > li {
+          a {
+            padding: 0 5px;
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }
