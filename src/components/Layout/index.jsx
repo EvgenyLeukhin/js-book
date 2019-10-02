@@ -16,13 +16,19 @@ class Layout extends React.Component {
     this.setState({ showAside: !showAside });
   }
 
+  closeSidebar = () => this.setState({ showAside: false });
+
   render() {
     const { showAside } = this.state;
 
     return(
       <div className="app-wrapper">
         <Header />
-        <Aside isShow={showAside} toggleSidebar={this.toggleSidebar} />
+        <Aside
+          isShow={showAside}
+          toggleSidebar={this.toggleSidebar}
+          onSidebarLinkClick={this.closeSidebar}
+        />
         <Routes />
         <Footer />
       </div>

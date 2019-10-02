@@ -1,4 +1,3 @@
-
 import React from 'react';
 import T from 'prop-types';
 import cln from 'classnames';
@@ -9,68 +8,96 @@ import links from 'Constants/links';
 
 import './styles.scss';
 
-const JSLinks = () => links.js.map(i => (
-  <li key ={i.id}>
-    <NavLink to={i.to} activeStyle={activeSidebarStyles} className={cln({ 'divider': i.divider })}>
-      {i.title}
-    </NavLink>
-  </li>
-));
 
-const WebpackLinks = () => links.webpack.map(i => (
-  <li key ={i.id}>
-    <NavLink to={i.to} activeStyle={activeSidebarStyles}>
-      {i.title}
-    </NavLink>
-  </li>
-));
+const Aside = ({ isShow, toggleSidebar, onSidebarLinkClick }) => {
+  const JSLinks = () => links.js.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
 
-const ReactLinks = () => links.react.map(i => (
-  <li key ={i.id}>
-    <NavLink to={i.to} activeStyle={activeSidebarStyles}>
-      {i.title}
-    </NavLink>
-  </li>
-));
+  const WebpackLinks = () => links.webpack.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
 
-const ReduxLinks = () => links.redux.map(i => (
-  <li key ={i.id}>
-    <NavLink to={i.to} activeStyle={activeSidebarStyles}>
-      {i.title}
-    </NavLink>
-  </li>
-));
+  const ReactLinks = () => links.react.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
 
-const NodeJsLinks = () => links.nodejs.map(i => (
-  <li key ={i.id}>
-    <NavLink to={i.to} activeStyle={activeSidebarStyles}>
-      {i.title}
-    </NavLink>
-  </li>
-));
+  const ReduxLinks = () => links.redux.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
 
+  const NodeJsLinks = () => links.nodejs.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
 
-const Aside = ({ isShow, toggleSidebar }) => (
-  <>
-    <aside className={cln({ 'hide': !isShow })}>
-      <ul className='links-list'>
-        <Switch>
-          <Route path='/js'     component={JSLinks} />
-          <Route path='/wp'     component={WebpackLinks} />
-          <Route path='/react'  component={ReactLinks} />
-          <Route path='/redux'  component={ReduxLinks} />
-          <Route path='/nodejs' component={NodeJsLinks} />
-        </Switch>
-      </ul>
+  return (
+    <>
+      <aside className={cln({ 'hide': !isShow })}>
+        <ul className='links-list'>
+          <Switch>
+            <Route path='/js'     component={JSLinks} />
+            <Route path='/wp'     component={WebpackLinks} />
+            <Route path='/react'  component={ReactLinks} />
+            <Route path='/redux'  component={ReduxLinks} />
+            <Route path='/nodejs' component={NodeJsLinks} />
+          </Switch>
+        </ul>
+      </aside>
 
-    </aside>
-    <div className="sidebar-toggler" onClick={toggleSidebar} />
-  </>
-);
+      <div className="sidebar-toggler" onClick={toggleSidebar} />
+    </>
+  );
+};
 
 Aside.propTypes = {
   isShow: T.bool,
-  toggleSidebar: T.func
+  toggleSidebar: T.func,
+  onSidebarLinkClick: T.func
 };
 
 export default Aside;

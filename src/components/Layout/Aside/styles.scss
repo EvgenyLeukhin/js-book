@@ -51,6 +51,7 @@ aside {
       a {
         position: relative;
         display: inline-flex;
+        white-space: nowrap;
 
         &.divider {
           margin-top: 10px;
