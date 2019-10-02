@@ -94,25 +94,21 @@ aside {
   & + .sidebar-toggler {
     display: block;
     position: fixed;
-    width: 16px;
-    height: 16px;
-    top: 5px;
-    left: 30px;
+    width: 30px;
+    height: 26px;
+    top: 0;
+    left: 0;
     z-index: 10;
     cursor: pointer;
     transition-duration: .5s;
-    border-radius: 50%;
-    background: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./burger.svg);
+    background-size: 15px;
+    background-color: #fff;
   }
 
   &.hide + .sidebar-toggler {
-    background: transparent;
-    border: 1px solid #000;
-  }
-}
-
-@media (max-width: 1050px) {
-  aside + .sidebar-toggler {
-    left: 15px;
+    background-color: transparent;
   }
 }
