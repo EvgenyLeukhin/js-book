@@ -16,7 +16,9 @@ class Layout extends React.Component {
     this.setState({ showAside: !showAside });
   }
 
-  closeSidebar = () => this.setState({ showAside: false });
+  closeSidebar = () => {
+    window.innerWidth < 1235 && this.setState({ showAside: false });
+  }
 
   render() {
     const { showAside } = this.state;
