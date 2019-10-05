@@ -1,10 +1,11 @@
 # Install
 
 ## Init project
+
 `npm init -y`
 
 ## Install packages
-   
+
 `npm i --save-dev webpack webpack-cli webpack-dev-server`
 
 ## package.json

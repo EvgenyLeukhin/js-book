@@ -1,4 +1,5 @@
 # Structure
+
 for React SPA
 
     .babelrc

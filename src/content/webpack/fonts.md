@@ -1,11 +1,13 @@
 # Fonts
 
 ## Install
-```
+
+```bash
 npm i --save-dev file-loader
 ```
 
 ## Config (common)
+
 ```js
 ...
   {
@@ -21,13 +23,15 @@ npm i --save-dev file-loader
 ```
 
 ## fonts.js
-```
+
+```js
 import '../fonts/UniNeue/500/UniNeueBook.woff2';
 import '../fonts/UniNeue/500/UniNeueBook.woff';
 import '../fonts/UniNeue/500/UniNeueBook.ttf';
 ```
 
 ## fonts.scss
+
 ```css
 @font-face {
   font-family: 'Uni Neue';

@@ -1,14 +1,18 @@
 # ESLint
+
+[ESLint - Official docs](https://eslint.org/)
+
 ## install
-```
-npm i --save-dev 
+
+```bash
+npm i --save-dev
   eslint
   eslint-loader
   eslint-plugin-react
-
 ```
 
-## Config-dev  
+## Config (dev)
+
 ```js
 ...
   {
@@ -20,6 +24,7 @@ npm i --save-dev
 ```
 
 ## .eslintrc.js
+
 ```js
 {
   "env": {
@@ -65,7 +70,8 @@ npm i --save-dev
 ```
 
 ## .eslintignore
-```
+
+```txt
 node_modules
 dist
 ```

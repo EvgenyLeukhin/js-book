@@ -1,8 +1,9 @@
 # CSS
 
 ## Install
-```
-npm i --save-dev 
+
+```bash
+npm i --save-dev
   css-loader
   postcss-loader
   sass-loader
@@ -14,7 +15,8 @@ npm i --save-dev
   optimize-css-assets-webpack-plugin
 ```
 
-## Config-dev
+## Config (dev)
+
 ```js
 ...
   {
@@ -31,7 +33,8 @@ npm i --save-dev
 ...
 ```
 
-## Config-prod
+## Config (prod)
+
 ```js
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');

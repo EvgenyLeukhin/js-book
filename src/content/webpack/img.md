@@ -1,13 +1,15 @@
 # Images
 
 ## Install
-```
-npm i --save-dev 
+
+```bash
+npm i --save-dev
   url-loader
   image-webpack-loader
 ```
 
-## Config-dev
+## Config (dev)
+
 ```js
 ...
   {
@@ -23,7 +25,8 @@ npm i --save-dev
 ...
 ```
 
-## Config-prod
+## Config (prod)
+
 ```js
 ...
   {

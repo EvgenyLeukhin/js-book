@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm i --save-dev 
+npm i --save-dev
   webpack-merge
   webpackbar
   clean-webpack-plugin

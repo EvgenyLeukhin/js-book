@@ -1,6 +1,6 @@
 # .editorconfig
 
-```
+```txt
 root = true
 
 [*]

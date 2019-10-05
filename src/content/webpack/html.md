@@ -1,11 +1,13 @@
 # HTML
 
 ## Install
-```
+
+```bash
 npm i --save-dev html-webpack-plugin
 ```
 
-## Config-dev
+## Config (dev)
+
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -17,7 +19,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 ...
 ```
 
-## Config-prod
+## Config (prod)
+
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -34,6 +37,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 ```
 
 ## index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +47,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <div id="root"></div>
 </body>
@@ -50,6 +55,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 ```
 
 ## html-loader
-```
+
+```bash
 npm i --save-dev html-webpack-loader
 ```

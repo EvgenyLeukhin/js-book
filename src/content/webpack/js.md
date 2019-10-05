@@ -1,19 +1,21 @@
 # JS-Babel
 
 ## Install
-```
-npm i --save-dev 
-  @babel/core 
+
+```bash
+npm i --save-dev
+  @babel/core
   @babel/plugin-proposal-class-properties
   @babel/plugin-proposal-optional-chaining
   @babel/plugin-syntax-dynamic-import
-  @babel/preset-env 
+  @babel/preset-env
   @babel/preset-react
   babel-loader
   uglifyjs-webpack-plugin
 ```
 
 ## Config (common)
+
 ```js
 ...
   {
@@ -24,7 +26,8 @@ npm i --save-dev
 ...
 ```
 
-## Config-prod
+## Config (prod)
+
 ```js
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 ...
@@ -44,6 +47,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 ```
 
 ## .babelrc
+
 ```js
 {
   "presets": [
