@@ -59,7 +59,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      favicon: 'static/img/favicon.ico',
+      favicon: 'src/favicon.png',
       template: __dirname + '/src/index.html',
       minify: {
         removeComments: true,
