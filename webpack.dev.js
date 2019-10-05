@@ -1,5 +1,6 @@
-const merge             = require('webpack-merge');
-const common            = require('./webpack.config.js');
+const path   = require('path');
+const merge  = require('webpack-merge');
+const common = require('./webpack.config.js');
 
 const development = {
   mode: 'development',
@@ -17,13 +18,6 @@ const development = {
 
   module: {
     rules: [
-      // JS //
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: 'eslint-loader'
-      },
-
       // CSS // with style-loader
       {
         test: /\.(sa|sc|c)ss$/,
@@ -48,7 +42,6 @@ const development = {
           }
         }]
       },
-
     ]
   }
 };

@@ -8,7 +8,7 @@ const MiniCssExtractPlugin    = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const production = {
-  mode:    'production',
+  mode:   'production',
   output: { filename: 'bundle-[hash:8].js' },
 
   module: {
@@ -60,9 +60,7 @@ const production = {
 
   plugins: [
     new WebpackBar(),
-
     new CleanWebpackPlugin(),
-
     new MiniCssExtractPlugin({ filename: 'bundle-[hash:8].css' }), // css bundle
   ]
 };

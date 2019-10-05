@@ -6,19 +6,20 @@
 
 ```bash
 npm i --save-dev
+  babel-eslint
   eslint
   eslint-loader
   eslint-plugin-react
 ```
 
-## Config (dev)
+## Config (common)
 
 ```js
 ...
   {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    use: 'eslint-loader'
+    use: ['babel-loader', 'eslint-loader']
   },
 ...
 ```
@@ -72,6 +73,6 @@ npm i --save-dev
 ## .eslintignore
 
 ```txt
-node_modules
-dist
+node_modules/
+dist/
 ```
