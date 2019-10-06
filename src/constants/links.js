@@ -79,11 +79,11 @@ const links = {
   ],
 
   nodejs: [
-    { id: 0, title: 'Install',      to: '/nodejs/install' },
-    { id: 1, title: 'Npm / Yarn',   to: '/nodejs/npm-yarn' },
-    { id: 2, title: 'Package.json', to: '/nodejs/package-json' },
-    { id: 3, title: 'Browser-sync', to: '/nodejs/browser-sync' },
-    { id: 4, title: 'Express',      to: '/nodejs/express' },
+    { id: 0, title: 'Install / Nvm', to: '/nodejs/install' },
+    { id: 1, title: 'Npm / Yarn',    to: '/nodejs/npm-yarn' },
+    { id: 2, title: 'Package.json',  to: '/nodejs/package-json' },
+    { id: 3, title: 'Browser-sync',  to: '/nodejs/browser-sync' },
+    { id: 4, title: 'Express',       to: '/nodejs/express' },
   ]
 };
 

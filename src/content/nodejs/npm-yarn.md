@@ -1,39 +1,57 @@
-# Npm / Yarn
+# Npm
 
 Npm install with node automaticly.
 
-Install:
+## Install
 
 ```bash
 npm i -g package-name
 npm i --save-dev package-name
 ```
 
-Remove:
+## Remove
 
 ```bash
 npm remove -g package-name
 npm remove --save-dev package-name
 ```
 
-Update:
+## Update
 
-Rebuild:
+```bash
+npm update -g <package_name>
+npm update --save-dev <package_name>
+```
 
-## Yarn
+## Update all packages
 
-Install:
+```bash
+npm update -g
+npm update --save-dev
+```
+
+## Rebuild
+
+```bash
+npm rebuild <package_name>
+```
+
+# Yarn
+
+## Install
 
 ```bash
 npm i -g yarn
 yarn -v
 ```
 
+## Add package
+
 ```bash
 yarn add package-name
 ```
 
-Remove:
+## Remove
 
 ```bash
 yarn remove package-name

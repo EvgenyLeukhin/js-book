@@ -34,3 +34,41 @@ and write js-code.
 ```bash
 node some-file.js
 ```
+
+# Nvm
+
+## Install
+
+```bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+```
+
+## Check node version
+
+```bash
+node -v
+```
+
+## See list of installed versions
+
+```bash
+nvm ls
+```
+
+## Install/uninstall some version
+
+```bash
+nvm install/uninstall 10.15.0
+```
+
+## Use installed version
+
+```bash
+nvm use 10.15.0
+```
+
+## .nvmrc
+
+```bash
+node -v > .nvmrc
+```
