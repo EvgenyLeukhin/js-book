@@ -2,11 +2,15 @@
 
 ## raw-loader
 
-```raw
-npm i --save-dev raw-loader
+```bash
+npm i --save-dev
+  github-markdown-css
+  raw-loader
+  react-markdown
+  react-syntax-highlighter
 ```
 
-### Config
+### 1. Config
 
 ```js
 ...
@@ -17,18 +21,28 @@ npm i --save-dev raw-loader
 ...
 ```
 
-### CodeBlock.jsx
+```scss
+// import to global component
+@import "~github-markdown-css";
+```
+
+### 2. MarkdownWrapper & SyntaxHighlighter
 
 ```js
 import React from 'react';
 import T from 'prop-types';
 
+import ReactMarkdown from 'react-markdown';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
 const CodeBlock = ({ language, value }) => (
   <SyntaxHighlighter language={language}>
     {value}
   </SyntaxHighlighter>
+);
+
+const MarkdownWrapper = ({ mdFile }) => (
+  <ReactMarkdown source={mdFile} renderers={{ code: CodeBlock }} />
 );
 
 CodeBlock.propTypes = {
@@ -38,44 +52,32 @@ CodeBlock.propTypes = {
 
 CodeBlock.defaultProps = { language: null };
 
-export default CodeBlock;
-```
-
-### MarkdownWrapper.jsx
-
-```js
-import React from 'react';
-import T from 'prop-types';
-
-import ReactMarkdown from 'react-markdown';
-import CodeBlock from './CodeBlock';
-
-const MarkdownWrapper = ({ mdFile }) => (
-  <ReactMarkdown source={mdFile} renderers={{ code: CodeBlock }} />
-);
-
 MarkdownWrapper.propTypes = {
   mdFile: T.string.isRequired
 };
 
-
 export default MarkdownWrapper;
 ```
 
-### RequireMd.jsx
+### 3. Routes.jsx
 
 ```js
-import JsIndex from 'JS/index.md';
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-export const JS = () => <MarkdownWrapper mdFile={JsIndex} />;
-```
+import MdWrapper from './MarkdownWrapper';
 
-### Add route
+import SomeMdFile from 'content/file.md';
 
-```js
-import { JS } from './RequireMd';
-...
-<Route path='/js' exact component={JS} />
+const Routes = () => (
+  <main className='markdown-body'>
+    <Switch>
+      <Route path='some-path' component={() => <MdWrapper mdFile={SomeMdFile} />} />
+    </Switch>
+  </main>
+);
+
+export default Routes;
 ```
 
 ---
@@ -83,7 +85,8 @@ import { JS } from './RequireMd';
 ## markdown-with-front-matter-loader
 
 ```raw
-  npn i --save-dev
+  npm i --save-dev
+  github-markdown-css
   markdown-with-front-matter-loader
 ```
 
@@ -107,12 +110,12 @@ email: dogsdontuseemail@hzdg.com
 ---
 
 
-I LIKE TO EAT CATS
+I LIKE TO EAT APPLES
 ==================
 
-* Fat cats
-* Skinny cats
-* Whatever
+* Apples
+* Oranges
+* Tomatos
 
 ```
 
