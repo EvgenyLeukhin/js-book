@@ -4,15 +4,16 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import MdWrapper from './MarkdownWrapper';
 
 // I. Import markdown files with content
-// index
+// index //
 import Js      from 'JS/index.md';
 import ReacT   from 'React/index.md';
 import Webpack from 'Webpack/index.md';
 import NodeJs  from 'NodeJs/index.md';
 import Redux   from 'Redux/index.md';
+
 import Test    from './../content/Test';
 
-// js
+// js //
 import JsScript    from 'JS/script.md';
 import JsTypes     from 'JS/types.md';
 import JsVars      from 'JS/vars.md';
@@ -38,7 +39,7 @@ import JsEvents    from 'JS/events.md';
 import JsStorage   from 'JS/storage.md';
 import JsMethods   from 'JS/methods.md';
 
-// webpack
+// webpack //
 import WpInstall   from 'Webpack/install.md';
 import WpConfig    from 'Webpack/config.md';
 import WpJs        from 'Webpack/js.md';
@@ -52,7 +53,7 @@ import WpPlugins   from 'Webpack/plugins.md';
 import WpEditor    from 'Webpack/editor.md';
 import WpStructure from 'Webpack/structure.md';
 
-// react
+// react //
 import ReactTemplate   from 'React/template.md';
 import ReactComponents from 'React/components.md';
 import ReactProps      from 'React/props.md';
@@ -76,8 +77,12 @@ import ReactRedux      from 'React/redux.md';
 import ReactPlugins    from 'React/plugins.md';
 import ReactGatsby     from 'React/gatsby-js.md';
 
-// nodejs
-import NodeJsExpress from 'NodeJs/express.md';
+// nodejs //
+import NodeJsInstall     from 'NodeJs/install.md';
+import NodeJsPackageJson from 'NodeJs/package-json.md';
+import NodeJsNpmYarn     from 'NodeJs/npm-yarn.md';
+import NodeJsBrowserSync from 'NodeJs/browser-sync.md';
+import NodeJsExpress     from 'NodeJs/express.md';
 
 
 // II. Add routes
@@ -159,7 +164,11 @@ const Routes = () => (
       <Route path='/react/gatsby-js'   component={() => <MdWrapper mdFile={ReactGatsby} />} />
 
       {/* nodejs-pages */}
-      <Route path='/nodejs/express'    component={() => <MdWrapper mdFile={NodeJsExpress} />} />
+      <Route path='/nodejs/install'      component={() => <MdWrapper mdFile={NodeJsInstall} />} />
+      <Route path='/nodejs/npm-yarn'     component={() => <MdWrapper mdFile={NodeJsNpmYarn} />} />
+      <Route path='/nodejs/package-json' component={() => <MdWrapper mdFile={NodeJsPackageJson} />} />
+      <Route path='/nodejs/browser-sync' component={() => <MdWrapper mdFile={NodeJsBrowserSync} />} />
+      <Route path='/nodejs/express'      component={() => <MdWrapper mdFile={NodeJsExpress} />} />
 
       {/* 404 page */}
       <Route render={() => <h1 style={{ paddingTop: 24 }}>404 - Page not found</h1>} />

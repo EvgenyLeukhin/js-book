@@ -1,13 +1,16 @@
-# Server (nodejs)
+# Express
+
 ## Install
-```
-npm i --save-dev 
+
+```bash
+npm i --save-dev
   express
   chalk
   compression
 ```
 
 ## server.js
+
 ```js
 const path = require('path');
 const express = require('express');
@@ -31,6 +34,7 @@ server.listen(PORT, () => console.log(`
 ```
 
 ## Start server after build
+
 ```js
 ...
   "serve": "node server.js --open google-chrome",
