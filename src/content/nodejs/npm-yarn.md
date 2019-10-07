@@ -32,6 +32,8 @@ npm update --save-dev
 
 ## Rebuild
 
+Helpful command when need to reinstall package after change node version.
+
 ```bash
 npm rebuild <package_name>
 ```

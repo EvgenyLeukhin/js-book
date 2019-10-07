@@ -75,7 +75,12 @@ const links = {
   ],
 
   redux: [
-    { id: 0, title: 'Install', to: '/redux/install' },
+    { id: 0, title: 'Install',  to: '/redux/install' },
+    { id: 1, title: 'Provider', to: '/redux/provider' },
+    { id: 2, title: 'Enhancer', to: '/redux/enhancer' },
+    { id: 3, title: 'Reducer',  to: '/redux/reducer' },
+    { id: 4, title: 'Actions',  to: '/redux/actions' },
+    { id: 5, title: 'Types',    to: '/redux/types' },
   ],
 
   nodejs: [
