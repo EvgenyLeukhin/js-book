@@ -11,8 +11,8 @@ npm init -y
 ## Install all packages
 
 ```bash
-npm install && npm i
-yarn install && yarn
+npm install || npm i
+yarn install || yarn
 ```
 
 ## "scripts": {}
@@ -62,11 +62,13 @@ List of packeges with versions, which installed with --save-dev flag
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"
+    ...
+    "vue": "^2.5.2",
+    ...
   },
   "devDependencies": {
     ...
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
     ...
   },
   "engines": {

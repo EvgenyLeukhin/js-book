@@ -127,3 +127,12 @@ const found = data.find((item, index, thisArray) => {
 
 console.log(found);
 ```
+
+## Spread/rest operator
+
+```js
+const a = [1, 2, 3];
+const b = [4, 5, 6];
+
+const c = [...a, ...b]; // [1, 2, 3, 4, 5, 6]
+```
