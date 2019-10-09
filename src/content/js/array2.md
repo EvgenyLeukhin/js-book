@@ -29,11 +29,19 @@ arr.forEach((item, index, thisArray) => {
 
 ## map()
 
-Функция для ИЗМЕНЕНИЯ или ОТОБРАЖЕНИЯ элементов в массиве. Мапирование.
-Функция для создания нового массива по карте другого. Также можно применять для вывода элементов массива.
+Функция для создания нового массива по карте другого.
+Также можно применять для вывода элементов массива.
 
 ```js
-console.log('Hello, World!');
+const arr = [1, 2, 3];
+
+// создаём новый массив по карте другого
+const mappedArray = arr.map((item, index, thisArray) => {
+   // умножим элементы на 2
+   return item * 2;
+});
+
+console.log(mappedArray); // [2, 4, 6]
 ```
 
 ## filter()
@@ -41,31 +49,81 @@ console.log('Hello, World!');
 Функция для возвращения определённых значений массива. ФИЛЬТРАЦИЯ.
 
 ```js
-console.log('Hello, World!');
+const arr = [1, 2, 3];
+
+const filteredArray = arr.filter((item, index, thisArray) => {
+// выведем только нечётные
+  return item%2 !== 0;
+});
+
+console.log(filteredArray); // [1, 3]
 ```
 
 ## some()
 
 Проверяет элемент массива на соответствие какому-либо УСЛОВИЮ.
 
+Возвращает true, если хотя бы один элемент true.
+
+Когда "наткнётся" на первое true, то цикл прекращается и возвращается true.
+
 ```js
-console.log('Hello, World!');
+const arr = [1, 2, 3];
+const checkTrue = arr.some((item, index, thisArray) => {
+// проверим массив на содержание в нём нечётных элементов
+  return item%2 !==0;
+});
+// выводим результат проверки
+console.log(checkTrue); // true
 ```
 
 ## every()
 
 Проверяет ВСЕ элементы массива на соответствие какому-либо УСЛОВИЮ.
 
+Возвращает false, если хотя бы один элемент false.
+
+Когда "наткнётся" на первый false, то цикл прекращается и возвращается false
+
 ```js
-console.log('Hello, World!');
+const arr = [1, 2, 3];
+const checkFalse = arr.every((item, index, thisArray) => {
+  // проверим массив на содержание в нём всех нечётных элементов
+  return item%2 !==0;
+});
+// выводим результат проверки
+console.log(checkFalse); // false
 ```
 
 ## reduce()
 
-Функция для "СВОРАЧИВАНИЯ" массива в одно значение (суммирование).
+Функция для "СВОРАЧИВАНИЯ" массива в одно значение (суммирование). Возвращает number.
+
+preVal - предыдущий элемент.
+
+0 - второй аргумент функции (НАЧАЛЬНОЕ ЗНАЧЕНИЕ).
 
 ```js
-console.log('Hello, World!');
+const arr = [1, 2, 3];
+const arrCount = arr.reduce((preVal, item) => {
+  // сложение элементов
+  return preVal + item;
+}, 0);
+
+// сумма элементов массива
+console.log(arrCount); // 6
 ```
 
 ## find()
+
+Метод для поиска элемента внутри массива. Возвращает первый найденный элемент.
+
+```js
+const data = [20, 18, 15, 10, 9];
+
+const found = data.find((item, index, thisArray) => {
+  return item < 12;
+});
+
+console.log(found);
+```
