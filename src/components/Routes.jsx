@@ -24,6 +24,7 @@ import JsBoolean   from 'JS/boolean.md';
 import JsFunction  from 'JS/function.md';
 import JsFunction2 from 'JS/function2.md';
 import JsArray     from 'JS/array.md';
+import JsArray2    from 'JS/array2.md';
 import JsObject    from 'JS/object.md';
 import JsObject2   from 'JS/object2.md';
 import JsMath      from 'JS/math.md';
@@ -118,6 +119,7 @@ const Routes = () => (
       <Route path='/js/function'  component={() => <MdWrapper mdFile={JsFunction} />} />
       <Route path='/js/function2' component={() => <MdWrapper mdFile={JsFunction2} />} />
       <Route path='/js/array'     component={() => <MdWrapper mdFile={JsArray} />} />
+      <Route path='/js/array2'    component={() => <MdWrapper mdFile={JsArray2} />} />
       <Route path='/js/object'    component={() => <MdWrapper mdFile={JsObject} />} />
       <Route path='/js/object2'   component={() => <MdWrapper mdFile={JsObject2} />} />
       <Route path='/js/math'      component={() => <MdWrapper mdFile={JsMath} />} />
