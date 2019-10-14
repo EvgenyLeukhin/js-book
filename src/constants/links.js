@@ -14,7 +14,7 @@ const links = {
     { id: 3,  title: 'Function II',   to: '/js/function2' },
     { id: 4,  title: 'Array',         to: '/js/array' },
     { id: 5,  title: 'Array II',      to: '/js/array2' },
-    { id: 6,  title: 'Server X',      to: '/js/server', divider: true },
+    { id: 6,  title: 'Promise',       to: '/js/server', divider: true },
     { id: 7,  title: 'Import/Export', to: '/js/export', divider: true },
     { id: 8,  title: 'DOM',           to: '/js/dom' },
     { id: 9,  title: 'Events',        to: '/js/events' },

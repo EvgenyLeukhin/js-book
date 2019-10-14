@@ -12,4 +12,6 @@ $title-color: maroon;
   flex-grow: 1;
 
   h1 { color: $title-color; }
+
+  h1 + h2 { margin-top: 0; }
 }
