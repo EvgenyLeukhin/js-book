@@ -172,7 +172,19 @@ var table = {
   myFunc: function() {
     this.height = 300;   }
 };
-`````
+```
+
+## Destructuring
+
+```js
+const { title, width } = options;
+
+// with change value
+const { title: 'anoter value', width } = options;
+
+// nesting
+const { title, width: { fullWidth } } = options;
+```
 
 ## JSON
 

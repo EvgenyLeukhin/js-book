@@ -26,19 +26,16 @@ import JsFunction2 from 'JS/function2.md';
 import JsArray     from 'JS/array.md';
 import JsArray2    from 'JS/array2.md';
 import JsObject    from 'JS/object.md';
-import JsObject2   from 'JS/object2.md';
 import JsMath      from 'JS/math.md';
 import JsLogic     from 'JS/logic.md';
 import JsCycles    from 'JS/cycles.md';
 import JsClass     from 'JS/class.md';
-import JsClass2    from 'JS/class2.md';
 import JsDom       from 'JS/dom.md';
 import JsForms     from 'JS/forms.md';
 import JsImport    from 'JS/import.md';
 import JsServer    from 'JS/server.md';
 import JsEvents    from 'JS/events.md';
 import JsStorage   from 'JS/storage.md';
-import JsMethods   from 'JS/methods.md';
 
 // webpack //
 import WpInstall   from 'Webpack/install.md';
@@ -121,19 +118,16 @@ const Routes = () => (
       <Route path='/js/array'     component={() => <MdWrapper mdFile={JsArray} />} />
       <Route path='/js/array2'    component={() => <MdWrapper mdFile={JsArray2} />} />
       <Route path='/js/object'    component={() => <MdWrapper mdFile={JsObject} />} />
-      <Route path='/js/object2'   component={() => <MdWrapper mdFile={JsObject2} />} />
       <Route path='/js/math'      component={() => <MdWrapper mdFile={JsMath} />} />
       <Route path='/js/logic'     component={() => <MdWrapper mdFile={JsLogic} />} />
       <Route path='/js/cycles'    component={() => <MdWrapper mdFile={JsCycles} />} />
       <Route path='/js/class'     component={() => <MdWrapper mdFile={JsClass} />} />
-      <Route path='/js/class2'    component={() => <MdWrapper mdFile={JsClass2} />} />
       <Route path='/js/dom'       component={() => <MdWrapper mdFile={JsDom} />} />
       <Route path='/js/forms'     component={() => <MdWrapper mdFile={JsForms} />} />
       <Route path='/js/export'    component={() => <MdWrapper mdFile={JsImport} />} />
       <Route path='/js/server'    component={() => <MdWrapper mdFile={JsServer} />} />
       <Route path='/js/events'    component={() => <MdWrapper mdFile={JsEvents} />} />
       <Route path='/js/storage'   component={() => <MdWrapper mdFile={JsStorage} />} />
-      <Route path='/js/methods'   component={() => <MdWrapper mdFile={JsMethods} />} />
 
       {/* wp-pages */}
       <Route path='/wp/install'   component={() => <MdWrapper mdFile={WpInstall} />} />
