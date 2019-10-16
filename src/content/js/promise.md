@@ -1,5 +1,17 @@
 # Promise
 
+Имеет статию **pending** - ожидание. Pending может стать выполненным (сдержанным) **resolved** - и цеппочка выполнения действий внутри промиса продолжится (then - затем) или несдержанным **rejected** - цепочка обрывается.
+
+## Basic syntax
+
+```js
+someFunc()
+  .then(someFunc1)
+  .then(someFunc2)
+  .then(someFunc3)
+  .catch(someFunc3) // catch errors
+```
+
 ## Асинхронность, колбэки
 
 Асинхронное выполнение кода. Event loop. Стек событий.
