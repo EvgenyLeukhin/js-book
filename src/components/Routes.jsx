@@ -33,7 +33,8 @@ import JsClass     from 'JS/class.md';
 import JsDom       from 'JS/dom.md';
 import JsForms     from 'JS/forms.md';
 import JsImport    from 'JS/import.md';
-import JsPromise    from 'JS/promise.md';
+import JsCallback  from 'JS/callback.md';
+import JsPromise   from 'JS/promise.md';
 import JsEvents    from 'JS/events.md';
 import JsStorage   from 'JS/storage.md';
 
@@ -125,7 +126,8 @@ const Routes = () => (
       <Route path='/js/dom'       component={() => <MdWrapper mdFile={JsDom} />} />
       <Route path='/js/forms'     component={() => <MdWrapper mdFile={JsForms} />} />
       <Route path='/js/export'    component={() => <MdWrapper mdFile={JsImport} />} />
-      <Route path='/js/server'    component={() => <MdWrapper mdFile={JsPromise} />} />
+      <Route path='/js/callback'  component={() => <MdWrapper mdFile={JsCallback} />} />
+      <Route path='/js/promise'   component={() => <MdWrapper mdFile={JsPromise} />} />
       <Route path='/js/events'    component={() => <MdWrapper mdFile={JsEvents} />} />
       <Route path='/js/storage'   component={() => <MdWrapper mdFile={JsStorage} />} />
 
