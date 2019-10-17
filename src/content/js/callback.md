@@ -88,10 +88,12 @@ function loadScript(src, callback) {
   script.src = src;
   // error - аргумент колбека для ошибики, script не будет передаваться («error-first callback»)
   script.onerror = () => callback(new Error(`Не удалось загрузить скрипт ${src}`), null);
-  document.head.append(script);
 
   // null - аргумент колбека для ошибики, script будет передаваться при успешной загрузке
   script.onload = () => callback(null, script);
+
+  // после окончания загрузки скрипта, вставляем его в <head>
+  document.head.append(script);
 }
 
 // I
