@@ -35,6 +35,8 @@ import JsForms     from 'JS/forms.md';
 import JsImport    from 'JS/import.md';
 import JsCallback  from 'JS/callback.md';
 import JsPromise   from 'JS/promise.md';
+import JsPromise2  from 'JS/promise2.md';
+import JsFetch     from 'JS/fetch.md';
 import JsEvents    from 'JS/events.md';
 import JsStorage   from 'JS/storage.md';
 
@@ -128,6 +130,8 @@ const Routes = () => (
       <Route path='/js/export'    component={() => <MdWrapper mdFile={JsImport} />} />
       <Route path='/js/callback'  component={() => <MdWrapper mdFile={JsCallback} />} />
       <Route path='/js/promise'   component={() => <MdWrapper mdFile={JsPromise} />} />
+      <Route path='/js/promise2'  component={() => <MdWrapper mdFile={JsPromise2} />} />
+      <Route path='/js/fetch'     component={() => <MdWrapper mdFile={JsFetch} />} />
       <Route path='/js/events'    component={() => <MdWrapper mdFile={JsEvents} />} />
       <Route path='/js/storage'   component={() => <MdWrapper mdFile={JsStorage} />} />
 

@@ -15,11 +15,14 @@ const MarkdownWrapper = ({ mdFile }) => (
 );
 
 CodeBlock.propTypes = {
-  value: T.string.isRequired,
+  value: T.string,
   language: T.string
 };
 
-CodeBlock.defaultProps = { language: null };
+CodeBlock.defaultProps = {
+  value: '',
+  language: null,
+};
 
 MarkdownWrapper.propTypes = {
   mdFile: T.string.isRequired
