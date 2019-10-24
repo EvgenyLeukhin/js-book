@@ -76,12 +76,13 @@ const links = {
   ],
 
   redux: [
-    { id: 0, title: 'Install',  to: '/redux/install' },
-    { id: 1, title: 'Provider', to: '/redux/provider' },
-    { id: 2, title: 'Enhancer', to: '/redux/enhancer' },
-    { id: 3, title: 'Reducer',  to: '/redux/reducer' },
-    { id: 4, title: 'Actions',  to: '/redux/actions' },
-    { id: 5, title: 'Types',    to: '/redux/types' },
+    { id: 0, title: 'Provider & enh.', to: '/redux/provider-enhancer' },
+    { id: 1, title: 'Root reducer',    to: '/redux/root-reducer' },
+    { id: 2, title: 'Single reducer',  to: '/redux/single-reducer' },
+    { id: 3, title: 'Connect',         to: '/redux/connect' },
+    { id: 4, title: 'Actions',         to: '/redux/actions' },
+    { id: 5, title: 'Server API',      to: '/redux/server-api' },
+    { id: 6, title: 'Fetch data',      to: '/redux/fetch-data' },
   ],
 
   nodejs: [

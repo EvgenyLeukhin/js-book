@@ -47,8 +47,8 @@ function Footer(props) {
 export default () => <div className='wrapper'></div>
 ```
 
-<br>
 ## Nested components
+
 ### Nested CBC
 
 ```js

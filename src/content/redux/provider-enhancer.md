@@ -1,4 +1,20 @@
-# Provider
+Install by npm or yarn
+
+```bash
+npm i save react-redux redux
+yarn add react-redux redux
+```
+
+Для Redux-dev-tools:
+
+```bash
+npm i save redux-thunk
+yarn add redux-thunk
+```
+
+# Provider и enhancer
+
+## <Provider />
 
 Создаём Redux-обёртку **<Provider />** и глобальный **store** всего приложения.
 
@@ -30,3 +46,22 @@ ReactDOM.render(
   document.getElementById('react-app')
 );
 ```
+
+## enhancer.js
+
+В режиме разработке данные из Redux будут доступны в "Redux-dev-tools" в браузере.
+
+```js
+import { compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+const composeEnhancers = typeof window === 'object'
+  && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+  : compose;
+
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+
+export default enhancer;
+```
+
