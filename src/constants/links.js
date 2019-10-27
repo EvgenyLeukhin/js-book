@@ -66,13 +66,9 @@ const links = {
     { id: 12, title: 'Transitions',  to: '/react/transitions' },
     { id: 13, title: 'Refs X',       to: '/react/refs' },
     { id: 14, title: 'Forms',        to: '/react/forms' },
-    { id: 15, title: 'Lifecycle',    to: '/react/lifecycle' },
-    { id: 16, title: 'Events',       to: '/react/events' },
-    { id: 17, title: 'Fetch in CBB', to: '/react/fetch' },
-    { id: 18, title: 'Server API X', to: '/react/server' },
-    { id: 19, title: 'Redux X',      to: '/react/redux' },
-    { id: 20, title: 'Plugins X',    to: '/react/plugins' },
-    { id: 21, title: 'GatsbyJS',     to: '/react/gatsby-js' },
+    { id: 15, title: 'Events',       to: '/react/events' },
+    { id: 16, title: 'Plugins',    to: '/react/plugins' },
+    { id: 17, title: 'GatsbyJS',     to: '/react/gatsby-js' },
   ],
 
   redux: [
@@ -83,6 +79,7 @@ const links = {
     { id: 4, title: 'Actions',         to: '/redux/actions' },
     { id: 5, title: 'Server API',      to: '/redux/server-api' },
     { id: 6, title: 'Fetch data',      to: '/redux/fetch-data' },
+    { id: 7, title: 'Lifecycle',       to: '/redux/lifecycle' },
   ],
 
   nodejs: [

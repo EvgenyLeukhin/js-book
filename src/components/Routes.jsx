@@ -71,10 +71,6 @@ import ReactStyling    from 'React/styling.md';
 import ReactTransition from 'React/transition.md';
 import ReactRefs       from 'React/refs.md';
 import ReactRouting    from 'React/routing.md';
-import ReactLifecycle  from 'React/lifecycle.md';
-import ReactFetch      from 'React/fetch.md';
-import ReactServer     from 'React/server.md';
-import ReactRedux      from 'React/redux.md';
 import ReactPlugins    from 'React/plugins.md';
 import ReactGatsby     from 'React/gatsby-js.md';
 
@@ -84,8 +80,9 @@ import ReduxRootReducer      from 'Redux/root-reducer.md';
 import ReduxSingleReducer    from 'Redux/single-reducer.md';
 import ReduxConnect          from 'Redux/connect.md';
 import ReduxActions          from 'Redux/actions.md';
-import ReduxServerApi        from 'Redux/server-api.md';
+import ReduxServerApi        from 'Redux/server.md';
 import ReduxFetchData        from 'Redux/fetch-data.md';
+import ReduxLifecycle        from 'Redux/lifecycle.md';
 
 // nodejs //
 import NodeJsInstall     from 'NodeJs/install.md';
@@ -167,10 +164,6 @@ const Routes = () => (
       <Route path='/react/transitions' component={() => <MdWrapper mdFile={ReactTransition} />} />
       <Route path='/react/refs'        component={() => <MdWrapper mdFile={ReactRefs} />} />
       <Route path='/react/routing'     component={() => <MdWrapper mdFile={ReactRouting} />} />
-      <Route path='/react/lifecycle'   component={() => <MdWrapper mdFile={ReactLifecycle} />} />
-      <Route path='/react/fetch'       component={() => <MdWrapper mdFile={ReactFetch} />} />
-      <Route path='/react/server'      component={() => <MdWrapper mdFile={ReactServer} />} />
-      <Route path='/react/redux'       component={() => <MdWrapper mdFile={ReactRedux} />} />
       <Route path='/react/plugins'     component={() => <MdWrapper mdFile={ReactPlugins} />} />
       <Route path='/react/gatsby-js'   component={() => <MdWrapper mdFile={ReactGatsby} />} />
 
@@ -182,6 +175,7 @@ const Routes = () => (
       <Route path='/redux/actions'           component={() => <MdWrapper mdFile={ReduxActions} />} />
       <Route path='/redux/server-api'        component={() => <MdWrapper mdFile={ReduxServerApi} />} />
       <Route path='/redux/fetch-data'        component={() => <MdWrapper mdFile={ReduxFetchData} />} />
+      <Route path='/redux/lifecycle'         component={() => <MdWrapper mdFile={ReduxLifecycle} />} />
 
       {/* nodejs-pages */}
       <Route path='/nodejs/install'      component={() => <MdWrapper mdFile={NodeJsInstall} />} />

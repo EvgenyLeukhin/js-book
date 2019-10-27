@@ -1,9 +1,11 @@
 # Server
 
 ## Fetch API - React Server API (standart)
+
 Сетевой код нужно изолировать в отдельный класс (ServerAPI)
 
 ### Выполнение запроса (Promise)
+
 ```js
 fetch('https://swapi.co/api/starships/9/')
   .then((res) => {
@@ -16,6 +18,7 @@ fetch('https://swapi.co/api/starships/9/')
 ```
 
 ### Шаблонная функция
+
 ```js
 const getResource = async (url) => {
   
@@ -32,7 +35,9 @@ const getResource = async (url) => {
   return body;
 };
 ```
+
 ### Использование этой функции
+
 ```js
 getResource('https://swapi.co/api/people/1/')
   
@@ -43,8 +48,8 @@ getResource('https://swapi.co/api/people/1/')
   .catch((err) => {console.error('RESPONSE ' + err);})
 ```
 
-
 ### Api class
+
 ```js
 import React, { Component } from 'react';
 
@@ -97,6 +102,7 @@ export default ServerAPI;
 ```
 
 ### Load data from API to a component
+
 ```js
 import React, { Component } from 'react';
 
@@ -152,7 +158,7 @@ class Example extends Component {
   // функция запрос данных
   getDataToComponent = () => {
     this.setState({loading: true})
-    
+
     const id = Math.floor(Math.random() * 15 + 1);
     // const id = 150;
     this.API
@@ -184,14 +190,14 @@ class Example extends Component {
 
         {
           loading ? 
-            <p>Loading ... </p> : 
+            <p>Loading ... </p> :
 
             <React.Fragment>
               <p>Name:       <b>{name}</b></p>
               <p>Height:     <b>{height}</b></p>
               <p>Mass:       <b>{mass}</b></p>
               <p>Hair color: <b>{hair_color}</b></p>
-            </React.Fragment> 
+            </React.Fragment>
         }
       </div>
     )
