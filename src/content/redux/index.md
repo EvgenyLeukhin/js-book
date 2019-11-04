@@ -8,6 +8,8 @@ A predictable state container for JavaScript apps.
 
 Суть Redux - есть глобальный state + функции actions, которые меняют этот state (state + actions = store). Это всё находится в одном месте (reducer). Доступ к store компоненту предоставляет функция connect. Все данные из store можно прикручивать к props компонентов через методы mapStateToProps и mapDispatchToProps.
 
+Redux решает проблему большой вложенности компонентов и передачи props от компонентов к родителю.
+
 **Redux** - единый глобальный state всего приложения + Reducer. State в Redux все компоненты могут только читать, изменять его нельзя.
 
 **Reducer** - (Функция) вся логика по обновлению или изменению state. Reducer обновляет state. Реагирует на actions.

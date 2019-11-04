@@ -3,9 +3,12 @@
 for React SPA
 
     .babelrc
-    .eslintrc
+    .editorconfig
     .eslintignore
+    .eslintrc
     .gitignore
+    .nvmrc
+
 
     dist\*
     design\*
@@ -24,10 +27,10 @@ for React SPA
     static\
 
     LICENSE
-    README.md
     package.json
     package-lock.json
     postcss.config.js
+    README.md
     server.js
     webpack.config.js
     webpack.dev.js

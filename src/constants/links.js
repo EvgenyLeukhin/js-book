@@ -22,7 +22,7 @@ const links = {
     { id: 11, title: 'DOM',           to: '/js/dom', divider: true },
     { id: 12, title: 'Events',        to: '/js/events' },
     { id: 13, title: 'Forms',         to: '/js/forms' },
-    { id: 14, title: 'Storage X',     to: '/js/storage' },
+    { id: 14, title: 'Storage',       to: '/js/storage' },
     { id: 15, title: 'Script Tag',    to: '/js/script', divider: true  },
     { id: 16, title: 'Var/Let/Const', to: '/js/vars' },
     { id: 17, title: 'Types',         to: '/js/types' },
@@ -67,7 +67,7 @@ const links = {
     { id: 13, title: 'Refs X',       to: '/react/refs' },
     { id: 14, title: 'Forms',        to: '/react/forms' },
     { id: 15, title: 'Events',       to: '/react/events' },
-    { id: 16, title: 'Plugins',    to: '/react/plugins' },
+    { id: 16, title: 'Plugins',      to: '/react/plugins' },
     { id: 17, title: 'GatsbyJS',     to: '/react/gatsby-js' },
   ],
 
