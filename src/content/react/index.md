@@ -1,11 +1,14 @@
 # React
+
 A JavaScript library for building user interfaces.
 
 **React realize**: Load and output data (work with server), Fast routing with Virtual DOM, Re-usable components aproach, State and props manipulating, Many helpful plugins.
 
 React is a Components, Props, State, Data.
 
-Re-render App when props, state or data are changing.
+Re-render App when props or state-data are changing.
+
+Browser <-- DOM <-- Virtual DOM <-- JS(ES5 createElement()) <-- Babel <-- React-JSX (ES6)
 
 * [React official docs - RUS](https://ru.reactjs.org/)
 * [React official docs](https://reactjs.org/)

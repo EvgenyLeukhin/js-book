@@ -1,34 +1,66 @@
 # Lifecycle methods in React
 
-## render()
+FBC has only render() lifecycle-method, it returns only jsx.
+
+CBC has all React lifecycle-methods.
+
+---
+
+## Mounting
+
+* ### constructor()
+
+Классовый конструктор, запускается при инициализации компонента.
+
+* ### componentWillMount()
+
+Метод перед отрисовкой jsx-кода.
 
 ```js
-render () { ... } // render jsx
+ // do something before render jsx
+componentWillMount() { ... }
 ```
 
-## componentDidMount()
+* ### render()
+
+Метод отрисовки jsx-кода.
 
 ```js
-// do something after render jsx
+render () { ... }
+```
 
+* ### componentDidMount()
+
+Метод после отрисовки jsx-кода. Запросы на сервер. Добавление листенеров.
+
+```js
 componentDidMount() {
   // fetch data
   // addEventListener
 }
 ```
 
-## componentWillMount()
+* ### componentWillUnmount
+
+Метод, запускающийся перед "исчезновением" компонента. Удаление листенеров.
 
 ```js
-componentWillMount() { ... } // do something before render jsx
-```
-
-## componentWillUnmount()
-
-```js
-// do something after render jsx
-
 componentWillUnmount() {
   // removeEventListener
 }
+```
+
+---
+
+## Update
+
+* ### componentWillReceiveProps()
+
+* ### shouldComponentUpdate()
+
+* ### componentDidUpdate
+
+Метод, запускающийся при обновлении компонента. Получение новых props или изменение state.
+
+```js
 ```

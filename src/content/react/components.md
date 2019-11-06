@@ -1,5 +1,8 @@
 # Components (Компоненты)
+
 Components is a elements of React application. React is all about components. Component aproach. Reusable components.
+
+Бывают компоненты-классы, компоненты-функции, компоненты-контейнеры (HOC), компоненты-view.
 
 ## Class-based components 'CBC' (can have state and props)
 
@@ -9,7 +12,7 @@ import React, { Component } from 'react';
 class Someclass extends Component {
   state = { ... }
 
-  classMethod = () => { ... } 
+  classMethod = () => { ... }
 
   render() {
     return (
@@ -22,6 +25,9 @@ export default Someclass;
 ```
 
 ## Function-based components 'FBC', pure-function, return only JSX (can have props only)
+
+Принимают пропсы и возвращают jsx.
+
 ```js
 // common syntax
 const SomeFunc = () => {
@@ -85,6 +91,7 @@ export default SomeClass3;
 ```
 
 ### Nested FBC
+
 ```js
 import React from 'react';
 
@@ -102,6 +109,7 @@ export default SomeClass3;
 ```
 
 ### Old-school classes (with constructor)
+
 ```js
 class Someclass2 extends Component {
   constructor(props) {
