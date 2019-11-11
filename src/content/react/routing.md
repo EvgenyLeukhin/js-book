@@ -1,5 +1,7 @@
 # Routing [*(link)*](https://reacttraining.com/react-router/web/example/basic)
+
 ## Add routing
+
 ```js
 import { HashRouter as Router } from 'react-router-dom';
 // or BrowserRouter
@@ -17,6 +19,7 @@ ReactDOM.render(
 ```
 
 ## ScrollToTop
+
 ```js
 import React from 'react';
 import { withRouter } from "react-router";
@@ -37,6 +40,7 @@ export default withRouter(ScrollToTop);
 ```
 
 ## Switch
+
 ```js
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
@@ -53,6 +57,7 @@ export default () => <main className='markdown-body'>
 ```
 
 ## Navlinks
+
 ```js
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -71,7 +76,9 @@ export default () => <ul className='links-list'>
 </ul>
 
 ```
+
 ## Props
+
 ```js
 <Route path='/post/:id'/>
 
@@ -87,12 +94,24 @@ props.match.params.id;
 ```
 
 ## Redirect
+
 ```js
+import { Redirect } from 'react-router-dom';
+
+// should be inside render() method
+{ redirect && <Redirect to='/' />}
+
 <Route exact path="/" render={() => <Redirect to="/react" /> } />
+```
+
+## history
+
+```js
 props.history.push('/');
 ```
 
 ## External links
+
 ```js
 <a
   href="https://evgenyleukhin.github.io/HTML-CSS-book/index.html"
