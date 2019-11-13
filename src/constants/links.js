@@ -67,7 +67,7 @@ const links = {
     { id: 13, title: 'Refs X',       to: '/react/refs' },
     { id: 14, title: 'Forms',        to: '/react/forms' },
     { id: 15, title: 'Events',       to: '/react/events' },
-    { id: 16, title: 'Plugins',      to: '/react/plugins' },
+    { id: 16, title: 'Libs',         to: '/react/libs' },
     { id: 17, title: 'GatsbyJS',     to: '/react/gatsby-js' },
   ],
 

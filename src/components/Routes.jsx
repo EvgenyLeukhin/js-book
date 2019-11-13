@@ -71,7 +71,7 @@ import ReactStyling    from 'React/styling.md';
 import ReactTransition from 'React/transition.md';
 import ReactRefs       from 'React/refs.md';
 import ReactRouting    from 'React/routing.md';
-import ReactPlugins    from 'React/plugins.md';
+import ReactLibs    from 'React/plugins.md';
 import ReactGatsby     from 'React/gatsby-js.md';
 
 // redux //
@@ -164,7 +164,7 @@ const Routes = () => (
       <Route path='/react/transitions' component={() => <MdWrapper mdFile={ReactTransition} />} />
       <Route path='/react/refs'        component={() => <MdWrapper mdFile={ReactRefs} />} />
       <Route path='/react/routing'     component={() => <MdWrapper mdFile={ReactRouting} />} />
-      <Route path='/react/plugins'     component={() => <MdWrapper mdFile={ReactPlugins} />} />
+      <Route path='/react/libs'        component={() => <MdWrapper mdFile={ReactLibs} />} />
       <Route path='/react/gatsby-js'   component={() => <MdWrapper mdFile={ReactGatsby} />} />
 
       {/* redux-pages */}
