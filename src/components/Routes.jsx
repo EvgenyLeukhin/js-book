@@ -41,18 +41,19 @@ import JsEvents    from 'JS/events.md';
 import JsStorage   from 'JS/storage.md';
 
 // webpack //
-import WpInstall   from 'Webpack/install.md';
-import WpConfig    from 'Webpack/config.md';
-import WpJs        from 'Webpack/js.md';
-import WpCss       from 'Webpack/css.md';
-import WpImg       from 'Webpack/img.md';
-import WpFonts     from 'Webpack/fonts.md';
-import WpMd        from 'Webpack/md.md';
-import WpHtml      from 'Webpack/html.md';
-import WpEslint    from 'Webpack/eslint.md';
-import WpPlugins   from 'Webpack/plugins.md';
-import WpEditor    from 'Webpack/editor.md';
-import WpStructure from 'Webpack/structure.md';
+import WpInstall        from 'Webpack/install.md';
+import WpConfig         from 'Webpack/config.md';
+import WpJs             from 'Webpack/js.md';
+import WpCss            from 'Webpack/css.md';
+import WpImg            from 'Webpack/img.md';
+import WpFonts          from 'Webpack/fonts.md';
+import WpMd             from 'Webpack/md.md';
+import WpHtml           from 'Webpack/html.md';
+import WpEslint         from 'Webpack/eslint.md';
+import WpPlugins        from 'Webpack/plugins.md';
+import WpEditor         from 'Webpack/editor.md';
+import WpStructure      from 'Webpack/structure.md';
+import WpCreateReactApp from 'Webpack/create-react-app.md';
 
 // react //
 import ReactTemplate   from 'React/template.md';
@@ -134,18 +135,19 @@ const Routes = () => (
       <Route path='/js/storage'   component={() => <MdWrapper mdFile={JsStorage} />} />
 
       {/* wp-pages */}
-      <Route path='/wp/install'   component={() => <MdWrapper mdFile={WpInstall} />} />
-      <Route path='/wp/config'    component={() => <MdWrapper mdFile={WpConfig} />} />
-      <Route path='/wp/js'        component={() => <MdWrapper mdFile={WpJs} />} />
-      <Route path='/wp/css'       component={() => <MdWrapper mdFile={WpCss} />} />
-      <Route path='/wp/img'       component={() => <MdWrapper mdFile={WpImg} />} />
-      <Route path='/wp/fonts'     component={() => <MdWrapper mdFile={WpFonts} />} />
-      <Route path='/wp/md'        component={() => <MdWrapper mdFile={WpMd} />} />
-      <Route path='/wp/html'      component={() => <MdWrapper mdFile={WpHtml} />} />
-      <Route path='/wp/plugins'   component={() => <MdWrapper mdFile={WpPlugins} />} />
-      <Route path='/wp/eslint'    component={() => <MdWrapper mdFile={WpEslint} />} />
-      <Route path='/wp/editor'    component={() => <MdWrapper mdFile={WpEditor} />} />
-      <Route path='/wp/structure' component={() => <MdWrapper mdFile={WpStructure} />} />
+      <Route path='/wp/install'          component={() => <MdWrapper mdFile={WpInstall} />} />
+      <Route path='/wp/config'           component={() => <MdWrapper mdFile={WpConfig} />} />
+      <Route path='/wp/js'               component={() => <MdWrapper mdFile={WpJs} />} />
+      <Route path='/wp/css'              component={() => <MdWrapper mdFile={WpCss} />} />
+      <Route path='/wp/img'              component={() => <MdWrapper mdFile={WpImg} />} />
+      <Route path='/wp/fonts'            component={() => <MdWrapper mdFile={WpFonts} />} />
+      <Route path='/wp/md'               component={() => <MdWrapper mdFile={WpMd} />} />
+      <Route path='/wp/html'             component={() => <MdWrapper mdFile={WpHtml} />} />
+      <Route path='/wp/plugins'          component={() => <MdWrapper mdFile={WpPlugins} />} />
+      <Route path='/wp/eslint'           component={() => <MdWrapper mdFile={WpEslint} />} />
+      <Route path='/wp/editor'           component={() => <MdWrapper mdFile={WpEditor} />} />
+      <Route path='/wp/structure'        component={() => <MdWrapper mdFile={WpStructure} />} />
+      <Route path='/wp/create-react-app' component={() => <MdWrapper mdFile={WpCreateReactApp} />} />
 
       {/* react-pages */}
       <Route path='/react/template'    component={() => <MdWrapper mdFile={ReactTemplate} />} />
