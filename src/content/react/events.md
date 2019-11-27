@@ -1,5 +1,7 @@
 # Events
-## <u>onClick</u> (simple click)
+
+## onClick (simple click)
+
 ```js
 ...
 state = { some: 'Some' }
@@ -9,7 +11,8 @@ changeName = () => this.setState({ some: 'Some another'})
 <h1 onClick={this.changeName}>{this.state.some}</h1>
 ```
 
-## <u>onChange</u> (change form input)
+## onChange (change form input)
+
 ```js
 export default class App extends React.Component {
 
@@ -32,12 +35,15 @@ export default class App extends React.Component {
   }
 }
 ```
-## <u>onMouseLeave</u>
+
+## onMouseLeave
+
 ```js
 <h1 onMouseLeave={this.someFunc}>Some text</h1>
 ```
 
 ## Event object
+
 ```js
 writeEvent  = e => console.log(e);
 
@@ -50,6 +56,7 @@ writeTarget = e => console.log(e.target.value);
 ```
 
 ## Bind
+
 ```js
 // need to bind
 someFunc() {console.log(123)}
@@ -61,6 +68,7 @@ onClick={this.someFunc}
 ```
 
 ## Show some components prop-data
+
 ```js
 showId = id => { alert(id); }
 
@@ -68,7 +76,9 @@ showId = id => { alert(id); }
 click={this.showId.bind(this, items.id)}
 
 ```
+
 ## Listeners
+
 ```js
 ...
 class Resize extends Component {
@@ -102,6 +112,7 @@ class Resize extends Component {
 ```
 
 ## react-click-outside
+
 ```js
 import clickOutsideHOC from 'react-onclickoutside';
 

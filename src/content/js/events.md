@@ -10,11 +10,23 @@ click, submit, dblclick, keydown, keyup, keypress, mouseover, mouseout, reset, f
 
 Задачи выполняются АСИНХРОННО, это означает, что если какая-либо задача выполняется, то Event loop не прекращается свою работу, а будет улавливать все события постоянно.
 
-## click
+## event object
+
+```js
+// disable default events
+event.preventDefault();
+
+// cancel all previos events. "Всплытие" событий вложенных элементов не произойдет
+event.stopPropagation();
+
+// only parent element
+event.currentTarget;
+```
+
+## click, scroll, resize, ... [link](https://developer.mozilla.org/ru/docs/Web/Events)
 
 ```js
 el.addEventListener('click', (event) => {
-  event.preventDefault(); // reset default events if they are
   // do smth
 });
 ```
@@ -51,3 +63,4 @@ el.onsubmit = () => { ... }
 ```html
 <body onload="alert('Страница загружена');">
 ```
+

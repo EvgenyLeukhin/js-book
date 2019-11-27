@@ -72,7 +72,7 @@ import ReactStyling    from 'React/styling.md';
 import ReactTransition from 'React/transition.md';
 import ReactRefs       from 'React/refs.md';
 import ReactRouting    from 'React/routing.md';
-import ReactLibs    from 'React/plugins.md';
+import ReactLibs       from 'React/libs.md';
 import ReactGatsby     from 'React/gatsby-js.md';
 
 // redux //

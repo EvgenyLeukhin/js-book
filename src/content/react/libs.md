@@ -18,6 +18,21 @@ import isEmpty from 'lodash/isEmpty';
 import isBoolean from 'lodash/isBoolean';
 ```
 
+### Lodash - throttle
+
+Прерывает событие на какое-либо значение в милисекундах, чтобы не перегружать производительность. Событие будет отрабатывать только через определенный интервал времени.
+
+```js
+import throttle from 'lodash/throttle';
+
+class Some extends React.Component {
+  constructor(props) {
+    super(props);
+    this.resizeListenerThrottled = throttle(this.resizeListener, 100);
+  }
+
+```
+
 ## Date-fns [(link)](https://date-fns.org/)
 
 ```npm i --save date-fns```
