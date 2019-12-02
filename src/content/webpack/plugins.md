@@ -120,8 +120,10 @@ const BundleAnalyzerPlugin =
 ```js
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 ...
-  new CopyWebpackPlugin([
-    { from: 'src/scss/no-script.css', to: '' },
-  ], {})
+  new CopyWebpackPlugin(
+    [
+      { from: 'src/scss/no-script.css', to: '' },
+      { from: 'robots.txt', to: '' },
+    ], {})
 ...
 ```
