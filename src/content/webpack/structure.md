@@ -35,6 +35,12 @@ for React SPA
     webpack.config.js
     webpack.dev.js
     webpack.prod.js
+    robots.txt
 
 
     * - ignored
+
+## robots.txt
+
+User-agent: *
+Disallow: /
