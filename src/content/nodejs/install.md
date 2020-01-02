@@ -53,6 +53,7 @@ node -v
 
 ```bash
 nvm ls
+nvm ls-remote
 ```
 
 ## Install/uninstall some version

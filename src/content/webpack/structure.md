@@ -43,4 +43,5 @@ for React SPA
 ## robots.txt
 
 User-agent: *
+
 Disallow: /
