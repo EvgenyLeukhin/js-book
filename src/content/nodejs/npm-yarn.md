@@ -38,6 +38,14 @@ Helpful command when need to reinstall package after change node version.
 npm rebuild <package_name>
 ```
 
+## See installed
+
+Localy
+```npm list -g --depth 0```
+
+Globaly
+```npm list --save-dev --depth 0```
+
 # Yarn
 
 ## Install

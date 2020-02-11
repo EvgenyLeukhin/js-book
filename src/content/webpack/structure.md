@@ -15,17 +15,18 @@ for React SPA
     node_modules\*
 
     src\
+        api\
+        assets\
+          img\
+          fonts\
+          scss\
+          style.scss
+          index.html
         components\
             common\
             layout\
-            routes\
-        scss\
+        routes\
         app.js
-        index.html
-        style.scss
-
-    static\
-
     LICENSE
     package.json
     package-lock.json

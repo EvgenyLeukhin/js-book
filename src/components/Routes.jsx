@@ -53,6 +53,8 @@ import WpEslint         from 'Webpack/eslint.md';
 import WpPlugins        from 'Webpack/plugins.md';
 import WpEditor         from 'Webpack/editor.md';
 import WpStructure      from 'Webpack/structure.md';
+import WpSpa            from 'Webpack/spa.md';
+import WpMpa            from 'Webpack/mpa.md';
 import WpCreateReactApp from 'Webpack/create-react-app.md';
 
 // react //
@@ -147,6 +149,8 @@ const Routes = () => (
       <Route path='/wp/eslint'           component={() => <MdWrapper mdFile={WpEslint} />} />
       <Route path='/wp/editor'           component={() => <MdWrapper mdFile={WpEditor} />} />
       <Route path='/wp/structure'        component={() => <MdWrapper mdFile={WpStructure} />} />
+      <Route path='/wp/spa'              component={() => <MdWrapper mdFile={WpSpa} />} />
+      <Route path='/wp/mpa'              component={() => <MdWrapper mdFile={WpMpa} />} />
       <Route path='/wp/create-react-app' component={() => <MdWrapper mdFile={WpCreateReactApp} />} />
 
       {/* react-pages */}

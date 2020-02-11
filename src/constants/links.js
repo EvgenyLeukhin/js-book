@@ -48,7 +48,9 @@ const links = {
     { id: 9,  title: 'ESLint',         to: '/wp/eslint' },
     { id: 10, title: 'Editor',         to: '/wp/editor' },
     { id: 11, title: 'Structure',      to: '/wp/structure' },
-    { id: 12, title: 'CreateReactApp', to: '/wp/create-react-app' },
+    { id: 12, title: 'SPA Template',   to: '/wp/spa' },
+    { id: 13, title: 'MPA Template',   to: '/wp/mpa' },
+    { id: 14, title: 'CreateReactApp', to: '/wp/create-react-app' },
   ],
 
   react: [

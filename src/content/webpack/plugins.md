@@ -1,19 +1,8 @@
 # Plugins
 
-## Install
-
-```bash
-npm i --save-dev
-  webpack-merge
-  webpackbar
-  clean-webpack-plugin
-  compression-webpack-plugin
-  favicons-webpack-plugin
-  webpack-bundle-analyzer
-  copy-webpack-plugin
-```
-
 ## webpack-merge
+
+```npm i --save-dev webpack-merge```
 
 ### webpack.config.js
 
@@ -21,7 +10,7 @@ npm i --save-dev
   // common configs
 ```
 
-## webpack.dev.js
+### webpack.dev.js
 
 ```js
 const merge  = require('webpack-merge');
@@ -51,6 +40,8 @@ module.exports = merge(common, production);
 
 ## webpack-bar (prod)
 
+```npm i --save-dev webpack-bar```
+
 ```js
 const WebpackBar = require('webpackbar');
 
@@ -62,6 +53,8 @@ const WebpackBar = require('webpackbar');
 ***
 
 ## clean-webpack-plugin (prod)
+
+```npm i --save-dev clean-webpack-plugin```
 
 ```js
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -75,6 +68,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 ## compression-webpack-plugin (prod)
 
+```npm i --save-dev compression-webpack-plugin```
+
 ```js
 const CompressionPlugin = require('compression-webpack-plugin');
 ...
@@ -85,6 +80,8 @@ const CompressionPlugin = require('compression-webpack-plugin');
 ***
 
 ## favicons-webpack-plugin (prod)
+
+```npm i --save-dev favicons-webpack-plugin```
 
 ```js
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -102,6 +99,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 ## webpack-bundle-analyzer (prod)
 
+```npm i --save-dev webpack-bundle-analyzer```
+
 ```js
 const BundleAnalyzerPlugin = 
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -116,6 +115,8 @@ const BundleAnalyzerPlugin =
 ***
 
 ## copy-webpack-plugin (prod)
+
+```npm i --save-dev copy-webpack-plugin```
 
 ```js
 const CopyWebpackPlugin = require('copy-webpack-plugin');

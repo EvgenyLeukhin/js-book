@@ -9,7 +9,7 @@ const plugins = require('plugins');
 ...
 
 module.exports = {
-  mode: ...,    // 'production' || 'development'
+  mode: '',    // 'production' || 'development'
 
   entry: ...,   // where is a entry point
 
@@ -21,7 +21,7 @@ module.exports = {
     rules: [ ... ]  // file-loaders
   },
 
-  optimization: .., // prod configs
+  optimization: ..., // prod configs
 
   plugins: ...,     // plugins configs
 }
