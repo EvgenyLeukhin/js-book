@@ -8,7 +8,7 @@ React is a Components, Props, State, Data.
 
 Re-render App when props or state-data are changing.
 
-Browser <- Real DOM <- Virtual DOM <- JS(ES5 createElement()) <- Babel(ES5 <- ES6) <- React-JSX(ES6)
+**Browser <- Real DOM <- Virtual DOM <- JS(ES5 createElement()) <- Babel(ES5 <- ES6) <- Webpack <- React-JSX(ES6)**
 
 * [React official docs - RUS](https://ru.reactjs.org/)
 * [React official docs](https://reactjs.org/)

@@ -10,6 +10,7 @@ import ReacT   from 'React/index.md';
 import Webpack from 'Webpack/index.md';
 import NodeJs  from 'NodeJs/index.md';
 import Redux   from 'Redux/index.md';
+import Vue     from 'Vue/index.md';
 
 import Test    from './../test';
 
@@ -107,6 +108,7 @@ const Routes = () => (
       <Route path='/react'  exact component={() => <MdWrapper mdFile={ReacT} />} />
       <Route path='/redux'  exact component={() => <MdWrapper mdFile={Redux} />} />
       <Route path='/nodejs' exact component={() => <MdWrapper mdFile={NodeJs} />} />
+      <Route path='/vue'    exact component={() => <MdWrapper mdFile={Vue} />} />
       <Route path='/test'         component={Test} />
 
       {/* js pages */}
@@ -189,6 +191,7 @@ const Routes = () => (
       <Route path='/nodejs/package-json' component={() => <MdWrapper mdFile={NodeJsPackageJson} />} />
       <Route path='/nodejs/browser-sync' component={() => <MdWrapper mdFile={NodeJsBrowserSync} />} />
       <Route path='/nodejs/express'      component={() => <MdWrapper mdFile={NodeJsExpress} />} />
+
 
       {/* 404 page */}
       <Route render={() => <h1 style={{ paddingTop: 24 }}>404 - Page not found</h1>} />

@@ -4,7 +4,8 @@ const links = {
     { id: 1, title: 'Webpack', to: '/wp' },
     { id: 2, title: 'React',   to: '/react' },
     { id: 3, title: 'Redux',   to: '/redux' },
-    { id: 4, title: 'NodeJS',  to: '/nodejs' },
+    { id: 4, title: 'Vue',     to: '/vue' },
+    { id: 5, title: 'NodeJS',  to: '/nodejs' },
   ],
 
   js: [
@@ -83,6 +84,10 @@ const links = {
     { id: 5, title: 'Server API',      to: '/redux/server-api' },
     { id: 6, title: 'Fetch data',      to: '/redux/fetch-data' },
     { id: 7, title: 'Lifecycle',       to: '/redux/lifecycle' },
+  ],
+
+  vue: [
+    { id: 0, title: 'Install', to: '/vue/install' },
   ],
 
   nodejs: [

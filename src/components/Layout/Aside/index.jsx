@@ -75,6 +75,19 @@ const Aside = ({ isShow, toggleSidebar, onSidebarLinkClick }) => {
     </li>
   ));
 
+  const VueJsLinks = () => links.vue.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
+
   return (
     <>
       <aside className={cln({ 'hide': !isShow })}>
@@ -85,6 +98,7 @@ const Aside = ({ isShow, toggleSidebar, onSidebarLinkClick }) => {
             <Route path='/react'  component={ReactLinks} />
             <Route path='/redux'  component={ReduxLinks} />
             <Route path='/nodejs' component={NodeJsLinks} />
+            <Route path='/vue'    component={VueJsLinks} />
           </Switch>
         </ul>
       </aside>

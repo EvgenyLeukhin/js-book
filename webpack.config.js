@@ -22,6 +22,7 @@ module.exports = {
       React:      path.resolve(__dirname, 'src', 'content/react'),
       Redux:      path.resolve(__dirname, 'src', 'content/redux'),
       NodeJs:     path.resolve(__dirname, 'src', 'content/nodejs'),
+      Vue:        path.resolve(__dirname, 'src', 'content/vue'),
       Links:      path.resolve(__dirname, 'src', 'components/Links'),
 
       Components: path.resolve(__dirname, 'src', 'components'),
