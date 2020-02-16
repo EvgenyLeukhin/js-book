@@ -2,47 +2,42 @@
 
 for React SPA
 
-    .babelrc
-    .editorconfig
-    .eslintignore
-    .eslintrc
-    .gitignore
-    .nvmrc
+```
+dist/ - output folder
+src/  - source folder
+  app.js - entry point
+  api/ ...
+  consts/ ...
+  components/
+    App.jsx - react entry point
+    ...
+  routes/ ...
+  static/
+    fonts/
+    img/
+    scss/
+    index.html
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.nvmrc
+LICENCE
+package-lock.json
+package.json
+postcss.config.js
+README.md
+robots.txt
+webpack.dev.js
+webpack.prod.js
+```
 
-
-    dist\*
-    design\*
-    node_modules\*
-
-    src\
-        api\
-        assets\
-          img\
-          fonts\
-          scss\
-          style.scss
-          index.html
-        components\
-            common\
-            layout\
-        routes\
-        app.js
-    LICENSE
-    package.json
-    package-lock.json
-    postcss.config.js
-    README.md
-    server.js
-    webpack.config.js
-    webpack.dev.js
-    webpack.prod.js
-    robots.txt
-
-
-    * - ignored
+```* - ignored```
 
 ## robots.txt
 
+```
 User-agent: *
-
 Disallow: /
+```

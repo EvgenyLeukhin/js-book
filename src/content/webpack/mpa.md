@@ -1,5 +1,9 @@
 # MPA
 
+html-mpa static html application with babel, scss and production optimization.
+
+[Repo-link](https://github.com/EvgenyLeukhin/webpack-react-spa/tree/html-mpa)
+
 ## package.json
 
 ```json
@@ -319,4 +323,10 @@ module.exports = {
     }),
   ]
 };
+```
+
+## Structure
+
+```
+  src\
 ```
