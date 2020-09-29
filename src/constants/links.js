@@ -6,6 +6,7 @@ const links = {
     { id: 3, title: 'Redux',   to: '/redux' },
     { id: 4, title: 'Vue',     to: '/vue' },
     { id: 5, title: 'NodeJS',  to: '/nodejs' },
+    { id: 6, title: 'Other',   to: '/other' },
   ],
 
   js: [
@@ -96,7 +97,12 @@ const links = {
     { id: 2, title: 'Package.json',  to: '/nodejs/package-json' },
     { id: 3, title: 'Browser-sync',  to: '/nodejs/browser-sync' },
     { id: 4, title: 'Express',       to: '/nodejs/express' },
-  ]
+  ],
+
+  other: [
+    { id: 0, title: 'jQuery', to: '/other/jquery' },
+    { id: 1, title: 'StimulusJs', to: '/other/stimulus' },
+  ],
 };
 
 export default links;

@@ -11,6 +11,7 @@ import Webpack from 'Webpack/index.md';
 import NodeJs  from 'NodeJs/index.md';
 import Redux   from 'Redux/index.md';
 import Vue     from 'Vue/index.md';
+import Other   from 'Other/index.md';
 
 import Test    from './../test';
 
@@ -95,6 +96,9 @@ import NodeJsNpmYarn     from 'NodeJs/npm-yarn.md';
 import NodeJsBrowserSync from 'NodeJs/browser-sync.md';
 import NodeJsExpress     from 'NodeJs/express.md';
 
+// other //
+import OtherJquery   from 'Other/jquery.md';
+import OtherStimulus from 'Other/stimulus.md';
 
 // II. Add routes
 const Routes = () => (
@@ -109,6 +113,7 @@ const Routes = () => (
       <Route path='/redux'  exact component={() => <MdWrapper mdFile={Redux} />} />
       <Route path='/nodejs' exact component={() => <MdWrapper mdFile={NodeJs} />} />
       <Route path='/vue'    exact component={() => <MdWrapper mdFile={Vue} />} />
+      <Route path='/other'  exact component={() => <MdWrapper mdFile={Other} />} />
       <Route path='/test'         component={Test} />
 
       {/* js pages */}
@@ -191,6 +196,10 @@ const Routes = () => (
       <Route path='/nodejs/package-json' component={() => <MdWrapper mdFile={NodeJsPackageJson} />} />
       <Route path='/nodejs/browser-sync' component={() => <MdWrapper mdFile={NodeJsBrowserSync} />} />
       <Route path='/nodejs/express'      component={() => <MdWrapper mdFile={NodeJsExpress} />} />
+
+      {/* other-pages */}
+      <Route path='/other/jquery'     component={() => <MdWrapper mdFile={OtherJquery} />} />
+      <Route path='/other/stimulus'   component={() => <MdWrapper mdFile={OtherStimulus} />} />
 
 
       {/* 404 page */}

@@ -128,3 +128,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
     ], {})
 ...
 ```
+
+## open-browser-webpack-plugin (dev)
+
+```npm i --save-dev open-browser-webpack-plugin```
+
+```js
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+...
+  new OpenBrowserPlugin({ url: 'http://localhost:8888' }),
+...
+```
