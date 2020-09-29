@@ -1,5 +1,6 @@
 const merge  = require('webpack-merge');
 const common = require('./webpack.config.js');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 const development = {
   mode: 'development',
@@ -42,7 +43,11 @@ const development = {
         }]
       },
     ]
-  }
+  },
+
+  plugins: [
+    new OpenBrowserPlugin({ url: 'http://localhost:8888' }),
+  ]
 };
 
 module.exports = merge(common, development);
