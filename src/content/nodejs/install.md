@@ -66,6 +66,7 @@ nvm install/uninstall 10.15.0
 
 ```bash
 nvm use 10.15.0
+nvm alias default 10.9.0
 ```
 
 ## .nvmrc
