@@ -59,14 +59,15 @@ nvm ls-remote
 ## Install/uninstall some version
 
 ```bash
-nvm install/uninstall 10.15.0
+nvm install stable (last stable version)
+nvm install/uninstall 10.15.0 (install exact version)
 ```
 
 ## Use installed version
 
 ```bash
 nvm use 10.15.0
-nvm alias default 10.9.0
+nvm alias default 10.15.0
 ```
 
 ## .nvmrc
