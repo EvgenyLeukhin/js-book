@@ -63,6 +63,20 @@ nvm install stable (last stable version)
 nvm install/uninstall 10.15.0 (install exact version)
 ```
 
+## Create .nvmrc file
+
+Run this command from root of project directory
+
+```bash
+node -v > .nvmrc
+```
+
+## Use node-version from .nvmrc file
+
+```bash
+node use
+```
+
 ## Use installed version
 
 ```bash
@@ -70,11 +84,6 @@ nvm use 10.15.0
 nvm alias default 10.15.0
 ```
 
-## .nvmrc
-
-```bash
-node -v > .nvmrc
-```
 
 ## Remove node, npm & nvm
 
