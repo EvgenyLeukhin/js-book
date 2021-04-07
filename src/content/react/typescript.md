@@ -1,8 +1,61 @@
 # Typescript in React (.tsx)
 
-Выдаёт ошибки уже на этапе разработки, а не после компиляции - Главное преимущество TypeScript
+TypeScript это своего рода настройка над JavaScript, в который он преобразуется на этапе компиляции. 
+Выдаёт ошибки уже на этапе разработки и написания кода, а не после компиляции. Если тип определяемых переменных не соответствует реальному - Главное преимущество TypeScript;
 
-## FC with Typescript
+[YouTube-видео - TypeScript & React. Полный курс](https://www.youtube.com/watch?v=xL-a5Tox7Qw)
+
+```
+npx create-react-app react-typescript --template typescript
+```
+
+## Variables in typescript
+
+```tsx
+let some: string = 'test;
+some = 123; // error
+```
+
+
+## Function Component with Typescript
+
+Функция должна что-ниб возвращать, иначе будет ошибка.
+A function must return something else will be error.
+
+```tsx
+// basic syntax
+import React from 'react';
+
+const Title:React.FC = () => <h1>Hello, World!</h1>
+
+const App = () => <Title />
+
+export default App;
+
+
+// TYPES CHECKS (props check)
+
+// 1. GENERIC TYPES METHOD (check types inside <>) - use whed we have less props
+const Title:React.FC<{ title: string }> = () => <h1>{title}</h1>
+const App = () => <Title title="Hello, World!" />
+
+// 2. TYPE || INTERFACE METHOD - use whed we have many props
+type Props = {
+  title: string,
+  someOptionalProp?: string, // optional prop
+}
+
+const Title = ({title, someOptionalProp = ''}: Props }) => <h1>{title}</h1>
+const App = () => <Title title="Hello, World!" />
+```
+
+## Class component with Typescript
+
+
+
+
+
+
 
 ### Types check (1 variant)
 
@@ -16,7 +69,7 @@ interface Props {
 export const TextField: React.FC<Props> = () => {
   return (
     <div>
-      <input />
+      {Props.text}
     </div>
   );
 }
@@ -30,7 +83,7 @@ import React from 'react';
 export const TextField: React.FC<{ text: string }> = () => {
   return (
     <div>
-      <input />
+      {text}
     </div>
   );
 }
@@ -82,7 +135,7 @@ export const TextField: React.FC<{ text: string }> = () => {
 
   return (
     <div>
-      <input />
+      {text}
     </div>
   );
 }
@@ -107,3 +160,60 @@ const changeTitle = (event: React.ChangeEvent<HTMLInputElement>) => {
 ```
 
 ## useRef
+
+## Component template
+
+```tsx
+// imports
+import React, { useCallback } from 'react';
+
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+
+import { ReactComponent as BackArrow } from '../../icons/backArrow.svg';
+
+// styles
+const styles = makeStyles((theme) => ({
+  loginPageStyles: {
+    
+    // nesting
+    '& p': {
+
+    },
+
+    // adaptivity
+    [theme.breakpoints.up('sm')]: {
+      marginTop: '0px',
+    },
+  },
+}));
+
+// Props checking
+interface Props {
+  goto?: string;
+  text: string;
+  style?: object;
+  loginPage?: boolean;
+}
+                                        // props with distucturing
+const SomeFComponent: React.FC<Props> = ({ goto, style, text, loginPage }: Props) => {
+  const classes = styles();
+  const { btnStyle, textStyle, loginPageStyles } = classes;  // classes distructuring
+
+  // some method
+  const onClick = useCallback(() => {
+    // method code
+  });
+
+  return (
+    <div onClick={onClick} className={loginPage ? loginPageStyles : btnStyle}>
+      <BackArrow />
+      <Typography className={textStyle} style={style} variant="body2">
+        {text}
+      </Typography>
+    </div>
+  );
+};
+
+export default SomeFComponent;
+```

@@ -1,5 +1,13 @@
 # React
 
+## Create-react-app
+
+```
+npx create-react-app my-app 
+cd my-app
+npm start || yarn start
+```
+
 Typical React apllication consist of:
 
 1. ### Layout
