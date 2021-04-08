@@ -190,7 +190,6 @@ const styles = makeStyles((theme) => ({
 
 // Props checking
 interface Props {
-  goto?: string;
   text: string;
   style?: object;
   loginPage?: boolean;
@@ -198,7 +197,6 @@ interface Props {
                                         // props with distucturing
 const SomeFComponent: React.FC<Props> = ({ goto, style, text, loginPage }: Props) => {
   const classes = styles();
-  const { btnStyle, textStyle, loginPageStyles } = classes;  // classes distructuring
 
   // some method
   const onClick = useCallback(() => {
@@ -206,9 +204,9 @@ const SomeFComponent: React.FC<Props> = ({ goto, style, text, loginPage }: Props
   });
 
   return (
-    <div onClick={onClick} className={loginPage ? loginPageStyles : btnStyle}>
+    <div onClick={onClick} className={classes.loginPage}>
       <BackArrow />
-      <Typography className={textStyle} style={style} variant="body2">
+      <Typography className={classes.textStyle} style={style} variant="body2">
         {text}
       </Typography>
     </div>
@@ -216,4 +214,37 @@ const SomeFComponent: React.FC<Props> = ({ goto, style, text, loginPage }: Props
 };
 
 export default SomeFComponent;
+
+
+//////// small FC ////////
+// Small FC with styles
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
+const styles = makeStyles((theme) => ({
+  someStyleClass: {
+    [theme.breakpoints.up('sm')]: {
+      // css code
+    },
+  },
+}));
+
+// types checking
+interface Props {
+  text: string;
+}
+
+// FC
+const BackButton: React.FC<Props> = ({ text }: Props) => {
+  const classes = styles();
+  const onClick = () => alert('Some click!');
+
+  return (
+    <div onClick={onClick} className={classes.someStyleClass}>
+      // return jsx with props {text}
+    </div>
+  );
+};
+
+export default BackButton;
 ```
