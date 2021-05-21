@@ -32,16 +32,7 @@ export default SomeClass;
 ```tsx
 import React, { Component } from 'react';
 
-// or interface
-type ClassState = {
-  count: number,
-}
 
-// or interface
-type ClassProps = {
-  // readonly можно не ставить, так как он стоит по умолчанию, полученное значение props и state нельзя изменять, так как будет ошибка даже в простом Реакте, так как нельзя переопределять пропсы и стейт напрямую, иммутабельность, только через setState
-  readonly title?: string,
-}
 
 // types check generic method 1 {} - props, 2 {} - state
 class SomeClass extends Component<ClassProps, ClassState> {
@@ -72,31 +63,6 @@ class SomeClass extends Component<ClassProps, ClassState> {
 export default SomeClass;
 ```
 
-
-## Types of data
-
-```ts
-interface Person {
-  name: string,
-  surname: string,
-}
-
-interface Props {
-  name: string,
-  age: number,
-  alive: boolean,
-  // void - anything
-  fn: () => void,
-  fnWithPar: (par: string) => string,
-  obj: {
-    f1: string,
-    f2: number,
-    f3: () => boolear, 
-  },
-  person: Person,
-  unknown?: string // optional type with ?
-}
-```
 
 ## useState with TypeScript
 

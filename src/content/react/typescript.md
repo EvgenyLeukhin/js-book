@@ -1,7 +1,7 @@
 # Typescript in React (.tsx)
 
-TypeScript это своего рода настройка над JavaScript, в который он преобразуется на этапе компиляции. 
-Выдаёт ошибки уже на этапе разработки и написания кода, а не после компиляции. Если тип определяемых переменных не соответствует реальному - Главное преимущество TypeScript;
+**TypeScript** - это своего рода настройка над JavaScript, в который он преобразуется на этапе компиляции. 
+Выдаёт ошибки уже на этапе разработки и написания кода, а не после компиляции (в чем премущество над **propTypes**). Если тип определяемых переменных не соответствует реальному - Главное преимущество TypeScript;
 
 [YouTube-видео - TypeScript & React. Полный курс](https://www.youtube.com/watch?v=xL-a5Tox7Qw)
 
@@ -9,65 +9,38 @@ TypeScript это своего рода настройка над JavaScript, в
 npx create-react-app react-typescript --template typescript
 ```
 
-## Func Component - I variant (many props)
-
-A function must return something else will be error.
+## Typescript in FC
 
 ```tsx
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
+// типизируем пропса-объект
 interface Props {
-  text: string;
+  name: string;
+  surname: string;
+  age: number;
+  alive: boolean;
 }
-// { text = '' } // with default pros
-const SomeFC: React.FC<Props> = ({ text }: Props) => {
-  const onClick = () => alert('Some click!');
 
-  return (
-    <div onClick={onClick}>
-      {text}
-    </div>
-  );
-};
-
-export default SomeFC;
-```
-
-## Func Component - II variant (less props, generic method)
-
-```tsx
-import React from 'react';
-
-const SomeFC: React.FC<{ text: string }> = () => {
-  const onClick = () => alert('Some click!');
-
-  return (
-    <div onClick={onClick}>
-      {text}
-    </div>
-  );
-};
-
-export default SomeFC;
-```
-
-## Class Component
-
-## Types
-```tsx
+// типизируем пропcы FC
 interface Props {
-  prop1: string;
-  prop2: number;
-  readonly prop3: boolean;
-  prop4?: boolean; // optional prop
-  prop5?: number | null; // condition
-  children: React.ReactNode,
-  prop4: () => void;
+  person: PersonProps;
+  handleClose: MouseEventHandler; // event
+  items: [] | null;
+  readonly something: boolean; // readonly можно не ставить (стоит по ум*)
+  optionalProp?: string | any;
+}
+
+const SomeFC: React.FC<Props> = ({ person, handleClose, items, something, optionalProp }) => {
+  return (
+    // Typescript on maping
+    <div>
+      {items.map((item: { name: string }, index) => {
+        return <span>{item.name}</span>;
+      })}
+    </div>
+  );
 }
 ```
 
-## Variables in typescript
-```tsx
-let some: string = 'test;
-some = 123; // error!
-```
+## TypeScript in CC
