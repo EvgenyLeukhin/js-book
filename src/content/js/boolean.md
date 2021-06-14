@@ -28,3 +28,9 @@ Boolean({});        // true, any object
 
 Boolean(() => alert(123)); // true, any function
 ```
+
+## Save condition to variblae 
+
+```js
+const boolCondition = someValue > 10; // return true or false
+```

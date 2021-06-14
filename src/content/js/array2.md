@@ -136,3 +136,10 @@ const b = [4, 5, 6];
 
 const c = [...a, ...b]; // [1, 2, 3, 4, 5, 6]
 ```
+
+## Examples
+
+```js
+// return players item {} if item.playerId === activePlayerId
+const activePlayerObj = players.find((item) => item.playerId === activePlayerId);
+```
