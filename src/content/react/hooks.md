@@ -48,4 +48,31 @@ export default SomeFunc;
 
 В useState() -> useState(() => someCalcFunction) может находиться любая функция для вычисления параметра
 
+
+## Все состояние в useState
+
+Лучше использовать useState для точечных изменений, а не для всех сразу.
+
+```tsx
+const [state, setState] = useState({
+  title: 'Some title',
+  date: Date.now(),
+});
+
+// перезатирает весь state (поле date исчезнет)
+onClick={() => setState({ title: 'Some new title' })};
+
+// сохраняет все поля в state
+function updateTitle() {
+  setState(prevState => {
+    return {
+      ...prevState,
+      title: 'Some new title',
+    }
+  })
+}
+
+
+```
+
 ## useEffect
