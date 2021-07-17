@@ -3,60 +3,107 @@
 **TypeScript** - это своего рода настройка над JavaScript, в который он преобразуется на этапе компиляции. 
 Выдаёт ошибки уже на этапе разработки и написания кода, а не после компиляции (в чем премущество над **propTypes**). Если тип определяемых переменных не соответствует реальному - Главное преимущество TypeScript;
 
+Строго типизированная js-обертка, усраняет проблему динамической типизации чистого js.
+
+[TypeScript Official Website](https://www.typescriptlang.org/)
+
 [YouTube-видео - TypeScript & React. Полный курс](https://www.youtube.com/watch?v=xL-a5Tox7Qw)
+
+[TypeScript 4.0 Cheat Sheet](https://www.sitepen.com/blog/typescript-cheat-sheet)
+
+[TypeScript Cheat Sheetс](https://devhints.io/typescript)
 
 ```
 npx create-react-app react-typescript --template typescript
+
+sudo npm i -g typescript
+
+// TypeScript compiler
+tsc some-file.ts
 ```
 
-## Typing Props
+## Type and declaration
 
-### Create interface inside .tsx file
+Simple typing for one parametr
+
+```tsx
+let isDone: boolean;
+let isDone: boolean = false;
+const user: any = 'String';
+const arr: [string, number] = [ 'Name', 123 ];
+const arrayOfNumbers: Array<number> = [ 123, 123 ];
+const someFunc = ():void => console.log(123);
+const obj: { name: string, age: number } = {
+  name: 'John', 
+  age: 14,
+};
+
+// create type
+type IPerson = { 
+  name: string, 
+  age: number ,
+  optional?: () => string;
+};
+
+// with type
+const obj: IPerson = {
+  name: 'John', 
+  age: 14,
+}
+
+// create type
+type ID = number;
+const someId: ID = 123;
+
+type ID = number | string;
+const someId1: ID = '123';
+const someId2: ID = 123;
+const someId3: ID = true; // error
+```
+
+## Interface
+
+Create types for all component, which may contains several types
 
 ```tsx
 interface Props {
 
   // single props
-  name: string;
-  id: number;
-  alive: boolean;
+  anything: any;
+  someString: string;
+  someNumber: number;
+  someNull: null;
+  somBool?: boolean; // not-nessesary props
+  readonly some: undefined | null; // combinations of types, readonly
 
-  // object
-  loginData: {
+  // functins
+  someFunc1: Function;
+  someFunc3: () => any;
+  someFunc2: () => void; // return nothing
+  someFunc2: () => never; // ??? throw New Error(text)
+  someFunc4: (id: number) => any;
+  someFunc5: () => MouseEventHandler; // import { MouseEventHandler } from 'react';
+
+  // arrays
+  arrayOfNumbers: number[] | Array<number>; // generic type
+  arrayOfStrings: string[] | Array<string>;
+  arrayOfObjs: {
     id: number;
     name: string;
     login: boolean;
-  };
+  }[];
 
-  // array of objects
-  players: [
-    {
-      name: string;
-      active: boolean;
-      id: number;
-    }
-  ];
+  // Array of PlayerData object (some import)
+  players: PlayerData[];
 
-  // actions
-  someAction1: Function;
-  someAction1: () => void;
-  someAction2: (value: number) => void;
-  someAction3: () => MouseEventHandler; // import { MouseEventHandler } from 'react';
-
-  // combinations of types
-  someField1: number | string;
-
-  // not-nessesary props
-  someField2?: number;
-
-  // or like this
-  someField: number | undefined;
+  // Array of functions that return strings
+  (() => string)[] | { (): string; }[] | Array<() => string>;
 }
 ```
 
-### Create types sepparate .tsx file
+## Create types sepparate .tsx file
 
-#### types.tsx
+### types.tsx
 ```tsx
 export type Id = number;
 
@@ -77,7 +124,7 @@ export type GameDate = {
 };
 ```
 
-### Import types
+## Import types
 
 ```tsx
 import { Id, ISpin, GameDate } from './types';
@@ -89,7 +136,7 @@ interface Props {
 }
 
 ```
-### Typing inside maping
+## Typing inside maping
 
 ```tsx
 ...
@@ -103,7 +150,9 @@ return (
 );
 ```
 
-### Create enum
+## enum
+
+Список значений. Смесь массива и объекта. Значения, если не присвоены будут возвращать индексы
 
 ```tsx
   // add statuses list
@@ -128,4 +177,53 @@ export interface IServerGameState {
 ```tsx
   gameStatus === READY_START_ROUND; // right
   gameStatus === END_START_ROUND; // wrong
+```
+
+```tsx
+enum Directions {
+  Up = 2,
+  Down = 4,
+  Left = 5,
+  Right = 6,
+}
+
+Directions.Up; // 2
+Directions.[6]; // 'Right'
+
+```
+
+## FC template
+
+```tsx
+import React from 'react';
+
+import { IImportTypes } from './types';
+
+import { styles } from './styles';
+
+interface IProps {
+  prop1: number;
+  prop2: number;
+  prop3: IImportTypes;
+}
+
+// typing with interface
+const SomeComp1: React.FC<IProps> = ({ prop1, prop2, prop3 }) => {
+  return (
+    <div>Some jsx-code</div>
+  );
+})
+
+// typing inside generic
+const SomeComp2: React.FC<{ 
+  prop1: number; 
+  prop2: number; 
+  prop3: IImportTypes; 
+}> = ({ prop1, prop2, prop3 }) => {
+  return (
+    <div>Some jsx-code</div>
+  );
+})
+
+export { SomeComp1, SomeComp2 };
 ```
