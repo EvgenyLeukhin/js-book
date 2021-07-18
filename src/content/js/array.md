@@ -91,3 +91,13 @@ const multiLevelArray = [arr1, arr2, arr3];
 
 console.log(multiLevelArray[2] [0]); // 7
 ```
+
+## Array distructuring
+
+```js
+const [a, b] = [10, 20];
+
+// equal to
+const a = 10;
+const b = 20;
+```
