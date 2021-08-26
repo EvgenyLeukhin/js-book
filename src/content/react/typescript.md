@@ -195,17 +195,26 @@ Directions.[6]; // 'Right'
 ## FC template
 
 ```tsx
-import React from 'react';
-
 import { IImportTypes } from './types';
-
 import { styles } from './styles';
 
 interface IProps {
-  prop1: number;
-  prop2: number;
+  prop1: boolean;
+  prop2: string;
   prop3: IImportTypes;
 }
+
+const SomeComp: React.FC<IProps> = ({ prop1, prop2 }) => {
+  const classes = styles();
+
+  return (
+    <div className={classes.someClass}>
+      {prop1 && prop2}
+    </div>
+  )
+}
+
+export default SomeComp;
 
 // typing with interface
 const SomeComp1: React.FC<IProps> = ({ prop1, prop2, prop3 }) => {
@@ -223,7 +232,7 @@ const SomeComp2: React.FC<{
   return (
     <div>Some jsx-code</div>
   );
-})
+)}
 
 export { SomeComp1, SomeComp2 };
 ```
