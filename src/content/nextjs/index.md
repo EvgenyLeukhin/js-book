@@ -16,6 +16,15 @@
 
 3. ```npm run dev```
 
+```json
+  "scripts": {
+    "start": "next dev",
+    "build": "next build",
+    "lint": "next lint"
+  },
+```
+
+
 
 ## Install 2 (manual)
 
@@ -199,7 +208,7 @@ export default function LinkCustom({ text, href }) {
 }
 ```
 
-## Запросы - getStaticProps
+## Запросы для статичных страниц - getStaticProps
 
 Не нужен useState или useEffect, все делается через getStaticProps
 
@@ -239,4 +248,125 @@ export default function users({ users }) {
   )
 }
 
+```
+
+## Запросы для динамических страниц - getServerSideProps
+
+При запросах через getStaticProps или getServerSideProps данные, полученные с сервера уже отрендериваются на клиенте.
+
+```jsx
+// getServerSideProps - for dynamic pages
+export async function getServerSideProps(context) {
+  const { params, query } = context; // params, query можно забирать прямо из контекста этой функции
+  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+  const userData = await response.json();
+
+  return {
+    props: {userData}, // will be passed to the page component as props
+  }
+}
+
+export default function userId({ userData }) {
+  console.log('userData', userData);
+
+  return (
+    <div>
+      <h1>User details:</h1>
+      <ul>
+        <li><span>Name:</span> <b>{userData.name}</b></li>
+        <li><span>Phone:</span> <b>{userData.phone}</b></li>
+        <li><span>Website:</span> <b>{userData.website}</b></li>
+        <li><span>Id:</span> <b>{userData.id}</b></li>
+      </ul>
+    </div>
+  )
+}
+```
+
+## SEO
+
+```jsx
+import Head from 'next/head';
+
+...
+<>
+  <Head>
+    <meta keywords="keyword1, keyword2, keyword3" />
+    <title>NextJs - Test</title>
+  </Head>
+  ...
+</>
+```
+
+## MainContainer.js
+
+```jsx
+// MainContainer.js
+import Head from 'next/head';
+import LinkCustom from './LinkCustom';
+
+export default function MainContainer({ children, keywords }) {
+  return (
+    <>
+      <Head>
+        <meta keywords={keywords} />
+        <title>NextJs - Test</title>
+      </Head>
+
+      <header>
+        <ul className="navbar">
+          <li>
+            <LinkCustom text="Index" href="" />
+          </li>
+          <li>
+            <LinkCustom text="Users" href="users" />
+          </li>
+        </ul>
+      </header>
+
+      <div>{children}</div>
+
+      {/* inline styling */}
+      <style jsx>
+        {`
+          .navbar {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+        `}
+      </style>
+    </>
+  );
+}
+
+
+...
+// index.js
+import MainContainer from '../components/MainContainer';
+
+const Index = () => {
+  return (
+    <MainContainer keywords='index page'>
+      <div>
+        <h1 style={{ color: 'maroon' }}>Hello, Nextjs!!!</h1>
+      </div>
+    </MainContainer>
+  )
+}
+
+export default Index;
+```
+
+## 404 page
+
+pages/404.js
+
+```jsx
+export default function Error() {
+  return (
+    <h1>404 - Page not found</h1>
+  )
+}
 ```
