@@ -88,6 +88,32 @@ const Aside = ({ isShow, toggleSidebar, onSidebarLinkClick }) => {
     </li>
   ));
 
+  const NextjsLinks = () => links.nextjs.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
+
+  const MobxLinks = () => links.mobx.map(i => (
+    <li key ={i.id}>
+      <NavLink
+        to={i.to}
+        onClick={onSidebarLinkClick}
+        activeStyle={activeSidebarStyles}
+        className={cln({ 'divider': i.divider })}
+      >
+        {i.title}
+      </NavLink>
+    </li>
+  ));
+
   const OtherLinks = () => links.other.map(i => (
     <li key={i.id}>
       <NavLink
@@ -112,7 +138,9 @@ const Aside = ({ isShow, toggleSidebar, onSidebarLinkClick }) => {
             <Route path='/redux'  component={ReduxLinks} />
             <Route path='/nodejs' component={NodeJsLinks} />
             <Route path='/vue'    component={VueLinks} />
-            <Route path='/other' component={OtherLinks} />
+            <Route path='/nextjs' component={NextjsLinks} />
+            <Route path='/mobx'   component={MobxLinks} />
+            <Route path='/other'  component={OtherLinks} />
           </Switch>
         </ul>
       </aside>

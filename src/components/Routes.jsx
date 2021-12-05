@@ -11,6 +11,8 @@ import Webpack from 'Webpack/index.md';
 import NodeJs  from 'NodeJs/index.md';
 import Redux   from 'Redux/index.md';
 import Vue     from 'Vue/index.md';
+import Mobx    from 'Mobx/index.md';
+import Nextjs  from 'Nextjs/index.md';
 import Other   from 'Other/index.md';
 
 import Test    from './../test';
@@ -98,6 +100,18 @@ import NodeJsNpmYarn     from 'NodeJs/npm-yarn.md';
 import NodeJsBrowserSync from 'NodeJs/browser-sync.md';
 import NodeJsExpress     from 'NodeJs/express.md';
 
+// nextjs //
+import Nextjs1     from 'Nextjs/nextjs-1.md';
+import Nextjs2     from 'Nextjs/nextjs-2.md';
+import Nextjs3     from 'Nextjs/nextjs-3.md';
+
+// nextjs //
+import Mobx1     from 'Mobx/mobx-1.md';
+import Mobx2     from 'Mobx/mobx-2.md';
+import Mobx3     from 'Mobx/mobx-3.md';
+
+// mobx //
+
 // other //
 import OtherJquery   from 'Other/jquery.md';
 import OtherStimulus from 'Other/stimulus.md';
@@ -116,6 +130,8 @@ const Routes = () => (
       <Route path='/nodejs' exact component={() => <MdWrapper mdFile={NodeJs} />} />
       <Route path='/vue'    exact component={() => <MdWrapper mdFile={Vue} />} />
       <Route path='/other'  exact component={() => <MdWrapper mdFile={Other} />} />
+      <Route path='/nextjs' exact component={() => <MdWrapper mdFile={Nextjs} />} />
+      <Route path='/mobx'   exact component={() => <MdWrapper mdFile={Mobx} />} />
       <Route path='/test'         component={Test} />
 
       {/* js pages */}
@@ -200,6 +216,16 @@ const Routes = () => (
       <Route path='/nodejs/package-json' component={() => <MdWrapper mdFile={NodeJsPackageJson} />} />
       <Route path='/nodejs/browser-sync' component={() => <MdWrapper mdFile={NodeJsBrowserSync} />} />
       <Route path='/nodejs/express'      component={() => <MdWrapper mdFile={NodeJsExpress} />} />
+
+      {/* nextjs-pages */}
+      <Route path='/nextjs/nextjs-1'     component={() => <MdWrapper mdFile={Nextjs1} />} />
+      <Route path='/nextjs/nextjs-2'     component={() => <MdWrapper mdFile={Nextjs2} />} />
+      <Route path='/nextjs/nextjs-3'     component={() => <MdWrapper mdFile={Nextjs3} />} />
+
+      {/* mobx-pages */}
+      <Route path='/mobx/mobx-1'     component={() => <MdWrapper mdFile={Mobx1} />} />
+      <Route path='/mobx/mobx-2'     component={() => <MdWrapper mdFile={Mobx2} />} />
+      <Route path='/mobx/mobx-3'     component={() => <MdWrapper mdFile={Mobx3} />} />
 
       {/* other-pages */}
       <Route path='/other/jquery'     component={() => <MdWrapper mdFile={OtherJquery} />} />

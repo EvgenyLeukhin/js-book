@@ -24,6 +24,8 @@ module.exports = {
       Redux:      path.resolve(__dirname, 'src', 'content/redux'),
       NodeJs:     path.resolve(__dirname, 'src', 'content/nodejs'),
       Vue:        path.resolve(__dirname, 'src', 'content/vue'),
+      Mobx:       path.resolve(__dirname, 'src', 'content/mobx'),
+      Nextjs:     path.resolve(__dirname, 'src', 'content/nextjs'),
       Other:      path.resolve(__dirname, 'src', 'content/other'),
 
       // application

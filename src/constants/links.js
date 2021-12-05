@@ -1,12 +1,14 @@
 const links = {
   header: [
     { id: 0, title: 'JS',      to: '/js' },
-    { id: 1, title: 'Webpack', to: '/wp' },
-    { id: 2, title: 'React',   to: '/react' },
-    { id: 3, title: 'Redux',   to: '/redux' },
-    { id: 4, title: 'Vue',     to: '/vue' },
+    { id: 1, title: 'React',   to: '/react' },
+    { id: 2, title: 'Mobx',    to: '/mobx' },
+    { id: 3, title: 'NextJs',  to: '/nextjs' },
+    { id: 4, title: 'Redux',   to: '/redux' },
     { id: 5, title: 'NodeJS',  to: '/nodejs' },
-    { id: 6, title: 'Other',   to: '/other' },
+    { id: 6, title: 'Webpack', to: '/wp' },
+    { id: 7, title: 'Other',   to: '/other' },
+    // { id: 8, title: 'Vue',     to: '/vue' },
   ],
 
   js: [
@@ -104,6 +106,18 @@ const links = {
   other: [
     { id: 0, title: 'jQuery', to: '/other/jquery' },
     { id: 1, title: 'StimulusJs', to: '/other/stimulus' },
+  ],
+
+  nextjs: [
+    { id: 0, title: 'NextJs-1', to: '/nextjs/nextjs-1' },
+    { id: 1, title: 'NextJs-2', to: '/nextjs/nextjs-2' },
+    { id: 2, title: 'NextJs-3', to: '/nextjs/nextjs-3' },
+  ],
+
+  mobx: [
+    { id: 0, title: 'MobX-1', to: '/mobx/mobx-1' },
+    { id: 1, title: 'MobX-2', to: '/mobx/mobx-2' },
+    { id: 2, title: 'MobX-3', to: '/mobx/mobx-3' },
   ],
 };
 

@@ -82,8 +82,8 @@ aside {
     &.active {
       &::before {
         position: absolute;
-        left: -20px;
-        content: "►";
+        left: -15px;
+        content: "●";
       }
 
       &:hover {
