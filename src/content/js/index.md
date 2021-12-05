@@ -6,8 +6,16 @@
 
 ## Справочники
 
-* [Learn JavaScript - RUS](https://learn.javascript.ru/)
-* [Справочник MDN - RUS](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference)
+* [**React** - *reactjs.org*](https://ru.reactjs.org)
+* [**Redux** - *redux.js.org*](https://redux.js.org)
+* [**MobX** - *mobx.js.org*](https://mobx.js.org/README.html)
+* [**MDN Web Docs** - *developer.mozilla.org*](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference)
+* [**Learn JavaScript** - *learn.javascript.ru*](https://learn.javascript.ru/)
+* [**TypeScript** - *typescriptlang.org*](https://www.typescriptlang.org)
+* [**NextJS** - *nextjs.org*](https://nextjs.org)
+* [**Gatsbyjs** - *gatsbyjs.com*](https://www.gatsbyjs.com/)
+* [**Webpack** - *webpack.js.org*](https://webpack.js.org)
+* [**NodeJs** - *nodejs.org*](https://nodejs.org/en)
 
 ## Онлайн-песочницы
 
@@ -20,10 +28,13 @@
 
 В наши дни на чистом JS практически не разрабатывают, работу с данным языком в значительной степени упрощают библиотеки, такие как:
 
-* [React](https://reactjs.org/)
-* [Vue](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [jQuery](https://jquery.com/)
+* [Vue](https://vuejs.org)
+* [Angular](https://angular.io)
+* [jQuery](https://jquery.com)
+* [Stimulus](https://stimulus.hotwired.dev)
+* [Svelte](https://svelte.dev)
+* [React Native](https://reactnative.dev)
+* [Electron](https://www.electronjs.org/)
 
 ## ECMAScript - Стандарт языка
 
