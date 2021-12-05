@@ -12,6 +12,7 @@
 * [**MDN Web Docs** - *developer.mozilla.org*](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference)
 * [**Learn JavaScript** - *learn.javascript.ru*](https://learn.javascript.ru/)
 * [**TypeScript** - *typescriptlang.org*](https://www.typescriptlang.org)
+* [**Create React App** - *create-react-app.dev*](https://create-react-app.dev)
 * [**NextJS** - *nextjs.org*](https://nextjs.org)
 * [**Gatsbyjs** - *gatsbyjs.com*](https://www.gatsbyjs.com/)
 * [**Webpack** - *webpack.js.org*](https://webpack.js.org)
