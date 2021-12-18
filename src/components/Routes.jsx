@@ -101,9 +101,13 @@ import NodeJsBrowserSync from 'NodeJs/browser-sync.md';
 import NodeJsExpress     from 'NodeJs/express.md';
 
 // nextjs //
-import Nextjs1     from 'Nextjs/nextjs-1.md';
-import Nextjs2     from 'Nextjs/nextjs-2.md';
-import Nextjs3     from 'Nextjs/nextjs-3.md';
+import NextInstall   from 'Nextjs/install.md';
+import NextjsApi     from 'Nextjs/api.md';
+import NextjsPages   from 'Nextjs/pages.md';
+import NextjsRouting from 'Nextjs/routing.md';
+import NextjsSeo     from 'Nextjs/seo.md';
+import NextjsStyling from 'Nextjs/styling.md';
+import NextjsExpress from 'Nextjs/express.md';
 
 // nextjs //
 import Mobx1     from 'Mobx/mobx-1.md';
@@ -218,9 +222,13 @@ const Routes = () => (
       <Route path='/nodejs/express'      component={() => <MdWrapper mdFile={NodeJsExpress} />} />
 
       {/* nextjs-pages */}
-      <Route path='/nextjs/nextjs-1'     component={() => <MdWrapper mdFile={Nextjs1} />} />
-      <Route path='/nextjs/nextjs-2'     component={() => <MdWrapper mdFile={Nextjs2} />} />
-      <Route path='/nextjs/nextjs-3'     component={() => <MdWrapper mdFile={Nextjs3} />} />
+      <Route path='/nextjs/install' component={() => <MdWrapper mdFile={NextInstall} />} />
+      <Route path='/nextjs/api'     component={() => <MdWrapper mdFile={NextjsApi} />} />
+      <Route path='/nextjs/pages'   component={() => <MdWrapper mdFile={NextjsPages} />} />
+      <Route path='/nextjs/routing' component={() => <MdWrapper mdFile={NextjsRouting} />} />
+      <Route path='/nextjs/seo'     component={() => <MdWrapper mdFile={NextjsSeo} />} />
+      <Route path='/nextjs/styling' component={() => <MdWrapper mdFile={NextjsStyling} />} />
+      <Route path='/nextjs/express' component={() => <MdWrapper mdFile={NextjsExpress} />} />
 
       {/* mobx-pages */}
       <Route path='/mobx/mobx-1'     component={() => <MdWrapper mdFile={Mobx1} />} />

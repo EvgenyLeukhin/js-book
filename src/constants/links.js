@@ -109,9 +109,13 @@ const links = {
   ],
 
   nextjs: [
-    { id: 0, title: 'NextJs-1', to: '/nextjs/nextjs-1' },
-    { id: 1, title: 'NextJs-2', to: '/nextjs/nextjs-2' },
-    { id: 2, title: 'NextJs-3', to: '/nextjs/nextjs-3' },
+    { id: 0, title: 'Install', to: '/nextjs/install' },
+    { id: 1, title: 'Pages',   to: '/nextjs/pages' },
+    { id: 2, title: 'Styling', to: '/nextjs/styling' },
+    { id: 3, title: 'Routing', to: '/nextjs/routing' },
+    { id: 4, title: 'Seo',     to: '/nextjs/seo' },
+    { id: 5, title: 'Api',     to: '/nextjs/api' },
+    { id: 6, title: 'Express', to: '/nextjs/express' },
   ],
 
   mobx: [
