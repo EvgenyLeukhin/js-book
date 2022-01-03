@@ -14,10 +14,10 @@ import {
   ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLibs, ReactTypescript, ReactHooks, ReactGatsby,
 
   // api
-  JsCallback, JsPromise, JsPromise2, JsFetch,
+  ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
 
   // state
-  ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxServerApi, ReduxFetchData, ReduxLifecycle, Mobx1, Mobx2, Mobx3,
+  ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx1, Mobx2, Mobx3,
 
   // webpack
   WpInstall, WpConfig, WpJs, WpCss, WpImg, WpFonts, WpMd, WpHtml, WpEslint, WpPlugins, WpEditor, WpStructure, WpSpa, WpMpa, WpCreateReactApp,
@@ -95,24 +95,24 @@ const Routes = () => (
       <Route path='/react/gatsby-js'   component={() => <MdWrapper mdFile={ReactGatsby} />} />
 
       {/* api-pages */}\
-      <Route path='/api/callback'           component={() => <MdWrapper mdFile={JsCallback} />} />
-      <Route path='/api/promise'            component={() => <MdWrapper mdFile={JsPromise} />} />
-      <Route path='/api/promise2'           component={() => <MdWrapper mdFile={JsPromise2} />} />
-      <Route path='/api/fetch'              component={() => <MdWrapper mdFile={JsFetch} />} />
+      <Route path='/api/callback'           component={() => <MdWrapper mdFile={ApiCallback} />} />
+      <Route path='/api/promise'            component={() => <MdWrapper mdFile={ApiPromise} />} />
+      <Route path='/api/promise2'           component={() => <MdWrapper mdFile={ApiPromise2} />} />
+      <Route path='/api/fetch'              component={() => <MdWrapper mdFile={ApiFetch} />} />
+      <Route path='/api/server-api'         component={() => <MdWrapper mdFile={ApiServer} />} />
+      <Route path='/api/fetch-data'         component={() => <MdWrapper mdFile={ApiFetchData} />} />
 
 
       {/* state-pages */}
-      <Route path='/state/provider-enhancer'  component={() => <MdWrapper mdFile={ReduxProviderEnhancer} />} />
-      <Route path='/state/root-reducer'       component={() => <MdWrapper mdFile={ReduxRootReducer} />} />
-      <Route path='/state/single-reducer'     component={() => <MdWrapper mdFile={ReduxSingleReducer} />} />
-      <Route path='/state/connect'            component={() => <MdWrapper mdFile={ReduxConnect} />} />
-      <Route path='/state/actions'            component={() => <MdWrapper mdFile={ReduxActions} />} />
-      <Route path='/state/server-api'         component={() => <MdWrapper mdFile={ReduxServerApi} />} />
-      <Route path='/state/fetch-data'         component={() => <MdWrapper mdFile={ReduxFetchData} />} />
-      <Route path='/state/lifecycle'          component={() => <MdWrapper mdFile={ReduxLifecycle} />} />
-      <Route path='/state/mobx-1'             component={() => <MdWrapper mdFile={Mobx1} />} />
-      <Route path='/state/mobx-2'             component={() => <MdWrapper mdFile={Mobx2} />} />
-      <Route path='/state/mobx-3'             component={() => <MdWrapper mdFile={Mobx3} />} />
+      <Route path='/state/redux/provider-enhancer'  component={() => <MdWrapper mdFile={ReduxProviderEnhancer} />} />
+      <Route path='/state/redux/root-reducer'       component={() => <MdWrapper mdFile={ReduxRootReducer} />} />
+      <Route path='/state/redux/single-reducer'     component={() => <MdWrapper mdFile={ReduxSingleReducer} />} />
+      <Route path='/state/redux/connect'            component={() => <MdWrapper mdFile={ReduxConnect} />} />
+      <Route path='/state/redux/actions'            component={() => <MdWrapper mdFile={ReduxActions} />} />
+      <Route path='/state/redux/lifecycle'          component={() => <MdWrapper mdFile={ReduxLifecycle} />} />
+      <Route path='/state/mobx/mobx-1'              component={() => <MdWrapper mdFile={Mobx1} />} />
+      <Route path='/state/mobx/mobx-2'              component={() => <MdWrapper mdFile={Mobx2} />} />
+      <Route path='/state/mobx/mobx-3'              component={() => <MdWrapper mdFile={Mobx3} />} />
 
       {/* wp-pages */}
       <Route path='/wp/install'          component={() => <MdWrapper mdFile={WpInstall} />} />
