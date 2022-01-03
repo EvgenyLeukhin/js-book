@@ -19,13 +19,12 @@ module.exports = {
     alias: {
       // content
       JS:         path.resolve(__dirname, 'src', 'content/js'),
-      Webpack:    path.resolve(__dirname, 'src', 'content/webpack'),
       React:      path.resolve(__dirname, 'src', 'content/react'),
-      Redux:      path.resolve(__dirname, 'src', 'content/redux'),
-      NodeJs:     path.resolve(__dirname, 'src', 'content/nodejs'),
-      Vue:        path.resolve(__dirname, 'src', 'content/vue'),
-      Mobx:       path.resolve(__dirname, 'src', 'content/mobx'),
+      Api:        path.resolve(__dirname, 'src', 'content/api'),
+      State:      path.resolve(__dirname, 'src', 'content/state'),
+      Webpack:    path.resolve(__dirname, 'src', 'content/webpack'),
       Nextjs:     path.resolve(__dirname, 'src', 'content/nextjs'),
+      NodeJs:     path.resolve(__dirname, 'src', 'content/nodejs'),
       Other:      path.resolve(__dirname, 'src', 'content/other'),
 
       // application

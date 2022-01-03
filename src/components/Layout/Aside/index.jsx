@@ -10,137 +10,38 @@ import './styles.scss';
 
 
 const Aside = ({ isShow, toggleSidebar, onSidebarLinkClick }) => {
-  const JSLinks = () => links.js.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const WebpackLinks = () => links.webpack.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const ReactLinks = () => links.react.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const ReduxLinks = () => links.redux.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const NodeJsLinks = () => links.nodejs.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const VueLinks = () => links.vue.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const NextjsLinks = () => links.nextjs.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const MobxLinks = () => links.mobx.map(i => (
-    <li key ={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
-
-  const OtherLinks = () => links.other.map(i => (
-    <li key={i.id}>
-      <NavLink
-        to={i.to}
-        onClick={onSidebarLinkClick}
-        activeStyle={activeSidebarStyles}
-        className={cln({ 'divider': i.divider })}
-      >
-        {i.title}
-      </NavLink>
-    </li>
-  ));
+  const returnLinks = (linksField) => {
+    return (
+      links[`${linksField}`].map(link => {
+        return (
+          <li key ={link.id}>
+            <NavLink
+              to={link.to}
+              onClick={onSidebarLinkClick}
+              activeStyle={activeSidebarStyles}
+              className={cln({ 'divider': link.divider })}
+            >
+              {link.title}
+            </NavLink>
+          </li>
+        );
+      })
+    );
+  };
 
   return (
     <>
       <aside className={cln({ 'hide': !isShow })}>
         <ul className='links-list'>
           <Switch>
-            <Route path='/js'     component={JSLinks} />
-            <Route path='/wp'     component={WebpackLinks} />
-            <Route path='/react'  component={ReactLinks} />
-            <Route path='/redux'  component={ReduxLinks} />
-            <Route path='/nodejs' component={NodeJsLinks} />
-            <Route path='/vue'    component={VueLinks} />
-            <Route path='/nextjs' component={NextjsLinks} />
-            <Route path='/mobx'   component={MobxLinks} />
-            <Route path='/other'  component={OtherLinks} />
+            <Route path='/js'     component={() => returnLinks('js')} />
+            <Route path='/react'  component={() => returnLinks('react')} />
+            <Route path='/api'    component={() => returnLinks('api')} />
+            <Route path='/state'  component={() => returnLinks('state')} />
+            <Route path='/wp'     component={() => returnLinks('webpack')} />
+            <Route path='/nextjs' component={() => returnLinks('nextjs')} />
+            <Route path='/nodejs' component={() => returnLinks('nodejs')} />
+            <Route path='/other'  component={() => returnLinks('other')} />
           </Switch>
         </ul>
       </aside>
