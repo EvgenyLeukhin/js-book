@@ -2,7 +2,7 @@
 
 [Official Docs](https://redux.js.org/)
 
-![Redux schema](https://raw.githubusercontent.com/EvgenyLeukhin/js-book/master/src/content/redux/redux.png)
+![Redux schema](https://raw.githubusercontent.com/EvgenyLeukhin/js-book/master/src/content/state/redux.png)
 
 A predictable state container for JavaScript apps.
 
