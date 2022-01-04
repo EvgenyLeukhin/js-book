@@ -29,7 +29,6 @@ import JsDom       from 'JS/dom.md';
 import JsForms     from 'JS/forms.md';
 import JsImport    from 'JS/import.md';
 import JsEvents    from 'JS/events.md';
-import JsStorage   from 'JS/storage.md';
 
 // react //
 import ReactTemplate   from 'React/template.md';
@@ -54,13 +53,13 @@ import ReactHooks      from 'React/hooks.md';
 import ReactGatsby     from 'React/gatsby-js.md';
 
 // api //
-import ApiRequest   from 'Api/request.md';
-import ApiCallback  from 'Api/callback.md';
+import ApiFetch     from 'Api/fetch.md';
+import ApiAxios     from 'Api/axios.md';
+import ApiStorage   from 'Api/storage.md';
+import ApiCookies   from 'Api/cookies.md';
+import ApiAsync     from 'Api/async.md';
 import ApiPromise   from 'Api/promise.md';
 import ApiPromise2  from 'Api/promise2.md';
-import ApiFetch     from 'Api/fetch.md';
-import ApiServer    from 'Api/server-api.md';
-import ApiFetchData from 'Api/fetch-data.md';
 
 // state //
 import ReduxProviderEnhancer  from 'State/redux/provider-enhancer.md';
@@ -115,13 +114,13 @@ export {
   Js, ReacT, Api, State, Webpack, Nextjs, NodeJs, Other, Test,
 
   // js
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsArray2, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms, JsImport, JsEvents, JsStorage,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsArray2, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms, JsImport, JsEvents,
 
   // react
   ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLibs, ReactTypescript, ReactHooks, ReactGatsby,
 
   // api
-  ApiRequest, ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
+  ApiFetch, ApiAxios, ApiStorage, ApiCookies, ApiAsync, ApiPromise, ApiPromise2,
 
   // state
   ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx1, Mobx2, Mobx3,

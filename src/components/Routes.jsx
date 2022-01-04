@@ -8,13 +8,13 @@ import {
   Js, ReacT, Api, State, Webpack, Nextjs, NodeJs, Other, Test,
 
   // js
-  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsArray2, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms, JsImport, JsEvents, JsStorage,
+  JsScript, JsTypes, JsVars, JsString, JsNumber, JsNull, JsBoolean, JsFunction, JsFunction2, JsArray, JsArray2, JsObject, JsMath, JsLogic, JsCycles, JsClass, JsDom, JsForms, JsImport, JsEvents,
 
   // react
   ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLibs, ReactTypescript, ReactHooks, ReactGatsby,
 
   // api
-  ApiRequest, ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
+  ApiFetch, ApiAxios, ApiStorage, ApiCookies, ApiAsync, ApiPromise, ApiPromise2,
 
   // state
   ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx1, Mobx2, Mobx3,
@@ -70,7 +70,6 @@ const Routes = () => (
       <Route path='/js/forms'     component={() => <MdWrapper mdFile={JsForms} />} />
       <Route path='/js/export'    component={() => <MdWrapper mdFile={JsImport} />} />
       <Route path='/js/events'    component={() => <MdWrapper mdFile={JsEvents} />} />
-      <Route path='/js/storage'   component={() => <MdWrapper mdFile={JsStorage} />} />
 
       {/* react-pages */}
       <Route path='/react/template'    component={() => <MdWrapper mdFile={ReactTemplate} />} />
@@ -95,14 +94,13 @@ const Routes = () => (
       <Route path='/react/gatsby-js'   component={() => <MdWrapper mdFile={ReactGatsby} />} />
 
       {/* api-pages */}
-      <Route path='/api/request'           component={() => <MdWrapper mdFile={ApiRequest} />} />
-      <Route path='/api/callback'           component={() => <MdWrapper mdFile={ApiCallback} />} />
-      <Route path='/api/promise'            component={() => <MdWrapper mdFile={ApiPromise} />} />
-      <Route path='/api/promise2'           component={() => <MdWrapper mdFile={ApiPromise2} />} />
-      <Route path='/api/fetch'              component={() => <MdWrapper mdFile={ApiFetch} />} />
-      <Route path='/api/server-api'         component={() => <MdWrapper mdFile={ApiServer} />} />
-      <Route path='/api/fetch-data'         component={() => <MdWrapper mdFile={ApiFetchData} />} />
-
+      <Route path='/api/fetch'     component={() => <MdWrapper mdFile={ApiFetch} />} />
+      <Route path='/api/axios'     component={() => <MdWrapper mdFile={ApiAxios} />} />
+      <Route path='/api/storage'   component={() => <MdWrapper mdFile={ApiStorage} />} />
+      <Route path='/api/cookies'   component={() => <MdWrapper mdFile={ApiCookies} />} />
+      <Route path='/api/async'     component={() => <MdWrapper mdFile={ApiAsync} />} />
+      <Route path='/api/promise'   component={() => <MdWrapper mdFile={ApiPromise} />} />
+      <Route path='/api/promise2'  component={() => <MdWrapper mdFile={ApiPromise2} />} />
 
       {/* state-pages */}
       <Route path='/state/redux/provider-enhancer'  component={() => <MdWrapper mdFile={ReduxProviderEnhancer} />} />
