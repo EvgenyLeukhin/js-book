@@ -54,6 +54,7 @@ import ReactHooks      from 'React/hooks.md';
 import ReactGatsby     from 'React/gatsby-js.md';
 
 // api //
+import ApiRequest   from 'Api/request.md';
 import ApiCallback  from 'Api/callback.md';
 import ApiPromise   from 'Api/promise.md';
 import ApiPromise2  from 'Api/promise2.md';
@@ -120,7 +121,7 @@ export {
   ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLibs, ReactTypescript, ReactHooks, ReactGatsby,
 
   // api
-  ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
+  ApiRequest, ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
 
   // state
   ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx1, Mobx2, Mobx3,

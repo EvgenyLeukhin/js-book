@@ -14,7 +14,7 @@ import {
   ReactTemplate, ReactComponents, ReactProps, ReactProptypes, ReactJSX, ReactImages, ReactState, ReactOutputData, ReactMapingData, ReactEvents, ReactSwitcher, ReactForms, ReactStyling, ReactTransition, ReactRefs, ReactRouting, ReactLibs, ReactTypescript, ReactHooks, ReactGatsby,
 
   // api
-  ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
+  ApiRequest, ApiCallback, ApiPromise, ApiPromise2, ApiFetch, ApiServer, ApiFetchData,
 
   // state
   ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx1, Mobx2, Mobx3,
@@ -94,7 +94,8 @@ const Routes = () => (
       <Route path='/react/hooks'       component={() => <MdWrapper mdFile={ReactHooks} />} />
       <Route path='/react/gatsby-js'   component={() => <MdWrapper mdFile={ReactGatsby} />} />
 
-      {/* api-pages */}\
+      {/* api-pages */}
+      <Route path='/api/request'           component={() => <MdWrapper mdFile={ApiRequest} />} />
       <Route path='/api/callback'           component={() => <MdWrapper mdFile={ApiCallback} />} />
       <Route path='/api/promise'            component={() => <MdWrapper mdFile={ApiPromise} />} />
       <Route path='/api/promise2'           component={() => <MdWrapper mdFile={ApiPromise2} />} />
