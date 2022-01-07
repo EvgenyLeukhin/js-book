@@ -17,7 +17,7 @@ import {
   ApiFetch, ApiAxios, ApiStorage, ApiCookies, ApiAsync, ApiPromise, ApiPromise2,
 
   // state
-  ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx1, Mobx2, Mobx3,
+  ReduxProviderEnhancer, ReduxRootReducer, ReduxSingleReducer, ReduxConnect, ReduxActions, ReduxLifecycle, Mobx, MobxStore, MobxUseStore,
 
   // webpack
   WpInstall, WpConfig, WpJs, WpCss, WpImg, WpFonts, WpMd, WpHtml, WpEslint, WpPlugins, WpEditor, WpStructure, WpSpa, WpMpa, WpCreateReactApp,
@@ -109,9 +109,9 @@ const Routes = () => (
       <Route path='/state/redux/connect'            component={() => <MdWrapper mdFile={ReduxConnect} />} />
       <Route path='/state/redux/actions'            component={() => <MdWrapper mdFile={ReduxActions} />} />
       <Route path='/state/redux/lifecycle'          component={() => <MdWrapper mdFile={ReduxLifecycle} />} />
-      <Route path='/state/mobx/mobx-1'              component={() => <MdWrapper mdFile={Mobx1} />} />
-      <Route path='/state/mobx/mobx-2'              component={() => <MdWrapper mdFile={Mobx2} />} />
-      <Route path='/state/mobx/mobx-3'              component={() => <MdWrapper mdFile={Mobx3} />} />
+      <Route path='/state/mobx/mobx'                component={() => <MdWrapper mdFile={Mobx} />} />
+      <Route path='/state/mobx/mobx-store'          component={() => <MdWrapper mdFile={MobxStore} />} />
+      <Route path='/state/mobx/mobx-use-store'      component={() => <MdWrapper mdFile={MobxUseStore} />} />
 
       {/* wp-pages */}
       <Route path='/wp/install'          component={() => <MdWrapper mdFile={WpInstall} />} />

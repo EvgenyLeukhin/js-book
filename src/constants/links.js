@@ -73,9 +73,9 @@ const links = {
     { id: 3, title:  'Connect',         to: '/state/redux/connect' },
     { id: 4, title:  'Actions',         to: '/state/redux/actions' },
     { id: 7, title:  'Lifecycle',       to: '/state/redux/lifecycle' },
-    { id: 8, title:  'MobX',            to: '/state/mobx/mobx-1', divider: true },
-    { id: 9, title:  'MobX-2',          to: '/state/mobx/mobx-2' },
-    { id: 10, title: 'MobX-3',          to: '/state/mobx/mobx-3' },
+    { id: 8, title:  'MobX',            to: '/state/mobx/mobx', divider: true },
+    { id: 9, title:  'MobX store',      to: '/state/mobx/mobx-store' },
+    { id: 10, title: 'MobX use store',  to: '/state/mobx/mobx-use-store' },
   ],
 
   webpack: [
