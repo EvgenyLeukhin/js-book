@@ -1,9 +1,9 @@
 # Typescript in React (.tsx)
 
 **TypeScript** - это своего рода настройка над JavaScript, в который он преобразуется на этапе компиляции. 
-Выдаёт ошибки уже на этапе разработки и написания кода, а не после компиляции (в чем премущество над **propTypes**). Если тип определяемых переменных не соответствует реальному - Главное преимущество TypeScript;
+Статическая типизация выдаёт ошибки уже на этапе разработки и написания кода, а не после компиляции (в чем премущество над **propTypes**). Если тип определяемых переменных не соответствует реальному - Главное преимущество TypeScript;
 
-Строго типизированная js-обертка, усраняет проблему динамической типизации чистого js.
+Строго типизированная js-обертка, усраняет проблему динамической типизации чистого js
 
 [TypeScript Official Website](https://www.typescriptlang.org/)
 
@@ -12,6 +12,16 @@
 [TypeScript 4.0 Cheat Sheet](https://www.sitepen.com/blog/typescript-cheat-sheet)
 
 [TypeScript Cheat Sheetс](https://devhints.io/typescript)
+
+Преимужества: 
+
+* Статическая типизация показывает сразу на ошибки в типе без компиляции
+
+* Автокомплит (подстановка полей)
+
+* Уже известный и доступный набор полей и их тип (даже при запросах, можно типизировать тело ответа от сервера)
+
+* Типизация пропсов (propTypes больше не нужен)
 
 ```
 npx create-react-app react-typescript --template typescript
@@ -37,6 +47,8 @@ const obj: { name: string, age: number } = {
   name: 'John', 
   age: 14,
 };
+
+const users: IUser[] = [{}, {}];
 
 // create type
 type IPerson = { 
@@ -72,17 +84,21 @@ interface Props {
   anything: any;
   someString: string;
   someNumber: number;
+  someArray: IUser[]; // массив типов IUser
   someNull: null;
   somBool?: boolean; // not-nessesary props
+  children: React.ReactChild | React.RactNode;
   readonly some: undefined | null; // combinations of types, readonly
 
   // functins
   someFunc1: Function;
-  someFunc3: () => any;
-  someFunc2: () => void; // return nothing
-  someFunc2: () => never; // ??? throw New Error(text)
-  someFunc4: (id: number) => any;
-  someFunc5: () => MouseEventHandler; // import { MouseEventHandler } from 'react';
+  someFunc2: () => any;
+  someFunc3: () => string; // return string
+  someFunc4: () => number; // return number
+  someFunc5: () => void; // return nothing (клики по кнопкам)
+  someFunc6: () => never; // ??? throw New Error(text)
+  someFunc7: (id: number) => any;
+  someFunc8: () => MouseEventHandler; // import { MouseEventHandler } from 'react';
 
   // arrays
   arrayOfNumbers: number[] | Array<number>; // generic type
@@ -167,9 +183,15 @@ export enum GameState {
   SHOWING_RESULTS = 'SHOWING_RESULTS',
 }
 
+enum CardVariant {
+  variant1 = 'variant1';
+  variant2 = 'variant2';
+}
+
 // equal this enum to prop
 export interface IServerGameState {
   gameStatus: GameState;
+  variant: CardVariant;
 }
 ```
 Если значение **gameStatus** будет отличное от вариантов из списка **GameState**, no будет ошибка
