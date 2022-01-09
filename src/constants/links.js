@@ -112,6 +112,7 @@ const links = {
     { id: 2, title: 'Package.json',  to: '/nodejs/package-json' },
     { id: 3, title: 'Browser-sync',  to: '/nodejs/browser-sync' },
     { id: 4, title: 'Express',       to: '/nodejs/express' },
+    { id: 5, title: 'GraphQL',       to: '/nodejs/graphql' },
   ],
 
   other: [

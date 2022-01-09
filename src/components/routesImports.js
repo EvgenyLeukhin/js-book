@@ -104,6 +104,7 @@ import NodeJsPackageJson from 'NodeJs/package-json.md';
 import NodeJsNpmYarn     from 'NodeJs/npm-yarn.md';
 import NodeJsBrowserSync from 'NodeJs/browser-sync.md';
 import NodeJsExpress     from 'NodeJs/express.md';
+import NodeJsGraphQl     from 'NodeJs/graph-ql.md';
 
 // other //
 import OtherJquery   from 'Other/jquery.md';
@@ -132,7 +133,7 @@ export {
   NextInstall, NextjsApi, NextjsPages, NextjsRouting, NextjsSeo, NextjsStyling, NextjsExpress,
 
   // nodejs
-  NodeJsInstall, NodeJsPackageJson, NodeJsNpmYarn, NodeJsBrowserSync, NodeJsExpress,
+  NodeJsInstall, NodeJsPackageJson, NodeJsNpmYarn, NodeJsBrowserSync, NodeJsExpress, NodeJsGraphQl,
 
   // other
   OtherJquery, OtherStimulus,

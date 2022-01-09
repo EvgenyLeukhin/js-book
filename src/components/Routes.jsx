@@ -26,7 +26,7 @@ import {
   NextInstall, NextjsApi, NextjsPages, NextjsRouting, NextjsSeo, NextjsStyling, NextjsExpress,
 
   // nodejs
-  NodeJsInstall, NodeJsPackageJson, NodeJsNpmYarn, NodeJsBrowserSync, NodeJsExpress,
+  NodeJsInstall, NodeJsPackageJson, NodeJsNpmYarn, NodeJsBrowserSync, NodeJsExpress, NodeJsGraphQl,
 
   // other
   OtherJquery, OtherStimulus,
@@ -136,6 +136,7 @@ const Routes = () => (
       <Route path='/nodejs/package-json' component={() => <MdWrapper mdFile={NodeJsPackageJson} />} />
       <Route path='/nodejs/browser-sync' component={() => <MdWrapper mdFile={NodeJsBrowserSync} />} />
       <Route path='/nodejs/express'      component={() => <MdWrapper mdFile={NodeJsExpress} />} />
+      <Route path='/nodejs/graphql'      component={() => <MdWrapper mdFile={NodeJsGraphQl} />} />
 
 
       {/* nextjs-pages */}
